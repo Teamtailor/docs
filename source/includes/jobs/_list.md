@@ -1,7 +1,7 @@
 ## List Jobs
 
 ```shell
-curl "https://api.teamtailor.com/v1/api/jobs"
+GET http://api.teamtailor.dev/v1/jobs
 ```
 
 > The above command returns JSON structured like this:
@@ -10,12 +10,208 @@ curl "https://api.teamtailor.com/v1/api/jobs"
 {
   "data": [
     {
+      "id": "7263",
+      "type": "jobs",
+      "links": {
+        "careersite-job-url": "http://career.teamtailor.dev/jobs/7263-yay-horray-3",
+        "careersite-job-apply-url": "https://career.teamtailor.dev/jobs/7263-yay-horray-3/applications/new",
+        "self": "http://api.teamtailor.dev/v1/jobs/7263"
+      },
+      "attributes": {
+        "ask-for-cover-letter": true,
+        "ask-for-resume": true,
+        "body": "hello",
+        "end-date": null,
+        "external-application-url": null,
+        "human-status": "published",
+        "picture": null,
+        "pinned": false,
+        "start-date": null,
+        "status": "open",
+        "template": false,
+        "title": "yay horray 3"
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7263/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/jobs/7263/department"
+          }
+        },
+        "role": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7263/relationships/role",
+            "related": "http://api.teamtailor.dev/v1/jobs/7263/role"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7263/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/jobs/7263/location"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7263/relationships/user",
+            "related": "http://api.teamtailor.dev/v1/jobs/7263/user"
+          }
+        }
+      }
+    },
+    {
+      "id": "7262",
+      "type": "jobs",
+      "links": {
+        "careersite-job-url": "http://career.teamtailor.dev/jobs/7262-yay-horray-3",
+        "careersite-job-apply-url": "https://career.teamtailor.dev/jobs/7262-yay-horray-3/applications/new",
+        "self": "http://api.teamtailor.dev/v1/jobs/7262"
+      },
+      "attributes": {
+        "ask-for-cover-letter": true,
+        "ask-for-resume": true,
+        "body": "hello",
+        "end-date": null,
+        "external-application-url": null,
+        "human-status": "published",
+        "picture": null,
+        "pinned": false,
+        "start-date": null,
+        "status": "open",
+        "template": false,
+        "title": "yay horray 3"
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7262/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/jobs/7262/department"
+          }
+        },
+        "role": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7262/relationships/role",
+            "related": "http://api.teamtailor.dev/v1/jobs/7262/role"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7262/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/jobs/7262/location"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7262/relationships/user",
+            "related": "http://api.teamtailor.dev/v1/jobs/7262/user"
+          }
+        }
+      }
+    },
+    {
+      "id": "7261",
+      "type": "jobs",
+      "links": {
+        "careersite-job-url": "http://career.teamtailor.dev/jobs/7261-yay-horray-2",
+        "careersite-job-apply-url": "https://career.teamtailor.dev/jobs/7261-yay-horray-2/applications/new",
+        "self": "http://api.teamtailor.dev/v1/jobs/7261"
+      },
+      "attributes": {
+        "ask-for-cover-letter": true,
+        "ask-for-resume": true,
+        "body": "hello",
+        "end-date": null,
+        "external-application-url": null,
+        "human-status": "published",
+        "picture": null,
+        "pinned": false,
+        "start-date": null,
+        "status": "open",
+        "template": false,
+        "title": "yay horray 2"
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7261/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/jobs/7261/department"
+          }
+        },
+        "role": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7261/relationships/role",
+            "related": "http://api.teamtailor.dev/v1/jobs/7261/role"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7261/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/jobs/7261/location"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7261/relationships/user",
+            "related": "http://api.teamtailor.dev/v1/jobs/7261/user"
+          }
+        }
+      }
+    },
+    {
+      "id": "7260",
+      "type": "jobs",
+      "links": {
+        "careersite-job-url": "http://career.teamtailor.dev/jobs/7260-yay-horray-2",
+        "careersite-job-apply-url": "https://career.teamtailor.dev/jobs/7260-yay-horray-2/applications/new",
+        "self": "http://api.teamtailor.dev/v1/jobs/7260"
+      },
+      "attributes": {
+        "ask-for-cover-letter": true,
+        "ask-for-resume": true,
+        "body": "hello",
+        "end-date": null,
+        "external-application-url": null,
+        "human-status": "published",
+        "picture": null,
+        "pinned": false,
+        "start-date": null,
+        "status": "open",
+        "template": false,
+        "title": "yay horray 2"
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7260/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/jobs/7260/department"
+          }
+        },
+        "role": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7260/relationships/role",
+            "related": "http://api.teamtailor.dev/v1/jobs/7260/role"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7260/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/jobs/7260/location"
+          }
+        },
+        "user": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/jobs/7260/relationships/user",
+            "related": "http://api.teamtailor.dev/v1/jobs/7260/user"
+          }
+        }
+      }
+    },
+    {
       "id": "7158",
       "type": "jobs",
       "links": {
-        "careersite-job-url": "https://career.teamtailor.com/jobs/7158-detta-ar-en-template",
-        "careersite-job-apply-url": "https://career.teamtailor.com/jobs/7158-detta-ar-en-template/applications/new",
-        "self": "https://api.teamtailor.com/v1/jobs/7158"
+        "careersite-job-url": "http://career.teamtailor.dev/jobs/7158-detta-ar-en-template",
+        "careersite-job-apply-url": "https://career.teamtailor.dev/jobs/7158-detta-ar-en-template/applications/new",
+        "self": "http://api.teamtailor.dev/v1/jobs/7158"
       },
       "attributes": {
         "ask-for-cover-letter": true,
@@ -34,26 +230,26 @@ curl "https://api.teamtailor.com/v1/api/jobs"
       "relationships": {
         "department": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/jobs/7158/relationships/department",
-            "related": "https://api.teamtailor.com/v1/jobs/7158/department"
+            "self": "http://api.teamtailor.dev/v1/jobs/7158/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/jobs/7158/department"
           }
         },
         "role": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/jobs/7158/relationships/role",
-            "related": "https://api.teamtailor.com/v1/jobs/7158/role"
+            "self": "http://api.teamtailor.dev/v1/jobs/7158/relationships/role",
+            "related": "http://api.teamtailor.dev/v1/jobs/7158/role"
           }
         },
         "location": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/jobs/7158/relationships/location",
-            "related": "https://api.teamtailor.com/v1/jobs/7158/location"
+            "self": "http://api.teamtailor.dev/v1/jobs/7158/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/jobs/7158/location"
           }
         },
         "user": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/jobs/7158/relationships/user",
-            "related": "https://api.teamtailor.com/v1/jobs/7158/user"
+            "self": "http://api.teamtailor.dev/v1/jobs/7158/relationships/user",
+            "related": "http://api.teamtailor.dev/v1/jobs/7158/user"
           }
         }
       }
@@ -62,14 +258,14 @@ curl "https://api.teamtailor.com/v1/api/jobs"
       "id": "1694",
       "type": "jobs",
       "links": {
-        "careersite-job-url": "https://career.teamtailor.com/jobs/1694-web-developer-with-fingerspitzengefuhll",
-        "careersite-job-apply-url": "https://career.teamtailor.com/jobs/1694-web-developer-with-fingerspitzengefuhll/applications/new",
-        "self": "https://api.teamtailor.com/v1/jobs/1694"
+        "careersite-job-url": "http://career.teamtailor.dev/jobs/1694-web-developer-with-fingerspitzengefuhll",
+        "careersite-job-apply-url": "https://career.teamtailor.dev/jobs/1694-web-developer-with-fingerspitzengefuhll/applications/new",
+        "self": "http://api.teamtailor.dev/v1/jobs/1694"
       },
       "attributes": {
         "ask-for-cover-letter": true,
         "ask-for-resume": true,
-        "body": "<p>\r\n\tTeamtailor is changing the way companies work with employer branding and recruiting online. Want to help us make HR heroes? Working at Teamtailor means working in a young, fast moving tech startup and working with smart people that are passionate about their work.</p><p>\r\n\t<span style=\"line-height: 1.45em; background-color: initial;\">Our team brings experience from companies such as Skype and Mynewsdesk. We have disrupted and transformed industries before. We already got revenues and are well funded.</span></p><p>\r\n\t        Read more about our product at \r\n\t<a href=\"https://teamtailor.com/\" target=\"_blank\">teamtailor.com</a>. Or why not look at som live examples: <a href=\"https://jobs.rebtel.com/\" target=\"_blank\">Rebtel</a>, <a href=\"https://jobb.fyndiq.se/\" target=\"_blank\">Fyndiq</a>, <a href=\"https://career.cybercom.com/\" target=\"_blank\">Cybercom</a>, <a href=\"https://epidemic-sound.teamtailor.com/\" target=\"_blank\">Epidemic sound</a> (yes, everything you see there is our product and yes it's amazing).</p><p>\r\n\t<strong>What is the role?</strong><br>\r\n\t        At the core, you will be part of the team that plans new features, and develops the product. You will also take part in planning the roadmap, talking to the customers, and be a part of building a world class team.</p><p>\r\n\t<strong>What skills do you need? <br>\r\n\t</strong>Being a start-up, we still have a lot of ground to cover and big questions to answer. Given that, we’re looking for someone that thrives when faced with complex problems, and likes to think outside the box (...what box b.t.w?).</p><p>\r\n\t                 Teamtailor is a Ruby on Rails app. Other key components in our current setup is postgresql, elasticsearch, redis. Previous relevant experience is a great, but we value the ability to learn new things over past experience.</p><p>\r\n\t<strong>Qualities we look for</strong></p><ul>\r\n\t<li>Fingerspitzengefühl. For every challenge there is a infinite number of possible solutions, you should have a talent for finding the best one.</li>\t<li>Eager to learn new things. The only thing we know is that a lot of things will change. Both the tech we use, but also about the industry we operate in. </li>\t<li>Passionate. We love what we do, you should too.</li>\r\n</ul><p>\r\n\t      Interested? Apply today. Or if you know someone that you think would like this opportunity let us know.</p>",
+        "body": "<p>\r\n\tTeamtailor is changing the way companies work with employer branding and recruiting online. Want to help us make HR heroes? Working at Teamtailor means working in a young, fast moving tech startup and working with smart people that are passionate about their work.</p><p>\r\n\t<span style=\"line-height: 1.45em; background-color: initial;\">Our team brings experience from companies such as Skype and Mynewsdesk. We have disrupted and transformed industries before. We already got revenues and are well funded.</span></p><p>\r\n\t        Read more about our product at \r\n\t<a href=\"http://teamtailor.com/\" target=\"_blank\">teamtailor.com</a>. Or why not look at som live examples: <a href=\"http://jobs.rebtel.com/\" target=\"_blank\">Rebtel</a>, <a href=\"http://jobb.fyndiq.se/\" target=\"_blank\">Fyndiq</a>, <a href=\"http://career.cybercom.com/\" target=\"_blank\">Cybercom</a>, <a href=\"http://epidemic-sound.teamtailor.com/\" target=\"_blank\">Epidemic sound</a> (yes, everything you see there is our product and yes it's amazing).</p><p>\r\n\t<strong>What is the role?</strong><br>\r\n\t        At the core, you will be part of the team that plans new features, and develops the product. You will also take part in planning the roadmap, talking to the customers, and be a part of building a world class team.</p><p>\r\n\t<strong>What skills do you need? <br>\r\n\t</strong>Being a start-up, we still have a lot of ground to cover and big questions to answer. Given that, we’re looking for someone that thrives when faced with complex problems, and likes to think outside the box (...what box b.t.w?).</p><p>\r\n\t                 Teamtailor is a Ruby on Rails app. Other key components in our current setup is postgresql, elasticsearch, redis. Previous relevant experience is a great, but we value the ability to learn new things over past experience.</p><p>\r\n\t<strong>Qualities we look for</strong></p><ul>\r\n\t<li>Fingerspitzengefühl. For every challenge there is a infinite number of possible solutions, you should have a talent for finding the best one.</li>\t<li>Eager to learn new things. The only thing we know is that a lot of things will change. Both the tech we use, but also about the industry we operate in. </li>\t<li>Passionate. We love what we do, you should too.</li>\r\n</ul><p>\r\n\t      Interested? Apply today. Or if you know someone that you think would like this opportunity let us know.</p>",
         "end-date": null,
         "external-application-url": "",
         "human-status": "published",
@@ -86,38 +282,38 @@ curl "https://api.teamtailor.com/v1/api/jobs"
       "relationships": {
         "department": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/jobs/1694/relationships/department",
-            "related": "https://api.teamtailor.com/v1/jobs/1694/department"
+            "self": "http://api.teamtailor.dev/v1/jobs/1694/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/jobs/1694/department"
           }
         },
         "role": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/jobs/1694/relationships/role",
-            "related": "https://api.teamtailor.com/v1/jobs/1694/role"
+            "self": "http://api.teamtailor.dev/v1/jobs/1694/relationships/role",
+            "related": "http://api.teamtailor.dev/v1/jobs/1694/role"
           }
         },
         "location": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/jobs/1694/relationships/location",
-            "related": "https://api.teamtailor.com/v1/jobs/1694/location"
+            "self": "http://api.teamtailor.dev/v1/jobs/1694/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/jobs/1694/location"
           }
         },
         "user": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/jobs/1694/relationships/user",
-            "related": "https://api.teamtailor.com/v1/jobs/1694/user"
+            "self": "http://api.teamtailor.dev/v1/jobs/1694/relationships/user",
+            "related": "http://api.teamtailor.dev/v1/jobs/1694/user"
           }
         }
       }
     }
   ],
   "meta": {
-    "record-count": 2,
+    "record-count": 6,
     "page-count": 1
   },
   "links": {
-    "first": "https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337&page%5Bnumber%5D=1&page%5Bsize%5D=10",
-    "last": "https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337&page%5Bnumber%5D=1&page%5Bsize%5D=10"
+    "first": "http://api.teamtailor.dev/v1/jobs?filter%5Bdepartment%5D=337&page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "last": "http://api.teamtailor.dev/v1/jobs?filter%5Bdepartment%5D=337&page%5Bnumber%5D=1&page%5Bsize%5D=10"
   }
 }
 ```
