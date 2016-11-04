@@ -12,12 +12,12 @@ includes_topics:
   - auth
 
 includes_methods:
-  - methods1/index (just contains the # Method 1 headline so the next files will be sorted beneath it)
-  - methods1/list
-  - methods1/create
-  - methods1/read
-  - methods1/update
-  - methods1/delete
+  - jobs/index
+  - jobs/list
+  - jobs/create
+  - jobs/read
+  - jobs/update
+  - jobs/delete
 
 includes:
   - errors
