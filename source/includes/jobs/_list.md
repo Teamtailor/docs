@@ -123,3 +123,8 @@ curl "https://api.teamtailor.com/v1/api/jobs"
 ```
 
 This endpoint retrieves all kittens.
+
+Parameter | Default | Description
+--------- | ------- | -----------
+include   | null    | Comma separated list of relations to include in the response.
+filter[status] | null | Filter by job status. Available statuses: `Published`.
