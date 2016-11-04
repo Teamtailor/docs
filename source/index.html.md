@@ -14,10 +14,9 @@ includes_topics:
 includes_methods:
   - jobs/index
   - jobs/list
-  - jobs/create
   - jobs/read
+  - jobs/create
   - jobs/update
-  - jobs/delete
 
 includes:
   - errors
