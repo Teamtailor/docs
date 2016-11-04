@@ -74,6 +74,13 @@ under the License.
       <div class="dark-box"></div>
       <div class="content">
         <%= yield %>
+
+        <h1 id="topics">Topics</h1>
+        <% current_page.data.includes_topics && current_page.data.includes_topics.each do |include| %>
+          <%= partial "includes/#{include}" %>
+        <% end %>
+
+        <h1 id="resources">Resources</h1>
         <% current_page.data.includes && current_page.data.includes.each do |include| %>
           <%= partial "includes/#{include}" %>
         <% end %>
