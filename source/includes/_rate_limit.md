@@ -6,4 +6,4 @@ There is currently no rate-limit for the API. But when implemented it will use t
 * X-Rate-Limit-Remaining - The number of remaining requests in the current period
 * X-Rate-Limit-Reset - The number of seconds left in the current period
 
-The headers are already available in every response but contains static value. 
+The headers are already present in every response but contains static values. 
