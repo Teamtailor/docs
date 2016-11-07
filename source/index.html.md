@@ -38,5 +38,12 @@ includes:
 search: true
 ---
 
-# Teamtailor API v1 Draft
-Welcome to the documentation for the Teamtailor Api.
+# Teamtailor API
+Need to display your positions in different ways, or to extract additional information from your Teamtailor account? We provide you with an API that gives you full control over your data.
+
+**This API lets you:**
+
+* Get paginated jobs for your company
+* Get jobs which match particular filters like department and locations.
+* Get detailed information about individual jobs
+* Create new jobs
