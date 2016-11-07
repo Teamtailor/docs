@@ -1,1 +1,18 @@
 # Locations
+
+## Location Object
+
+### Attributes
+
+Attribute    | Type    | Description
+-------------|---------|------------
+address      | string  | Street address
+city         | string  | City name
+country      | string  | Full name of country, e.g `Sweden`
+email        | string  | Contact e-mail address
+headquarters | boolean | True if it's the company's main location. Can only be one headquarter per company
+lat          | string  | Decimal latitude of location, e.g `59.33855810000001`
+long         | string  | Decimal longitude of location, e.g `18.0557594`
+name         | string  | Specify name if City isn't enough information
+phone        | string  | Contact phone number
+zip          | string  | Postal code
