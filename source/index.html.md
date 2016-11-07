@@ -25,6 +25,9 @@ includes_methods:
   - roles/index
   - roles/list
   - roles/read
+  - locations/index
+  - locations/list
+  - locations/read
 
 includes:
   # - errors
