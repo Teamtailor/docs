@@ -127,7 +127,7 @@ curl -X "GET" "http://api.teamtailor.dev/v1/jobs/7199" \
 
 This endpoint retrieves all kittens.
 
-Parameter | Default | Description
---------- | ------- | -----------
-include   | null    | Comma separated list of relations to include in the response.
-filter[status] | null | Filter by job status. Available statuses: `Published`.
+Parameter      | Default   | Description
+-------------- | --------- | -----------
+include        | null      | Comma separated list of relations to include in the response.
+filter[status] | published | Filter by job status. Available statuses: `Published`.
