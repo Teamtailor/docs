@@ -91,7 +91,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;]">
+  <body class="index" data-languages="[&quot;http&quot;,&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -101,6 +101,7 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
+              <a href="#" data-language-name="http">http</a>
               <a href="#" data-language-name="shell">shell</a>
         </div>
         <div class="search">
@@ -124,7 +125,8 @@
 
         <h1 id="topics">Topics</h1>
           <h1 id="authentication">Authentication</h1>
-<pre class="highlight shell"><code>curl <span class="s2">"https://api.teamtailor.com/v1/v1/jobs?access_token=abc123"</span>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">http://api.teamtailor.dev/v1/jobs/7199</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
 </code></pre>
 
 <p>Authenticate Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -256,7 +258,11 @@ X-Rate-Limit-Reset
 </tbody></table>
 
           <h2 id="list-jobs">List Jobs</h2>
-<pre class="highlight shell"><code>GET http://api.teamtailor.dev/v1/jobs
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">http://api.teamtailor.dev/v1/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"http://api.teamtailor.dev/v1/jobs/7199"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
 </code></pre>
 
 <blockquote>
@@ -396,7 +402,11 @@ X-Rate-Limit-Reset
 </tbody></table>
 
           <h2 id="show-a-job">Show a Job</h2>
-<pre class="highlight shell"><code>GET http://api.teamtailor.dev/v1/jobs/<span class="o">{</span>id<span class="o">}</span>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/jobs/{id}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs/{id}"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
 </code></pre>
 
 <blockquote>
@@ -404,7 +414,7 @@ X-Rate-Limit-Reset
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7263"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7199"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jobs"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"careersite-job-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://career.teamtailor.dev/jobs/7263-yay-horray-3"</span><span class="p">,</span><span class="w">
@@ -470,37 +480,44 @@ X-Rate-Limit-Reset
 </tbody></table>
 
           <h2 id="create-job">Create Job</h2>
-<pre class="highlight shell"><code>POST http://api.teamtailor.dev/v1/jobs
+<pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">https://api.teamtailor.com/v1/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
 
-<span class="o">{</span>
-  <span class="s2">"data"</span>: <span class="o">{</span>
-    <span class="s2">"type"</span>: <span class="s2">"jobs"</span>,
-    <span class="s2">"attributes"</span>: <span class="o">{</span>
-      <span class="s2">"title"</span>: <span class="s2">"yay horray 3"</span>,
-      <span class="s2">"body"</span>: <span class="s2">"hello"</span>
-    <span class="o">}</span>,
-    <span class="s2">"relationships"</span>: <span class="o">{</span>
-      <span class="s2">"user"</span>: <span class="o">{</span>
-        <span class="s2">"data"</span>: <span class="o">{</span>
-          <span class="s2">"id"</span>: <span class="s2">"819"</span>,
-          <span class="s2">"type"</span>: <span class="s2">"users"</span>
-        <span class="o">}</span>
-      <span class="o">}</span>,
-      <span class="s2">"department"</span>: <span class="o">{</span>
-        <span class="s2">"data"</span>: <span class="o">{</span>
-          <span class="s2">"id"</span>: <span class="s2">"337"</span>,
-          <span class="s2">"type"</span>: <span class="s2">"departments"</span>
-        <span class="o">}</span>
-      <span class="o">}</span>,
-      <span class="s2">"location"</span>: <span class="o">{</span>
-        <span class="s2">"data"</span>: <span class="o">{</span>
-          <span class="s2">"id"</span>: <span class="s2">"667"</span>,
-          <span class="s2">"type"</span>: <span class="s2">"locations"</span>
-        <span class="o">}</span>
-      <span class="o">}</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span>
+{
+  "data": {
+    "type": "jobs",
+    "attributes": {
+      "title": "Account Manager",
+      "body": "&lt;p&gt;hello&lt;/p&gt;"
+    },
+    "relationships": {
+      "user": {
+        "data": {
+          "id": "819",
+          "type": "users"
+        }
+      },
+      "department": {
+        "data": {
+          "id": "337",
+          "type": "departments"
+        }
+      },
+      "location": {
+        "data": {
+          "id": "667",
+          "type": "locations"
+        }
+      }
+    }
+  }
+}
+
+</code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"POST"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"Content-Type: application/vnd.api+json"</span> <span class="se">\</span>
+     -d <span class="s2">"{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">jobs</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">attributes</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">title</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">Account Manager</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">body</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">&lt;p&gt;hello&lt;/p&gt;</span><span class="se">\"</span><span class="s2">},</span><span class="se">\"</span><span class="s2">relationships</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">user</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">id</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">819</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">users</span><span class="se">\"</span><span class="s2">}},</span><span class="se">\"</span><span class="s2">department</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">id</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">337</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">departments</span><span class="se">\"</span><span class="s2">}},</span><span class="se">\"</span><span class="s2">location</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">id</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">667</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">locations</span><span class="se">\"</span><span class="s2">}}}}}"</span>
 </code></pre>
 
 <blockquote>
@@ -508,17 +525,17 @@ X-Rate-Limit-Reset
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7263"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7265"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jobs"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"careersite-job-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://career.teamtailor.dev/jobs/7263-yay-horray-3"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"careersite-job-apply-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://career.teamtailor.dev/jobs/7263-yay-horray-3/applications/new"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7263"</span><span class="w">
+      </span><span class="nt">"careersite-job-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://career.teamtailor.dev/jobs/7265-account-manager"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"careersite-job-apply-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://career.teamtailor.dev/jobs/7265-account-manager/applications/new"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7265"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"ask-for-cover-letter"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="nt">"ask-for-resume"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;hello world&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;hello&lt;/p&gt;"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"end-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"external-application-url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"human-status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
@@ -527,31 +544,31 @@ X-Rate-Limit-Reset
       </span><span class="nt">"start-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"template"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My new job"</span><span class="w">
+      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Account Manager"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7263/relationships/department"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7263/department"</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7265/relationships/department"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7265/department"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7263/relationships/role"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7263/role"</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7265/relationships/role"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7265/role"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7263/relationships/location"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7263/location"</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7265/relationships/location"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7265/location"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7263/relationships/user"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7263/user"</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7265/relationships/user"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7265/user"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -562,17 +579,24 @@ X-Rate-Limit-Reset
 <p>Create new jobs and stuff.</p>
 
           <h2 id="update-job">Update Job</h2>
-<pre class="highlight shell"><code>PATCH http://api.teamtailor.dev/v1/jobs/7199
+<pre class="highlight http"><code><span class="nf">PATCH</span> <span class="nn">https://api.teamtailor.com/v1/jobs/7199</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
 
-<span class="o">{</span>
-  <span class="s2">"data"</span>: <span class="o">{</span>
-    <span class="s2">"id"</span>: <span class="s2">"7199"</span>,
-    <span class="s2">"attributes"</span>: <span class="o">{</span>
-      <span class="s2">"title"</span>: <span class="s2">"My new job title"</span>
-    <span class="o">}</span>,
-    <span class="s2">"type"</span>: <span class="s2">"jobs"</span>
-  <span class="o">}</span>
-<span class="o">}</span>
+{
+  "data": {
+    "id": "7199",
+    "attributes": {
+      "title": "New Title",
+      "status": "unlisted"
+    },
+    "type": "jobs"
+  }
+}
+</code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"PATCH"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs/7199"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"Content-Type: application/vnd.api+json"</span> <span class="se">\</span>
+     -d <span class="s2">"{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">id</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">7199</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">attributes</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">title</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">New Title</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">status</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">unlisted</span><span class="se">\"</span><span class="s2">},</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">jobs</span><span class="se">\"</span><span class="s2">}}"</span>
 </code></pre>
 
 <blockquote>
@@ -637,6 +661,7 @@ X-Rate-Limit-Reset
       </div>
       <div class="dark-box">
           <div class="lang-selector">
+                <a href="#" data-language-name="http">http</a>
                 <a href="#" data-language-name="shell">shell</a>
           </div>
       </div>
