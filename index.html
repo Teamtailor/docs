@@ -697,6 +697,68 @@ X-Rate-Limit-Reset
 
           <h1 id="departments">Departments</h1>
 
+<h2 id="department-object">Department Object</h2>
+
+<h3 id="attributes">Attributes</h3>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The departmen&rsquo;s name</td>
+</tr>
+<tr>
+<td>people-headline</td>
+<td>string</td>
+<td>Headline for the people block</td>
+</tr>
+<tr>
+<td>people-text</td>
+<td>string</td>
+<td>Text for the people block</td>
+</tr>
+<tr>
+<td>row-order</td>
+<td>integer</td>
+<td>Value used for sorting, lowest first.</td>
+</tr>
+<tr>
+<td>start-page-headline</td>
+<td>string</td>
+<td>Description headline</td>
+</tr>
+<tr>
+<td>start-page-text</td>
+<td>string</td>
+<td>Description text</td>
+</tr>
+<tr>
+<td>pictures</td>
+<td>object</td>
+<td>Array of pictures</td>
+</tr>
+</tbody></table>
+
+<h3 id="relations">Relations</h3>
+
+<table><thead>
+<tr>
+<th>Relation</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>roles</td>
+<td>The department&rsquo;s roles</td>
+</tr>
+</tbody></table>
+
           <h2 id="list-departments">List departments</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/departments</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
