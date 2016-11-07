@@ -101,8 +101,8 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
-              <a href="#" data-language-name="http">http</a>
-              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="http">HTTP</a>
+              <a href="#" data-language-name="shell">cURL</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -125,11 +125,20 @@
 
         <h1 id="topics">Topics</h1>
           <h1 id="authentication">Authentication</h1>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">http://api.teamtailor.dev/v1/jobs/7199</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">http://api.teamtailor.dev/v1/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
 </code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+</code></pre>
 
-<p>Authenticate Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Authenticate your account when using the API by including your secret API key in the request. Manage your API keys under <a href="https://www.teamtailor.com/app/integrations/">Integrations</a> when signed in to Teamtailor.com</p>
+
+<p>Autentication is performed by passing the api key in the Authorization header.</p>
+
+<aside class="notice">
+You must replace <code>abc123abc123</code> with your own API key.
+</aside>
 
 <h2 id="different-permissions">Different permissions</h2>
 
@@ -661,8 +670,8 @@ X-Rate-Limit-Reset
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="http">http</a>
-                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="http">HTTP</a>
+                <a href="#" data-language-name="shell">cURL</a>
           </div>
       </div>
     </div>
