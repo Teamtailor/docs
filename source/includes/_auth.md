@@ -19,6 +19,21 @@ You must replace <code>abc123abc123</code> with your own API key.
 </aside>
 
 
-## Different permissions
+## Permissions
+You api keys might have different scope and permissions.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<aside class="notice">
+Currently we only have the <code>open</code> scope. More scopes and endpoints might come in the future.
+</aside>
+
+### Open
+Has access to public data, basically all data that is publicly visible on your career site.
+
+#### read
+Can read all public data, for example jobs, departments, locations.
+
+#### write
+Can create new jobs.
+
+#### read/write
+Can do all above and update existing jobs.
