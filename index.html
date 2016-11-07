@@ -1057,6 +1057,500 @@ X-Rate-Limit-Reset
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
+          <h1 id="users">Users</h1>
+
+          <h2 id="list-users">List users</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/users</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/users"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+</code></pre>
+
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"819"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/819"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;\r\n\t I have been doing IT-related business/product development for the last 10 years. Working with great companies such as Skype, Mynewsdesk and now Teamtailor.&lt;/p&gt;&lt;p&gt;\r\n\t&lt;span style=\"line-height: 1.45em; background-color: initial;\"&gt;At Teamtailor we do not have any formal HR-experience, we just love the web. Through our own recruitment activities the last couple of years we have come to realize that there is much that can be done and improved.&lt;/span&gt;&lt;span style=\"line-height: 1.45em; background-color: initial;\"&gt;.. We just had to do something.&lt;/span&gt;&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"erik@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/eandersson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://instagram.com/erianderssson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://se.linkedin.com/in/erikandersson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Erik Andersson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+46735000131"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1418376224/bhtsaivvnjj1zk4kpgjn.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CEO"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"erikandersson2"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/819/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/819/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/819/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/819/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1801"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/1801"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;\r\n\t          Coming from no computer science background, I'm a passionate web developer with lots of love for the frameworks and tools I use.&lt;/p&gt;&lt;p&gt;\r\n\t         I love building modern applications for businesses, using the web to solve problems – and improving the way people work. And I have done so in the last 10 years, previously building Mynewsdesk from a small startup, to the international company today.&lt;/p&gt;&lt;p&gt;\r\n\t          My daily work include Ruby on Rails, Ember.js, Sass, redis, PostgreSQL, Elasticsearch, and managing our cloud hosting. All the stuff you need to build modern web applications!&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"richard@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/richard.johansson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://instagram.com/richardjohansso"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://se.linkedin.com/in/richardjohansson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Richard Erik Johansson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1472197022/ctiiyiwfpif7nhdjuf6l.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://Twitter.com/richardjohansso"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"richarderikjohansson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/1801/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/1801/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/1801/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/1801/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2199"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/2199"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;\r\n\t   I love working at Teamtailor because I think we're trying to solve a &lt;strong&gt;real&lt;/strong&gt; and &lt;strong&gt;important&lt;/strong&gt; problem. The way HR and recruiting works needs to change. We help companies to become better at market themselves as an attractive workplace, and to engage their current employees in the recruiting process.&lt;/p&gt;&lt;p&gt;\r\n\t   I've been building products/services on the web since 1999. A lot of strange stuff &lt;span style=\"line-height: 1.45em; background-color: initial;\"&gt;and the occasional success.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;\r\n\t &lt;span style=\"line-height: 1.45em; background-color: initial;\"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;\r\n\t &lt;span style=\"line-height: 1.45em; background-color: initial;\"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;\r\n\t &lt;span style=\"line-height: 1.45em; background-color: initial;\"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p&gt;\r\n\t &lt;span style=\"line-height: 1.45em; background-color: initial;\"&gt;&lt;/span&gt;&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"david@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.facebook.com/david.wennergren"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://se.linkedin.com/in/davidwennergren/"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"David Richard Wennergren"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"070-7164007"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1418376331/e5xiuhwkkyy1lkpoc5vv.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"recruiter"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://twitter.com/davidwennergren"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"david"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/2199/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/2199/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/2199/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/2199/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3362"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3362"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;\r\n\t&lt;img src=\"http://res.cloudinary.com/teamtailor/image/upload/t_span8/iveduppqqyywm12wmn3z.jpg\"&gt;&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kim@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/kimchipchop"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://instagram.com/kimchipchop"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://se.linkedin.com/pub/kim-alm/4b/4a7/2b1/"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kim Alm"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0709-851211"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1418376420/boneodn9lviq2h94suqo.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sales"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://twitter.com/kimchipchop"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kimalm1"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3362/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3362/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3362/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3362/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3374"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3374"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kim+spencer@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spencer"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1418376422/zrhu2bqfcvuoocfnmzfs.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no_access"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Top Dog a.k.a Mr Grumpy"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spencer"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3374/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3374/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3374/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3374/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3595"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3595"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;\r\n\t &lt;span style=\"line-height: 1.45em; background-color: initial;\"&gt;I’m an artisan and a digital creative, in other words &amp;mdash; I’m a web designer. I push pixels for a clear and beautiful web, making your screen look so delicious you may want to lick it. However, good web design is not just about the pretty things. Web sites have users that interacts with them &amp;mdash; that’s why I like to realise my design solutions as well, making sure it works just the way it is meant to.&lt;/span&gt;&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joakim@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://instagram.com/joakimnordlund"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.linkedin.com/pub/joakim-nordlund/31/ba4/b32"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Joakim Nordlund"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://joakimnordlund.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0701099987"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1430314931/lou1lraaahi9g6cueajf.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Web Designer"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://twitter.com/northgrove"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joakimnordlund"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3595/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3595/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3595/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/3595/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4468"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;test&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jonas@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/himynameisjonas"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://instagram.com/himynameisjonas"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.linkedin.com/in/himynameisjonas"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jonas Brusman"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://himynameisjonas.net"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1423832344/hbwennnqa7uo7kubkzry.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://twitter.com/himynameisjonas"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jonas5"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4660"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4660"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calle@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://se.linkedin.com/in/callehenningsson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calle Henningsson"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"070-8765959"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1442566435/wjnnrxolc1zd0pqrksbv.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no_access"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sales"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"callehenningsson1"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4660/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4660/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4660/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4660/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5334"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/5334"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"suzan@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://se.linkedin.com/in/suzandil"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Suzan Dil"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+46 70-547 06 44"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1438766374/mynvx9ypejez1xafegn6.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no_access"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marketing"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"suzandil"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/5334/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/5334/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/5334/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/5334/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9067"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/9067"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"christoffer@teamtailor.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Christoffer Ankarstrand"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1438700213/tbmdlece0wleejpuw410.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sales"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"christofferankarstrand2"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/9067/relationships/department"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/9067/department"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/9067/relationships/location"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/9067/location"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"record-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"page-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users?page%5Bnumber%5D=2&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users?page%5Bnumber%5D=3&amp;page%5Bsize%5D=10"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+          <h2 id="show-an-user">Show an User</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/users/4468</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/users/4468"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+</code></pre>
+
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4468"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;test&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jonas@teamtailor.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"facebook-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/himynameisjonas"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"google-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"hide-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"instagram-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://instagram.com/himynameisjonas"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"linkedin-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.linkedin.com/in/himynameisjonas"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jonas Brusman"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"other-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://himynameisjonas.net"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1423832344/hbwennnqa7uo7kubkzry.jpg"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"twitter-profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://twitter.com/himynameisjonas"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jonas5"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"visible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468/relationships/department"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468/department"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468/relationships/location"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/users/4468/location"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
 
       </div>
       <div class="dark-box">
