@@ -913,6 +913,95 @@ X-Rate-Limit-Reset
 
           <h1 id="roles">Roles</h1>
 
+<h2 id="role-object">Role Object</h2>
+
+<h3 id="attributes">Attributes</h3>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>Street address</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td>City name</td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td>Full name of country, e.g <code class="prettyprint">Sweden</code></td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>Contact e-mail address</td>
+</tr>
+<tr>
+<td>headquarters</td>
+<td>boolean</td>
+<td>True if it&rsquo;s the company&rsquo;s main location. Can only be one headquarter per company</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>string</td>
+<td>Decimal latitude of location, e.g <code class="prettyprint">59.33855810000001</code></td>
+</tr>
+<tr>
+<td>long</td>
+<td>string</td>
+<td>Decimal longitude of location, e.g <code class="prettyprint">18.0557594</code></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Specify name if City isn&rsquo;t enough information</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>Contact phone number</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>string</td>
+<td>Postal code</td>
+</tr>
+</tbody></table>
+
+<h3 id="relations">Relations</h3>
+
+<table><thead>
+<tr>
+<th>Relation</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user</td>
+<td>hej</td>
+</tr>
+<tr>
+<td>department</td>
+<td></td>
+</tr>
+<tr>
+<td>location</td>
+<td></td>
+</tr>
+<tr>
+<td>role</td>
+<td></td>
+</tr>
+</tbody></table>
+
           <h2 id="list-roles">List roles</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/locations</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
