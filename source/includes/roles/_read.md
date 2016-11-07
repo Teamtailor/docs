@@ -1,13 +1,13 @@
 ## Show a Role
 
 ```http
-GET http://api.teamtailor.dev/v1/locations/667 HTTP/1.1
-Authorization: Token token=qPDgabPWxJMDfI7kkvjFjdWSg5xITdxZm36C7qC8
+GET https://api.teamtailor.com/v1/roles/8 HTTP/1.1
+Authorization: Token token=abc123abc123
 ```
 
 ```shell
-curl -X "GET" "http://api.teamtailor.dev/v1/locations/667" \
-     -H "Authorization: Token token=qPDgabPWxJMDfI7kkvjFjdWSg5xITdxZm36C7qC8"
+curl -X "GET" "https://api.teamtailor.com/v1/roles/8" \
+     -H "Authorization: Token token=abc123abc123"
 ```
 
 > Example response
@@ -15,22 +15,21 @@ curl -X "GET" "http://api.teamtailor.dev/v1/locations/667" \
 ```json
 {
   "data": {
-    "id": "667",
-    "type": "locations",
+    "id": "8",
+    "type": "roles",
     "links": {
-      "self": "http://api.teamtailor.dev/v1/locations/667"
+      "self": "http://api.teamtailor.dev/v1/roles/8"
     },
     "attributes": {
-      "address": "Tegnérgatan 34",
-      "city": "Stockholm",
-      "country": "Sweden",
-      "email": "support@teamtailor.com",
-      "headquarters": true,
-      "lat": "59.33855810000001",
-      "long": "18.0557594",
-      "name": "",
-      "phone": "",
-      "zip": "113 59"
+      "name": "Designer"
+    },
+    "relationships": {
+      "department": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/roles/8/relationships/department",
+          "related": "http://api.teamtailor.dev/v1/roles/8/department"
+        }
+      }
     }
   }
 }
