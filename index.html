@@ -149,14 +149,14 @@ You must replace <code>abc123abc123</code> with your own API key.
 <blockquote>
 <p>Headers</p>
 </blockquote>
-<pre class="highlight shell"><code>X-Rate-Limit-Limit
-<span class="c"># The number of allowed requests in the current period</span>
+<pre class="highlight plaintext"><code>X-Rate-Limit-Limit
+# The number of allowed requests in the current period
 
 X-Rate-Limit-Remaining
-<span class="c"># The number of remaining requests in the current period</span>
+# The number of remaining requests in the current period
 
 X-Rate-Limit-Reset
-<span class="c"># The number of seconds left in the current period</span>
+# The number of seconds left in the current period
 </code></pre>
 
 <p>The headers are already present in every response but contains static values. Please use common sense when making requests to the API until it returns real rate limit values.</p>
