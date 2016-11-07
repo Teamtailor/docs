@@ -22,6 +22,9 @@ includes_methods:
   - departments/index
   - departments/list
   - departments/read
+  - roles/index
+  - roles/list
+  - roles/read
 
 includes:
   # - errors
