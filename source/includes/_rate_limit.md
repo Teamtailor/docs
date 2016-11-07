@@ -2,7 +2,7 @@
 
 > Headers
 
-```shell
+```
 X-Rate-Limit-Limit
 # The number of allowed requests in the current period
 
