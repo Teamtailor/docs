@@ -2,8 +2,8 @@
 title: Teamtailor API v1 Draft
 
 language_tabs:
-  - http
-  - shell
+  - http: HTTP
+  - shell: cURL
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
