@@ -1,0 +1,439 @@
+## List users
+
+```http
+GET https://api.teamtailor.com/v1/users HTTP/1.1
+Authorization: Token token=abc123abc123
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/users" \
+     -H "Authorization: Token token=abc123abc123"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "819",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/819"
+      },
+      "attributes": {
+        "description": "<p>\r\n\t I have been doing IT-related business/product development for the last 10 years. Working with great companies such as Skype, Mynewsdesk and now Teamtailor.</p><p>\r\n\t<span style=\"line-height: 1.45em; background-color: initial;\">At Teamtailor we do not have any formal HR-experience, we just love the web. Through our own recruitment activities the last couple of years we have come to realize that there is much that can be done and improved.</span><span style=\"line-height: 1.45em; background-color: initial;\">.. We just had to do something.</span></p>",
+        "email": "erik@teamtailor.com",
+        "facebook-profile": "https://www.facebook.com/eandersson",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "http://instagram.com/erianderssson",
+        "linkedin-profile": "http://se.linkedin.com/in/erikandersson",
+        "name": "Erik Andersson",
+        "other-profile": "",
+        "phone": "+46735000131",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1418376224/bhtsaivvnjj1zk4kpgjn.jpg"
+        },
+        "role": "admin",
+        "title": "CEO",
+        "twitter-profile": "",
+        "username": "erikandersson2",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/819/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/819/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/819/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/819/location"
+          }
+        }
+      }
+    },
+    {
+      "id": "1801",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/1801"
+      },
+      "attributes": {
+        "description": "<p>\r\n\t          Coming from no computer science background, I'm a passionate web developer with lots of love for the frameworks and tools I use.</p><p>\r\n\t         I love building modern applications for businesses, using the web to solve problems – and improving the way people work. And I have done so in the last 10 years, previously building Mynewsdesk from a small startup, to the international company today.</p><p>\r\n\t          My daily work include Ruby on Rails, Ember.js, Sass, redis, PostgreSQL, Elasticsearch, and managing our cloud hosting. All the stuff you need to build modern web applications!</p>",
+        "email": "richard@teamtailor.com",
+        "facebook-profile": "https://www.facebook.com/richard.johansson",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "http://instagram.com/richardjohansso",
+        "linkedin-profile": "http://se.linkedin.com/in/richardjohansson",
+        "name": "Richard Erik Johansson",
+        "other-profile": "",
+        "phone": "",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1472197022/ctiiyiwfpif7nhdjuf6l.jpg"
+        },
+        "role": "user",
+        "title": "Developer",
+        "twitter-profile": "http://Twitter.com/richardjohansso",
+        "username": "richarderikjohansson",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/1801/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/1801/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/1801/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/1801/location"
+          }
+        }
+      }
+    },
+    {
+      "id": "2199",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/2199"
+      },
+      "attributes": {
+        "description": "<p>\r\n\t   I love working at Teamtailor because I think we're trying to solve a <strong>real</strong> and <strong>important</strong> problem. The way HR and recruiting works needs to change. We help companies to become better at market themselves as an attractive workplace, and to engage their current employees in the recruiting process.</p><p>\r\n\t   I've been building products/services on the web since 1999. A lot of strange stuff <span style=\"line-height: 1.45em; background-color: initial;\">and the occasional success.</span></p><p>\r\n\t <span style=\"line-height: 1.45em; background-color: initial;\"></span></p><p>\r\n\t <span style=\"line-height: 1.45em; background-color: initial;\"></span></p><p>\r\n\t <span style=\"line-height: 1.45em; background-color: initial;\"> </span></p><p>\r\n\t <span style=\"line-height: 1.45em; background-color: initial;\"></span></p>",
+        "email": "david@teamtailor.com",
+        "facebook-profile": "http://www.facebook.com/david.wennergren",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "",
+        "linkedin-profile": "http://se.linkedin.com/in/davidwennergren/",
+        "name": "David Richard Wennergren",
+        "other-profile": "",
+        "phone": "070-7164007",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1418376331/e5xiuhwkkyy1lkpoc5vv.jpg"
+        },
+        "role": "recruiter",
+        "title": "Developer",
+        "twitter-profile": "http://twitter.com/davidwennergren",
+        "username": "david",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/2199/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/2199/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/2199/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/2199/location"
+          }
+        }
+      }
+    },
+    {
+      "id": "3362",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/3362"
+      },
+      "attributes": {
+        "description": "<p>\r\n\t<img src=\"http://res.cloudinary.com/teamtailor/image/upload/t_span8/iveduppqqyywm12wmn3z.jpg\"></p>",
+        "email": "kim@teamtailor.com",
+        "facebook-profile": "https://www.facebook.com/kimchipchop",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "http://instagram.com/kimchipchop",
+        "linkedin-profile": "http://se.linkedin.com/pub/kim-alm/4b/4a7/2b1/",
+        "name": "Kim Alm",
+        "other-profile": "",
+        "phone": "0709-851211",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1418376420/boneodn9lviq2h94suqo.jpg"
+        },
+        "role": "user",
+        "title": "Sales",
+        "twitter-profile": "https://twitter.com/kimchipchop",
+        "username": "kimalm1",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/3362/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/3362/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/3362/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/3362/location"
+          }
+        }
+      }
+    },
+    {
+      "id": "3374",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/3374"
+      },
+      "attributes": {
+        "description": "",
+        "email": "kim+spencer@teamtailor.com",
+        "facebook-profile": "",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "",
+        "linkedin-profile": "",
+        "name": "Spencer",
+        "other-profile": "",
+        "phone": "",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1418376422/zrhu2bqfcvuoocfnmzfs.jpg"
+        },
+        "role": "no_access",
+        "title": "Top Dog a.k.a Mr Grumpy",
+        "twitter-profile": "",
+        "username": "spencer",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/3374/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/3374/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/3374/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/3374/location"
+          }
+        }
+      }
+    },
+    {
+      "id": "3595",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/3595"
+      },
+      "attributes": {
+        "description": "<p>\r\n\t <span style=\"line-height: 1.45em; background-color: initial;\">I’m an artisan and a digital creative, in other words &mdash; I’m a web designer. I push pixels for a clear and beautiful web, making your screen look so delicious you may want to lick it. However, good web design is not just about the pretty things. Web sites have users that interacts with them &mdash; that’s why I like to realise my design solutions as well, making sure it works just the way it is meant to.</span></p>",
+        "email": "joakim@teamtailor.com",
+        "facebook-profile": "",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "http://instagram.com/joakimnordlund",
+        "linkedin-profile": "http://www.linkedin.com/pub/joakim-nordlund/31/ba4/b32",
+        "name": "Joakim Nordlund",
+        "other-profile": "http://joakimnordlund.com",
+        "phone": "0701099987",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1430314931/lou1lraaahi9g6cueajf.jpg"
+        },
+        "role": "admin",
+        "title": "Web Designer",
+        "twitter-profile": "https://twitter.com/northgrove",
+        "username": "joakimnordlund",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/3595/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/3595/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/3595/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/3595/location"
+          }
+        }
+      }
+    },
+    {
+      "id": "4468",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/4468"
+      },
+      "attributes": {
+        "description": "<p>test</p>",
+        "email": "jonas@teamtailor.com",
+        "facebook-profile": "https://www.facebook.com/himynameisjonas",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "http://instagram.com/himynameisjonas",
+        "linkedin-profile": "https://www.linkedin.com/in/himynameisjonas",
+        "name": "Jonas Brusman",
+        "other-profile": "http://himynameisjonas.net",
+        "phone": "",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1423832344/hbwennnqa7uo7kubkzry.jpg"
+        },
+        "role": "admin",
+        "title": "Developer",
+        "twitter-profile": "https://twitter.com/himynameisjonas",
+        "username": "jonas5",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/4468/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/4468/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/4468/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/4468/location"
+          }
+        }
+      }
+    },
+    {
+      "id": "4660",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/4660"
+      },
+      "attributes": {
+        "description": "",
+        "email": "calle@teamtailor.com",
+        "facebook-profile": "",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "",
+        "linkedin-profile": "http://se.linkedin.com/in/callehenningsson",
+        "name": "Calle Henningsson",
+        "other-profile": "",
+        "phone": "070-8765959",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1442566435/wjnnrxolc1zd0pqrksbv.jpg"
+        },
+        "role": "no_access",
+        "title": "Sales",
+        "twitter-profile": "",
+        "username": "callehenningsson1",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/4660/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/4660/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/4660/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/4660/location"
+          }
+        }
+      }
+    },
+    {
+      "id": "5334",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/5334"
+      },
+      "attributes": {
+        "description": "",
+        "email": "suzan@teamtailor.com",
+        "facebook-profile": "",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "",
+        "linkedin-profile": "http://se.linkedin.com/in/suzandil",
+        "name": "Suzan Dil",
+        "other-profile": "",
+        "phone": "+46 70-547 06 44",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1438766374/mynvx9ypejez1xafegn6.jpg"
+        },
+        "role": "no_access",
+        "title": "Marketing",
+        "twitter-profile": "",
+        "username": "suzandil",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/5334/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/5334/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/5334/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/5334/location"
+          }
+        }
+      }
+    },
+    {
+      "id": "9067",
+      "type": "users",
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/users/9067"
+      },
+      "attributes": {
+        "description": "",
+        "email": "christoffer@teamtailor.com",
+        "facebook-profile": "",
+        "google-profile": "",
+        "hide-email": false,
+        "instagram-profile": "",
+        "linkedin-profile": "",
+        "name": "Christoffer Ankarstrand",
+        "other-profile": "",
+        "phone": "",
+        "picture": {
+          "standard": "https://res.cloudinary.com/teamtailor-development/image/upload/c_fill,dpr_2.0,f_auto,g_faces:center,h_160,q_80,w_160/v1438700213/tbmdlece0wleejpuw410.jpg"
+        },
+        "role": "admin",
+        "title": "Sales",
+        "twitter-profile": "",
+        "username": "christofferankarstrand2",
+        "visible": true
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/9067/relationships/department",
+            "related": "http://api.teamtailor.dev/v1/users/9067/department"
+          }
+        },
+        "location": {
+          "links": {
+            "self": "http://api.teamtailor.dev/v1/users/9067/relationships/location",
+            "related": "http://api.teamtailor.dev/v1/users/9067/location"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "record-count": 21,
+    "page-count": 3
+  },
+  "links": {
+    "first": "http://api.teamtailor.dev/v1/users?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "next": "http://api.teamtailor.dev/v1/users?page%5Bnumber%5D=2&page%5Bsize%5D=10",
+    "last": "http://api.teamtailor.dev/v1/users?page%5Bnumber%5D=3&page%5Bsize%5D=10"
+  }
+}
+```

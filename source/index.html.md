@@ -28,6 +28,9 @@ includes_methods:
   - locations/index
   - locations/list
   - locations/read
+  - users/index
+  - users/list
+  - users/read
 
 includes:
   # - errors
