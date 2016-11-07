@@ -19,6 +19,9 @@ includes_methods:
   - jobs/read
   - jobs/create
   - jobs/update
+  - departments/index
+  - departments/list
+  - departments/read
 
 includes:
   # - errors
