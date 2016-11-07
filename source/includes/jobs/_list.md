@@ -1,7 +1,13 @@
 ## List Jobs
 
+```http
+GET http://api.teamtailor.dev/v1/jobs HTTP/1.1
+Authorization: Token token=abc123abc123
+```
+
 ```shell
-GET http://api.teamtailor.dev/v1/jobs
+curl -X "GET" "http://api.teamtailor.dev/v1/jobs/7199" \
+     -H "Authorization: Token token=abc123abc123"
 ```
 
 > The above command returns JSON structured like this:

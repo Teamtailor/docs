@@ -1,17 +1,26 @@
 ## Update Job
 
-```shell
-PATCH http://api.teamtailor.dev/v1/jobs/7199
+```http
+PATCH https://api.teamtailor.com/v1/jobs/7199 HTTP/1.1
+Authorization: Token token=abc123abc123
 
 {
   "data": {
     "id": "7199",
     "attributes": {
-      "title": "My new job title"
+      "title": "New Title",
+      "status": "unlisted"
     },
     "type": "jobs"
   }
 }
+```
+
+```shell
+curl -X "PATCH" "https://api.teamtailor.com/v1/jobs/7199" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "Content-Type: application/vnd.api+json" \
+     -d "{\"data\":{\"id\":\"7199\",\"attributes\":{\"title\":\"New Title\",\"status\":\"unlisted\"},\"type\":\"jobs\"}}"
 ```
 
 > Example response

@@ -1,7 +1,13 @@
 ## Show a Job
 
+```http
+GET https://api.teamtailor.com/v1/jobs/{id} HTTP/1.1
+Authorization: Token token=abc123abc123
+```
+
 ```shell
-GET http://api.teamtailor.dev/v1/jobs/{id}
+curl -X "GET" "https://api.teamtailor.com/v1/jobs/{id}" \
+     -H "Authorization: Token token=abc123abc123"
 ```
 
 > Example response
@@ -9,7 +15,7 @@ GET http://api.teamtailor.dev/v1/jobs/{id}
 ```json
 {
   "data": {
-    "id": "7263",
+    "id": "7199",
     "type": "jobs",
     "links": {
       "careersite-job-url": "http://career.teamtailor.dev/jobs/7263-yay-horray-3",

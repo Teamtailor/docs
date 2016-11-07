@@ -2,6 +2,7 @@
 title: Teamtailor API v1 Draft
 
 language_tabs:
+  - http
   - shell
 
 toc_footers:
