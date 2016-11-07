@@ -34,4 +34,4 @@ curl -X "GET" "http://api.teamtailor.dev/v1/locations/667" \
     }
   }
 }
-``
+```
