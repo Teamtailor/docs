@@ -12,6 +12,7 @@ toc_footers:
 includes_topics:
   - auth
   - rate_limit
+  - pagination
 
 includes_methods:
   - jobs/index
