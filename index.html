@@ -173,6 +173,57 @@ Currently we only have the <code>open</code> scope. More scopes and endpoints mi
 
 <p>Can do all above and update existing jobs.</p>
 
+          <h1 id="pagination">Pagination</h1>
+
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"record-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"page-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs?filter%5Bdepartment%5D=337&amp;page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs?filter%5Bdepartment%5D=337&amp;page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>All top-level API resources have support for bulk fetches via &ldquo;list&rdquo; API methods.</p>
+
+<p>The <strong>links key</strong> in the response contains the following links:</p>
+
+<ul>
+<li>first: the first page of data</li>
+<li>last: the last page of data</li>
+<li>prev: the previous page of data</li>
+<li>next: the next page of data</li>
+</ul>
+
+<p>The <strong>meta key</strong> contains:</p>
+
+<ul>
+<li>record-count: The total number of items in the collection,</li>
+<li>page-count: The number of pages</li>
+</ul>
+
+          <h1 id="versioning">Versioning</h1>
+
+<blockquote>
+<p>Headers</p>
+</blockquote>
+<pre class="highlight plaintext"><code>X-Api-Version: 2016-10-01
+# The date/version of the API YYYY-MM-DD
+</code></pre>
+
+<p>When we make backwards-incompatible changes to the API, we release new, dated versions.</p>
+
+<p>To set the API version on a specific request, send a Teamtailor-Version header.</p>
+
+<p>Check the API changelog to see current and old versions</p>
+
           <h1 id="rate-limit">Rate Limit</h1>
 
 <blockquote>
