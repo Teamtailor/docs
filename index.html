@@ -248,9 +248,61 @@ X-Rate-Limit-Reset
         <h1 id="resources">Resources</h1>
           <h1 id="jobs">Jobs</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>List, update and create jobs.</p>
 
 <h2 id="job-object">Job Object</h2>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7199"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jobs"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"careersite-job-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://career.teamtailor.dev/jobs/7199-new-title"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"careersite-job-apply-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://career.teamtailor.dev/jobs/7199-new-title/applications/new"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7199"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"ask-for-cover-letter"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"ask-for-resume"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;lopl&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"end-date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-11-25T00:00:00.000+01:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"external-application-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"human-status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"scheduled"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"pinned"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"start-date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-11-17T00:00:00.000+01:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"template"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Title"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"department"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7199/relationships/department"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7199/department"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7199/relationships/role"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7199/role"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7199/relationships/location"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7199/location"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7199/relationships/user"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.teamtailor.dev/v1/jobs/7199/user"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <h3 id="attributes">Attributes</h3>
 
@@ -264,62 +316,62 @@ X-Rate-Limit-Reset
 <tr>
 <td>ask-for-cover-letter</td>
 <td>boolean</td>
-<td>true</td>
+<td>When <code class="prettyprint">false</code> the candidate won&rsquo;t be asked for a cover letter</td>
 </tr>
 <tr>
 <td>ask-for-resume</td>
 <td>boolean</td>
-<td>true</td>
+<td>When <code class="prettyprint">false</code> the candidate won&rsquo;t be asked for a Resume</td>
 </tr>
 <tr>
 <td>body</td>
 <td>string</td>
-<td></td>
+<td>The ad text, simple html is supported</td>
 </tr>
 <tr>
 <td>end-date</td>
 <td>date</td>
-<td></td>
+<td>The Job ad&rsquo;s expire date</td>
 </tr>
 <tr>
 <td>external-application-url</td>
 <td>string</td>
-<td>&ldquo;&rdquo;</td>
+<td>URL to a external application form</td>
 </tr>
 <tr>
 <td>human-status</td>
 <td>string</td>
-<td>&ldquo;published&rdquo;</td>
+<td>Human readable status of the job, can be one of the following: <code class="prettyprint">archived</code>, <code class="prettyprint">unlisted</code>, <code class="prettyprint">expired</code>, <code class="prettyprint">draft</code>, <code class="prettyprint">published</code>, <code class="prettyprint">scheduled</code> or <code class="prettyprint">unsaved</code></td>
 </tr>
 <tr>
 <td>picture</td>
 <td>object</td>
-<td></td>
+<td>Job ad&rsquo;s picture</td>
 </tr>
 <tr>
 <td>pinned</td>
 <td>boolean</td>
-<td></td>
+<td><code class="prettyprint">true</code> if the job is pinned to the top on the career site</td>
 </tr>
 <tr>
 <td>start-date</td>
 <td>date</td>
-<td>null</td>
+<td>Scheduled date to publish the job ad</td>
 </tr>
 <tr>
 <td>status</td>
 <td>string</td>
-<td>&ldquo;open&rdquo;</td>
+<td>The job&rsquo;s status, can be one of the following: <code class="prettyprint">open</code>, <code class="prettyprint">draft</code>, <code class="prettyprint">archived</code>, <code class="prettyprint">unlisted</code> or <code class="prettyprint">temp</code></td>
 </tr>
 <tr>
 <td>template</td>
 <td>boolean</td>
-<td></td>
+<td><code class="prettyprint">true</code> if the job is a template</td>
 </tr>
 <tr>
 <td>title</td>
 <td>string</td>
-<td></td>
+<td>The title on the job ad</td>
 </tr>
 </tbody></table>
 
