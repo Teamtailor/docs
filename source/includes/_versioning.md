@@ -1,7 +1,5 @@
 # Versioning
 
-> Headers
-
 ```http
 GET https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337 HTTP/1.1
 X-Api-Version : 20161108
@@ -17,3 +15,7 @@ When we make backwards-incompatible changes to the API, we release new, dated ve
 To set the API version on a specific request, send a Teamtailor-Version header.
 
 See the [API changelog](#changelog) to see current and old versions
+
+<aside class="warning">
+The <code>X-Api-Version</code> header is required when making requests to the API
+</aside>
