@@ -16,4 +16,4 @@ When we make backwards-incompatible changes to the API, we release new, dated ve
 
 To set the API version on a specific request, send a Teamtailor-Version header.
 
-Check the API changelog to see current and old versions
+See the [API changelog](#changelog) to see current and old versions
