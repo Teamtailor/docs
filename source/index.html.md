@@ -15,6 +15,7 @@ includes_topics:
   - rate_limit
   - pagination
   - examples
+  - changelog
 
 includes_methods:
   - jobs/index
@@ -34,9 +35,6 @@ includes_methods:
   - users/index
   - users/list
   - users/read
-
-includes:
-  # - errors
 
 search: true
 ---
