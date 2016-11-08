@@ -1,5 +1,5 @@
 ---
-title: Teamtailor API v1 Draft
+title: Teamtailor API
 
 language_tabs:
   - http: HTTP
@@ -11,9 +11,9 @@ toc_footers:
 
 includes_topics:
   - auth
-  - pagination
   - versioning
   - rate_limit
+  - pagination
 
 includes_methods:
   - jobs/index
