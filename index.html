@@ -174,10 +174,6 @@ Currently we only have the <code>open</code> scope. More scopes and endpoints mi
 <p>Can do all above and update existing jobs.</p>
 
           <h1 id="versioning">Versioning</h1>
-
-<blockquote>
-<p>Headers</p>
-</blockquote>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">X-Api-Version</span> <span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
@@ -189,7 +185,11 @@ Currently we only have the <code>open</code> scope. More scopes and endpoints mi
 
 <p>To set the API version on a specific request, send a Teamtailor-Version header.</p>
 
-<p>Check the API changelog to see current and old versions</p>
+<p>See the <a href="#changelog">API changelog</a> to see current and old versions</p>
+
+<aside class="warning">
+The <code>X-Api-Version</code> header is required when making requests to the API
+</aside>
 
           <h1 id="rate-limit">Rate Limit</h1>
 
@@ -284,7 +284,7 @@ X-Rate-Limit-Reset
 <h3 id="2016-11-08">2016-11-08</h3>
 
 <ul>
-<li>hello world</li>
+<li>First public version</li>
 </ul>
 
 
