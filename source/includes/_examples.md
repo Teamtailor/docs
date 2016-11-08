@@ -1,0 +1,23 @@
+# Examples
+Here are some real world usage examples of the Teamtailor API.
+
+## List published jobs with their department and location
+
+Get a list of 15 published jobs and include their departments and locations in one request.
+
+```http
+GET https:://api.teamtailor.com/v1/jobs?include=department,location&page%5Bsize%5D=15 HTTP/1.1
+Authorization: Token token=abc123abc123
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/jobs?include=department,location&page%5Bsize%5D=15" \
+     -H "Authorization: Token token=abc123abc123" \
+```
+
+### Parameters used in this example
+
+Parameter  | Value               | Description
+---------- | ------------------- | -----------
+include    | department,location | Comma separated list of relations to include in the response.
+page[size] | 15                  | Page size, get 15 jobs in one request

@@ -14,6 +14,7 @@ includes_topics:
   - versioning
   - rate_limit
   - pagination
+  - examples
 
 includes_methods:
   - jobs/index
