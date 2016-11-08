@@ -10,7 +10,7 @@ curl -X "GET" "http://api.teamtailor.dev/v1/jobs/7199" \
      -H "Authorization: Token token=abc123abc123"
 ```
 
-> The above command returns JSON structured like this:
+> Example response
 
 ```json
 {
@@ -125,7 +125,7 @@ curl -X "GET" "http://api.teamtailor.dev/v1/jobs/7199" \
 }
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all jobs.
 
 Parameter      | Default   | Description
 -------------- | --------- | -----------
