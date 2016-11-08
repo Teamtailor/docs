@@ -79,7 +79,7 @@ title                    | string  | The title on the job ad
 
 Relation   | Description
 -----------|------------
-user       | hej
-department |
-location   |
-role       |
+user       | The recruiter
+department | The department where the job i shown under
+role       | The role of the job
+location   | Where the job is located
