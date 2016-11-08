@@ -417,6 +417,12 @@ html, body {
   table {
     margin-bottom: 1em;
     overflow: auto;
+
+    // make it full width
+    display: table;
+    width: calc(50% - 56px);
+    margin-left: 28px;
+
     th,td {
       text-align: left;
       vertical-align: top;
