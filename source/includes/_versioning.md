@@ -10,11 +10,11 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337" \
      -H "X-Api-Version: 20161108"
 ```
 
-When we make backwards-incompatible changes to the API, we release new, dated versions.
+When we make backwards-incompatible changes to the API, we release new, dated versions. The current version is **20161108**.
 
-To set the API version on a specific request, send a Teamtailor-Version header.
+To set the API version on a specific request, send a X-Api-Version header.
 
-See the [API changelog](#changelog) to see current and old versions
+See the [API changelog](#changelog) to see current and old versions.
 
 <aside class="warning">
 The <code>X-Api-Version</code> header is required when making requests to the API
