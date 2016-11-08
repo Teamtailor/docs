@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Teamtailor API v1 Draft</title>
+    <title>Teamtailor API</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -173,6 +173,41 @@ Currently we only have the <code>open</code> scope. More scopes and endpoints mi
 
 <p>Can do all above and update existing jobs.</p>
 
+          <h1 id="versioning">Versioning</h1>
+
+<blockquote>
+<p>Headers</p>
+</blockquote>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">X-Api-Version</span> <span class="p">:</span> <span class="s">20161108</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
+</code></pre>
+
+<p>When we make backwards-incompatible changes to the API, we release new, dated versions.</p>
+
+<p>To set the API version on a specific request, send a Teamtailor-Version header.</p>
+
+<p>Check the API changelog to see current and old versions</p>
+
+          <h1 id="rate-limit">Rate Limit</h1>
+
+<blockquote>
+<p>Headers</p>
+</blockquote>
+<pre class="highlight plaintext"><code>X-Rate-Limit-Limit
+# The number of allowed requests in the current period
+
+X-Rate-Limit-Remaining
+# The number of remaining requests in the current period
+
+X-Rate-Limit-Reset
+# The number of seconds left in the current period
+</code></pre>
+
+<p>The headers are already present in every response but contains static values. Please use common sense when making requests to the API until it returns real rate limit values.</p>
+
           <h1 id="pagination">Pagination</h1>
 
 <blockquote>
@@ -208,41 +243,6 @@ Currently we only have the <code>open</code> scope. More scopes and endpoints mi
 <li>record-count: The total number of items in the collection,</li>
 <li>page-count: The number of pages</li>
 </ul>
-
-          <h1 id="versioning">Versioning</h1>
-
-<blockquote>
-<p>Headers</p>
-</blockquote>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">X-Api-Version</span> <span class="p">:</span> <span class="s">20161108</span>
-</code></pre>
-<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337"</span> <span class="se">\</span>
-     -H <span class="s2">"X-Api-Version: 20161108"</span>
-</code></pre>
-
-<p>When we make backwards-incompatible changes to the API, we release new, dated versions.</p>
-
-<p>To set the API version on a specific request, send a Teamtailor-Version header.</p>
-
-<p>Check the API changelog to see current and old versions</p>
-
-          <h1 id="rate-limit">Rate Limit</h1>
-
-<blockquote>
-<p>Headers</p>
-</blockquote>
-<pre class="highlight plaintext"><code>X-Rate-Limit-Limit
-# The number of allowed requests in the current period
-
-X-Rate-Limit-Remaining
-# The number of remaining requests in the current period
-
-X-Rate-Limit-Reset
-# The number of seconds left in the current period
-</code></pre>
-
-<p>The headers are already present in every response but contains static values. Please use common sense when making requests to the API until it returns real rate limit values.</p>
 
 
         <h1 id="resources">Resources</h1>
