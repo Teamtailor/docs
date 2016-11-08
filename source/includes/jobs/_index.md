@@ -1,25 +1,79 @@
 # Jobs
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+List, update and create jobs.
 
 ## Job Object
+
+```json
+{
+  "data": {
+    "id": "7199",
+    "type": "jobs",
+    "links": {
+      "careersite-job-url": "http://career.teamtailor.dev/jobs/7199-new-title",
+      "careersite-job-apply-url": "https://career.teamtailor.dev/jobs/7199-new-title/applications/new",
+      "self": "http://api.teamtailor.dev/v1/jobs/7199"
+    },
+    "attributes": {
+      "ask-for-cover-letter": true,
+      "ask-for-resume": true,
+      "body": "<p>lopl</p>",
+      "end-date": "2016-11-25T00:00:00.000+01:00",
+      "external-application-url": "",
+      "human-status": "scheduled",
+      "picture": null,
+      "pinned": false,
+      "start-date": "2016-11-17T00:00:00.000+01:00",
+      "status": "open",
+      "template": false,
+      "title": "New Title"
+    },
+    "relationships": {
+      "department": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/jobs/7199/relationships/department",
+          "related": "http://api.teamtailor.dev/v1/jobs/7199/department"
+        }
+      },
+      "role": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/jobs/7199/relationships/role",
+          "related": "http://api.teamtailor.dev/v1/jobs/7199/role"
+        }
+      },
+      "location": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/jobs/7199/relationships/location",
+          "related": "http://api.teamtailor.dev/v1/jobs/7199/location"
+        }
+      },
+      "user": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/jobs/7199/relationships/user",
+          "related": "http://api.teamtailor.dev/v1/jobs/7199/user"
+        }
+      }
+    }
+  }
+}
+```
 
 ### Attributes
 
 Attribute                | Type    | Description
 -------------------------|---------|------------
-ask-for-cover-letter     | boolean | true
-ask-for-resume           | boolean | true
-body                     | string  |
-end-date                 | date    |
-external-application-url | string  | ""
-human-status             | string  | "published"
-picture                  | object  |
-pinned                   | boolean |
-start-date               | date    | null
-status                   | string  | "open"
-template                 | boolean |
-title                    | string  |
+ask-for-cover-letter     | boolean | When `false` the candidate won't be asked for a cover letter
+ask-for-resume           | boolean | When `false` the candidate won't be asked for a Resume
+body                     | string  | The ad text, simple html is supported
+end-date                 | date    | The Job ad's expire date
+external-application-url | string  | URL to a external application form
+human-status             | string  | Human readable status of the job, can be one of the following: `archived`, `unlisted`, `expired`, `draft`, `published`, `scheduled` or `unsaved`
+picture                  | object  | Job ad's picture
+pinned                   | boolean | `true` if the job is pinned to the top on the career site
+start-date               | date    | Scheduled date to publish the job ad
+status                   | string  | The job's status, can be one of the following: `open`, `draft`, `archived`, `unlisted` or `temp`
+template                 | boolean | `true` if the job is a template
+title                    | string  | The title on the job ad
 
 ### Relations
 
