@@ -244,6 +244,41 @@ X-Rate-Limit-Reset
 <li>page-count: The number of pages</li>
 </ul>
 
+          <h1 id="examples">Examples</h1>
+
+<p>Here are some real world usage examples of the Teamtailor API.</p>
+
+<h2 id="list-published-jobs-with-their-department-and-location">List published jobs with their department and location</h2>
+
+<p>Get a list of 15 published jobs and include their departments and locations in one request.</p>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https:://api.teamtailor.com/v1/jobs?include=department,location&amp;page%5Bsize%5D=15</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs?include=department,location&amp;page%5Bsize%5D=15"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+</code></pre>
+
+<h3 id="parameters-used-in-this-example">Parameters used in this example</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include</td>
+<td>department,location</td>
+<td>Comma separated list of relations to include in the response.</td>
+</tr>
+<tr>
+<td>page[size]</td>
+<td>15</td>
+<td>Page size, get 15 jobs in one request</td>
+</tr>
+</tbody></table>
+
 
         <h1 id="resources">Resources</h1>
           <h1 id="jobs">Jobs</h1>
