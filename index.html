@@ -181,11 +181,11 @@ Currently we only have the <code>open</code> scope. More scopes and endpoints mi
      -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
-<p>When we make backwards-incompatible changes to the API, we release new, dated versions.</p>
+<p>When we make backwards-incompatible changes to the API, we release new, dated versions. The current version is <strong>20161108</strong>.</p>
 
-<p>To set the API version on a specific request, send a Teamtailor-Version header.</p>
+<p>To set the API version on a specific request, send a X-Api-Version header.</p>
 
-<p>See the <a href="#changelog">API changelog</a> to see current and old versions</p>
+<p>See the <a href="#changelog">API changelog</a> to see current and old versions.</p>
 
 <aside class="warning">
 The <code>X-Api-Version</code> header is required when making requests to the API
@@ -253,9 +253,11 @@ X-Rate-Limit-Reset
 <p>Get a list of 15 published jobs and include their departments and locations in one request.</p>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https:://api.teamtailor.com/v1/jobs?include=department,location&amp;page%5Bsize%5D=15</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs?include=department,location&amp;page%5Bsize%5D=15"</span> <span class="se">\</span>
      -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <h3 id="parameters-used-in-this-example">Parameters used in this example</h3>
@@ -447,9 +449,12 @@ X-Rate-Limit-Reset
           <h2 id="list-jobs">List Jobs</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">http://api.teamtailor.dev/v1/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
+
 </code></pre>
-<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"http://api.teamtailor.dev/v1/jobs/7199"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"http://api.teamtailor.dev/v1/jobs"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
@@ -591,9 +596,11 @@ X-Rate-Limit-Reset
           <h2 id="show-a-job">Show a Job</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/jobs/{id}</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs/{id}"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
@@ -669,6 +676,7 @@ X-Rate-Limit-Reset
           <h2 id="create-job">Create Job</h2>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">https://api.teamtailor.com/v1/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 
 {
   "data": {
@@ -699,10 +707,10 @@ X-Rate-Limit-Reset
     }
   }
 }
-
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"POST"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs"</span> <span class="se">\</span>
      -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
      -H <span class="s2">"Content-Type: application/vnd.api+json"</span> <span class="se">\</span>
      -d <span class="s2">"{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">jobs</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">attributes</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">title</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">Account Manager</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">body</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">&lt;p&gt;hello&lt;/p&gt;</span><span class="se">\"</span><span class="s2">},</span><span class="se">\"</span><span class="s2">relationships</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">user</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">id</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">819</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">users</span><span class="se">\"</span><span class="s2">}},</span><span class="se">\"</span><span class="s2">department</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">id</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">337</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">departments</span><span class="se">\"</span><span class="s2">}},</span><span class="se">\"</span><span class="s2">location</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">id</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">667</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">locations</span><span class="se">\"</span><span class="s2">}}}}}"</span>
 </code></pre>
@@ -768,6 +776,7 @@ X-Rate-Limit-Reset
           <h2 id="update-job">Update Job</h2>
 <pre class="highlight http"><code><span class="nf">PATCH</span> <span class="nn">https://api.teamtailor.com/v1/jobs/7199</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 
 {
   "data": {
@@ -782,6 +791,7 @@ X-Rate-Limit-Reset
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"PATCH"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs/7199"</span> <span class="se">\</span>
      -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
      -H <span class="s2">"Content-Type: application/vnd.api+json"</span> <span class="se">\</span>
      -d <span class="s2">"{</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">id</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">7199</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">attributes</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">title</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">New Title</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">status</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">unlisted</span><span class="se">\"</span><span class="s2">},</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">jobs</span><span class="se">\"</span><span class="s2">}}"</span>
 </code></pre>
@@ -942,9 +952,11 @@ X-Rate-Limit-Reset
           <h2 id="list-departments">List departments</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/departments</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/departments"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
@@ -1051,9 +1063,11 @@ X-Rate-Limit-Reset
           <h2 id="show-a-department">Show a Department</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/departments/337</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/departments/337"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
@@ -1149,9 +1163,11 @@ X-Rate-Limit-Reset
           <h2 id="list-roles">List roles</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/roles</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/roles"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
@@ -1336,9 +1352,11 @@ X-Rate-Limit-Reset
           <h2 id="show-a-role">Show a Role</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/roles/8</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/roles/8"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
@@ -1456,9 +1474,11 @@ X-Rate-Limit-Reset
           <h2 id="list-locations">List locations</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/locations</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/locations"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
@@ -1538,9 +1558,11 @@ X-Rate-Limit-Reset
           <h2 id="show-a-location">Show a Location</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/locations/667</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/locations/667"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
@@ -1729,9 +1751,11 @@ X-Rate-Limit-Reset
           <h2 id="list-users">List users</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/users</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/users"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
@@ -2165,9 +2189,11 @@ X-Rate-Limit-Reset
           <h2 id="show-an-user">Show an User</h2>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/users/4468</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
 </code></pre>
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/users/4468"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Token token=abc123abc123"</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
 <blockquote>
