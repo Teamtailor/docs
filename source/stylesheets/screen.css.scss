@@ -630,10 +630,27 @@ html, body {
   %right-col {
     width: auto;
     float: none;
+    margin: 0;
+    border-radius: 0;
   }
 
   %right-col + %left-col {
     margin-top: $main-padding;
+  }
+
+  .content {
+    h2 {
+      margin-bottom: $main-padding;
+    }
+    table {
+      margin: 0;
+      width: auto;
+      display: block;
+    }
+    blockquote > p {
+      color: $main-text;
+      text-shadow: none;
+    }
   }
 }
 
