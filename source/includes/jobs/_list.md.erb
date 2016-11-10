@@ -1,14 +1,14 @@
 ## List Jobs
 
 ```http
-GET http://api.teamtailor.dev/v1/jobs HTTP/1.1
+GET https://api.teamtailor.com/v1/jobs HTTP/1.1
 Authorization: Token token=abc123abc123
 X-Api-Version: <%= config[:api_version] %>
 
 ```
 
 ```shell
-curl -X "GET" "http://api.teamtailor.dev/v1/jobs" \
+curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
 ```
@@ -22,9 +22,9 @@ curl -X "GET" "http://api.teamtailor.dev/v1/jobs" \
       "id": "7263",
       "type": "jobs",
       "links": {
-        "careersite-job-url": "http://career.teamtailor.dev/jobs/7263-yay-horray-3",
-        "careersite-job-apply-url": "https://career.teamtailor.dev/jobs/7263-yay-horray-3/applications/new",
-        "self": "http://api.teamtailor.dev/v1/jobs/7263"
+        "careersite-job-url": "http://career.teamtailor.com/jobs/7263-yay-horray-3",
+        "careersite-job-apply-url": "https://career.teamtailor.com/jobs/7263-yay-horray-3/applications/new",
+        "self": "https://api.teamtailor.com/v1/jobs/7263"
       },
       "attributes": {
         "ask-for-cover-letter": true,
@@ -43,26 +43,26 @@ curl -X "GET" "http://api.teamtailor.dev/v1/jobs" \
       "relationships": {
         "department": {
           "links": {
-            "self": "http://api.teamtailor.dev/v1/jobs/7263/relationships/department",
-            "related": "http://api.teamtailor.dev/v1/jobs/7263/department"
+            "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/department",
+            "related": "https://api.teamtailor.com/v1/jobs/7263/department"
           }
         },
         "role": {
           "links": {
-            "self": "http://api.teamtailor.dev/v1/jobs/7263/relationships/role",
-            "related": "http://api.teamtailor.dev/v1/jobs/7263/role"
+            "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/role",
+            "related": "https://api.teamtailor.com/v1/jobs/7263/role"
           }
         },
         "location": {
           "links": {
-            "self": "http://api.teamtailor.dev/v1/jobs/7263/relationships/location",
-            "related": "http://api.teamtailor.dev/v1/jobs/7263/location"
+            "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/location",
+            "related": "https://api.teamtailor.com/v1/jobs/7263/location"
           }
         },
         "user": {
           "links": {
-            "self": "http://api.teamtailor.dev/v1/jobs/7263/relationships/user",
-            "related": "http://api.teamtailor.dev/v1/jobs/7263/user"
+            "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/user",
+            "related": "https://api.teamtailor.com/v1/jobs/7263/user"
           }
         }
       }
@@ -71,9 +71,9 @@ curl -X "GET" "http://api.teamtailor.dev/v1/jobs" \
       "id": "7262",
       "type": "jobs",
       "links": {
-        "careersite-job-url": "http://career.teamtailor.dev/jobs/7262-yay-horray-3",
-        "careersite-job-apply-url": "https://career.teamtailor.dev/jobs/7262-yay-horray-3/applications/new",
-        "self": "http://api.teamtailor.dev/v1/jobs/7262"
+        "careersite-job-url": "http://career.teamtailor.com/jobs/7262-yay-horray-3",
+        "careersite-job-apply-url": "https://career.teamtailor.com/jobs/7262-yay-horray-3/applications/new",
+        "self": "https://api.teamtailor.com/v1/jobs/7262"
       },
       "attributes": {
         "ask-for-cover-letter": true,
@@ -92,26 +92,26 @@ curl -X "GET" "http://api.teamtailor.dev/v1/jobs" \
       "relationships": {
         "department": {
           "links": {
-            "self": "http://api.teamtailor.dev/v1/jobs/7262/relationships/department",
-            "related": "http://api.teamtailor.dev/v1/jobs/7262/department"
+            "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/department",
+            "related": "https://api.teamtailor.com/v1/jobs/7262/department"
           }
         },
         "role": {
           "links": {
-            "self": "http://api.teamtailor.dev/v1/jobs/7262/relationships/role",
-            "related": "http://api.teamtailor.dev/v1/jobs/7262/role"
+            "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/role",
+            "related": "https://api.teamtailor.com/v1/jobs/7262/role"
           }
         },
         "location": {
           "links": {
-            "self": "http://api.teamtailor.dev/v1/jobs/7262/relationships/location",
-            "related": "http://api.teamtailor.dev/v1/jobs/7262/location"
+            "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/location",
+            "related": "https://api.teamtailor.com/v1/jobs/7262/location"
           }
         },
         "user": {
           "links": {
-            "self": "http://api.teamtailor.dev/v1/jobs/7262/relationships/user",
-            "related": "http://api.teamtailor.dev/v1/jobs/7262/user"
+            "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/user",
+            "related": "https://api.teamtailor.com/v1/jobs/7262/user"
           }
         }
       }
@@ -122,8 +122,8 @@ curl -X "GET" "http://api.teamtailor.dev/v1/jobs" \
     "page-count": 1
   },
   "links": {
-    "first": "http://api.teamtailor.dev/v1/jobs?filter%5Bdepartment%5D=337&page%5Bnumber%5D=1&page%5Bsize%5D=10",
-    "last": "http://api.teamtailor.dev/v1/jobs?filter%5Bdepartment%5D=337&page%5Bnumber%5D=1&page%5Bsize%5D=10"
+    "first": "https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337&page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "last": "https://api.teamtailor.com/v1/jobs?filter%5Bdepartment%5D=337&page%5Bnumber%5D=1&page%5Bsize%5D=10"
   }
 }
 ```
