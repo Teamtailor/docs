@@ -128,9 +128,11 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
 }
 ```
 
-This endpoint retrieves all jobs.
+Use this endpoint to retrive lists of jobs.
+
+### Example parameters
 
 Parameter      | Default   | Description
 -------------- | --------- | -----------
-include        | null      | Comma separated list of relations to include in the response.
+include        | null      | Comma separated list of relations to include in the response. For example `department,role`.
 filter[status] | published | Filter by job status. Available statuses: `Published`.
