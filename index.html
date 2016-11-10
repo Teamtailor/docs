@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Teamtailor API</title>
+    <title>Teamtailor API Documentation</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -151,10 +151,10 @@ You must replace <code>abc123abc123</code> with your own API key.
 <p>You api keys might have different scope and permissions.</p>
 
 <aside class="notice">
-Currently we only have the <code>open</code> scope. More scopes and endpoints might come in the future.
+Currently we only have the <code>public</code> scope. More scopes and endpoints might come in the future.
 </aside>
 
-<h3 id="open">Open</h3>
+<h3 id="public">Public</h3>
 
 <p>Has access to public data, basically all data that is publicly visible on your career site.</p>
 
@@ -180,11 +180,13 @@ Currently we only have the <code>open</code> scope. More scopes and endpoints mi
 
 <p>When we make backwards-incompatible changes to the API, we release new, dated versions. The current version is <code class="prettyprint">20161108</code>.</p>
 
-<p>To set the API version on a specific request, send a X-Api-Version header. See the <a href="#changelog">API changelog</a> to see current and old versions.</p>
+<p>To set the API version on a specific request, send a <code class="prettyprint">X-Api-Version</code> header. See the <a href="#changelog">API changelog</a> to see current and old versions.</p>
 
 <aside class="warning">
 The <code>X-Api-Version</code> header is required when making requests to the API
 </aside>
+
+<p>Successful API requests will have the used API version in the response header <code class="prettyprint">X-Api-Version</code></p>
 
           <h1 id="rate-limit">Rate Limit</h1>
 
@@ -288,7 +290,7 @@ X-Rate-Limit-Reset
         <h1 id="resources">Resources</h1>
           <h1 id="jobs">Jobs</h1>
 
-<p>List, update and create jobs.</p>
+<p>This object represents the job ad and the job process in Teamtailor. You can retrive a list or just a single job, update and create new jobs.</p>
 
 <h2 id="job-object">Job Object</h2>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -567,7 +569,9 @@ X-Rate-Limit-Reset
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint retrieves all jobs.</p>
+<p>Use this endpoint to retrive lists of jobs.</p>
+
+<h3 id="example-parameters">Example parameters</h3>
 
 <table><thead>
 <tr>
@@ -579,7 +583,7 @@ X-Rate-Limit-Reset
 <tr>
 <td>include</td>
 <td>null</td>
-<td>Comma separated list of relations to include in the response.</td>
+<td>Comma separated list of relations to include in the response. For example <code class="prettyprint">department,role</code>.</td>
 </tr>
 <tr>
 <td>filter[status]</td>
@@ -654,7 +658,7 @@ X-Rate-Limit-Reset
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Show one job</p>
+<p>Retreive a specific job.</p>
 
 <table><thead>
 <tr>
@@ -766,7 +770,9 @@ X-Rate-Limit-Reset
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Create new jobs and stuff.</p>
+<p>Create a new job.</p>
+
+<p><code class="prettyprint">user</code>, <code class="prettyprint">title</code> and <code class="prettyprint">body</code> is required attributes to be able to save a new job.</p>
 
           <h2 id="update-job">Update Job</h2>
 <pre class="highlight http"><code><span class="nf">PATCH</span> <span class="nn">https://api.teamtailor.com/v1/jobs/7199</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
@@ -847,7 +853,7 @@ X-Rate-Limit-Reset
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Update job</p>
+<p>Change a job&rsquo;s attributes/relationships.</p>
 
           <h1 id="departments">Departments</h1>
 
