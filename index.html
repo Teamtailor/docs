@@ -280,6 +280,16 @@ X-Rate-Limit-Reset
 
           <h1 id="changelog">Changelog</h1>
 
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/jobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">X-Api-Version</span> <span class="p">:</span> <span class="s">20161108</span>
+</code></pre>
+<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
+</code></pre>
+
 <h3 id="2016-11-08">2016-11-08</h3>
 
 <ul>
@@ -772,7 +782,9 @@ X-Rate-Limit-Reset
 
 <p>Create a new job.</p>
 
-<p><code class="prettyprint">user</code>, <code class="prettyprint">title</code> and <code class="prettyprint">body</code> is required attributes to be able to save a new job.</p>
+<aside class="notice">
+  <code>user</code>, <code>title</code> and <code>body</code> is required attributes to be able to save a new job.
+</aside>
 
           <h2 id="update-job">Update Job</h2>
 <pre class="highlight http"><code><span class="nf">PATCH</span> <span class="nn">https://api.teamtailor.com/v1/jobs/7199</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
