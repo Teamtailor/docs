@@ -15,17 +15,13 @@ This object represents the job ad and the job process in Teamtailor. You can ret
       "self": "https://api.teamtailor.com/v1/jobs/7199"
     },
     "attributes": {
-      "ask-for-cover-letter": true,
-      "ask-for-resume": true,
       "body": "<p>lopl</p>",
       "end-date": "2016-11-25T00:00:00.000+01:00",
-      "external-application-url": "",
       "human-status": "scheduled",
       "picture": null,
       "pinned": false,
       "start-date": "2016-11-17T00:00:00.000+01:00",
       "status": "open",
-      "template": false,
       "title": "New Title"
     },
     "relationships": {
@@ -62,17 +58,13 @@ This object represents the job ad and the job process in Teamtailor. You can ret
 
 Attribute                | Type    | Description
 -------------------------|---------|------------
-ask-for-cover-letter     | boolean | When `false` the candidate won't be asked for a cover letter
-ask-for-resume           | boolean | When `false` the candidate won't be asked for a Resume
 body                     | string  | The ad text, simple html is supported
 end-date                 | date    | The Job ad's expire date
-external-application-url | string  | URL to a external application form
 human-status             | string  | Human readable status of the job, can be one of the following: `archived`, `unlisted`, `expired`, `draft`, `published`, `scheduled` or `unsaved`
 picture                  | object  | Job ad's picture
 pinned                   | boolean | `true` if the job is pinned to the top on the career site
 start-date               | date    | Scheduled date to publish the job ad
 status                   | string  | The job's status, can be one of the following: `open`, `draft`, `archived`, `unlisted` or `temp`
-template                 | boolean | `true` if the job is a template
 title                    | string  | The title on the job ad
 
 ### Relations
