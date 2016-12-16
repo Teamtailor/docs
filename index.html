@@ -283,6 +283,30 @@ X-Rate-Limit-Reset
 </tr>
 </tbody></table>
 
+<h2 id="embed-application-form">Embed application form</h2>
+
+<blockquote>
+<p>Example iframe</p>
+</blockquote>
+<pre class="highlight html"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://career.teamtailor.com/jobs/7199-new-title/applications/new?iframe=true"</span>
+<span class="na">style=</span><span class="s">"width: 100%; height: 800px"</span>
+<span class="na">frameborder=</span><span class="s">"0"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre>
+
+<blockquote>
+<p>Iframe helper script</p>
+</blockquote>
+<pre class="highlight html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://www.teamtailor.com/widget/apply.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+
+<p>To embed an application form on your website, create an <code class="prettyprint">&lt;iframe&gt;</code> and set
+the <code class="prettyprint">src</code> attribute to the job&rsquo;s <code class="prettyprint">careersite-job-apply-iframe-url</code> attribute.</p>
+
+<p>Remember to set <code class="prettyprint">frameborder=&quot;0&quot;</code> and <code class="prettyprint">style=&quot;width: 100%; height: 800px&quot;</code>.</p>
+
+<p>To enable features such as auto-resize of the iframe, insert the helper script
+to the right in the <code class="prettyprint">&lt;head&gt;</code> section of your page.</p>
+
           <h1 id="changelog">Changelog</h1>
 
 <blockquote>
@@ -315,6 +339,7 @@ X-Rate-Limit-Reset
     </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"careersite-job-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://career.teamtailor.com/jobs/7199-new-title"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"careersite-job-apply-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://career.teamtailor.com/jobs/7199-new-title/applications/new"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"careersite-job-apply-iframe-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://career.teamtailor.com/jobs/7199-new-title/applications/new?iframe=true"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.teamtailor.com/v1/jobs/7199"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -405,6 +430,28 @@ X-Rate-Limit-Reset
 <td>title</td>
 <td>string</td>
 <td>The title on the job ad</td>
+</tr>
+</tbody></table>
+
+<h3 id="links">Links</h3>
+
+<table><thead>
+<tr>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>careersite-job-url</td>
+<td>View job on the Career site</td>
+</tr>
+<tr>
+<td>careersite-job-apply-url</td>
+<td>URL to the application form</td>
+</tr>
+<tr>
+<td>careersite-job-apply-iframe-url</td>
+<td>URL for application iframe <code class="prettyprint">src</code></td>
 </tr>
 </tbody></table>
 
