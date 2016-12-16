@@ -12,6 +12,7 @@ This object represents the job ad and the job process in Teamtailor. You can ret
     "links": {
       "careersite-job-url": "http://career.teamtailor.com/jobs/7199-new-title",
       "careersite-job-apply-url": "https://career.teamtailor.com/jobs/7199-new-title/applications/new",
+      "careersite-job-apply-iframe-url": "https://career.teamtailor.com/jobs/7199-new-title/applications/new?iframe=true",
       "self": "https://api.teamtailor.com/v1/jobs/7199"
     },
     "attributes": {
@@ -66,6 +67,15 @@ pinned                   | boolean | `true` if the job is pinned to the top on t
 start-date               | date    | Scheduled date to publish the job ad
 status                   | string  | The job's status, can be one of the following: `open`, `draft`, `archived`, `unlisted` or `temp`
 title                    | string  | The title on the job ad
+
+### Links
+
+Link                             | Description
+---------------------------------|------------
+careersite-job-url               | View job on the Career site
+careersite-job-apply-url         | URL to the application form
+careersite-job-apply-iframe-url  | URL for application iframe `src`
+
 
 ### Relations
 

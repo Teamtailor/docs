@@ -23,3 +23,28 @@ Parameter  | Value               | Description
 ---------- | ------------------- | -----------
 include    | department,location | Comma separated list of relations to include in the response.
 page[size] | 15                  | Page size, get 15 jobs in one request
+
+
+## Embed application form
+
+> Example iframe
+
+```html
+<iframe src="https://career.teamtailor.com/jobs/7199-new-title/applications/new?iframe=true"
+style="width: 100%; height: 800px"
+frameborder="0"></iframe>
+```
+
+> Iframe helper script
+
+```html
+<script src="https://www.teamtailor.com/widget/apply.js"></script>
+```
+
+To embed an application form on your website, create an `<iframe>` and set
+the `src` attribute to the job's `careersite-job-apply-iframe-url` attribute.
+
+Remember to set `frameborder="0"` and `style="width: 100%; height: 800px"`.
+
+To enable features such as auto-resize of the iframe, insert the helper script
+to the right in the `<head>` section of your page.
