@@ -1,0 +1,87 @@
+## Show a Candidate
+
+```http
+GET https://api.teamtailor.com/v1/candidates/{id} HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/candidates/{id}" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "candidates",
+    "links": {
+      "self": "http://api.teamtailor.dev/v1/candidates/1337"
+    },
+    "attributes": {
+      "connected": true,
+      "created-at": "2017-01-18T21:04:56.178+01:00",
+      "email": "john.doe@example.com",
+      "facebook-id": null,
+      "first-name": "John",
+      "last-name": "Doe",
+      "linkedin-uid": null,
+      "linkedin-url": null,
+      "phone": "0700000000",
+      "picture": "https://image.jpg",
+      "pitch": "I like turtles",
+      "referring-site": "Facebook",
+      "referring-url": "http://facebook.com/page",
+      "resume": "https://s3.amazonaws.com/resume.pdf",
+      "sourced": false,
+      "unsubscribed": false,
+      "updated-at": "2017-01-18T21:20:16.646+01:00",
+      "facebook-profile": null,
+      "linkedin-profile": null,
+      "tags": []
+    },
+    "relationships": {
+      "department": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/department",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/department"
+        }
+      },
+      "role": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/role",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/role"
+        }
+      },
+      "job-applications": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/job-applications",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/job-applications"
+        }
+      },
+      "questions": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/questions",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/questions"
+        }
+      },
+      "answers": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/answers",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/answers"
+        }
+      }
+    }
+  }
+}
+```
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+Parameter | Description
+--------- | -----------
+id        | The candidate's id.
