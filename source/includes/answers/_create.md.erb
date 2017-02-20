@@ -1,0 +1,110 @@
+## Create Answer
+
+```http
+POST https://api.teamtailor.com/v1/answers HTTP/1.1
+X-Api-Version: <%= config[:api_version] %>
+Authorization: Token token=abc123abc123
+
+{
+  "data": {
+    "type": "answers",
+    "attributes": {
+      "choices": [
+        3,
+        4
+      ]
+    },
+    "relationships": {
+      "candidate": {
+        "data": {
+          "id": "376226",
+          "type": "candidates"
+        }
+      },
+      "question": {
+        "data": {
+          "id": "6039",
+          "type": "questions"
+        }
+      }
+    }
+  }
+}
+```
+
+```shell
+curl -X "POST" "https://api.teamtailor.com/v1/answers" \
+     -H "Content-Type: application/vnd.api+json" \
+     -H "X-Api-Version: <%= config[:api_version] %>" \
+     -H "Authorization: Token token=abc123abc123" \
+     -d $'{
+  "data": {
+    "type": "answers",
+    "attributes": {
+      "choices": [
+        3,
+        4
+      ]
+    },
+    "relationships": {
+      "candidate": {
+        "data": {
+          "id": "376226",
+          "type": "candidates"
+        }
+      },
+      "question": {
+        "data": {
+          "id": "6039",
+          "type": "questions"
+        }
+      }
+    }
+  }
+}'
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "answers",
+    "links": {
+      "self": "http://api.teamtailor.dev/v1/answers/1337"
+    },
+    "attributes": {
+      "boolean": null,
+      "choices": [
+        3,
+        4
+      ],
+      "updated-at": "2017-02-16T14:06:36.926+01:00",
+      "range": null,
+      "text": null,
+      "video-token": null
+    },
+    "relationships": {
+      "question": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/answers/1337/relationships/question",
+          "related": "http://api.teamtailor.dev/v1/answers/1337/question"
+        }
+      },
+      "candidate": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/answers/1337/relationships/candidate",
+          "related": "http://api.teamtailor.dev/v1/answers/1337/candidate"
+        }
+      }
+    }
+  }
+}
+```
+
+Create a new Answer.
+
+<aside class="notice">
+  The relation <code>question</code> and <code>candidate</code> is required to be able to create a new answer.
+</aside>
