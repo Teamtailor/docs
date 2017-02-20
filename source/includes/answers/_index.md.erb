@@ -1,0 +1,63 @@
+# Answers
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Asnwer Object
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "answers",
+    "links": {
+      "self": "http://api.teamtailor.dev/v1/answers/1337"
+    },
+    "attributes": {
+      "boolean": null,
+      "choices": [
+        3,
+        4
+      ],
+      "updated-at": "2017-02-16T14:06:36.926+01:00",
+      "range": null,
+      "text": null,
+      "video-token": null
+    },
+    "relationships": {
+      "question": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/answers/1337/relationships/question",
+          "related": "http://api.teamtailor.dev/v1/answers/1337/question"
+        }
+      },
+      "candidate": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/answers/1337/relationships/candidate",
+          "related": "http://api.teamtailor.dev/v1/answers/1337/candidate"
+        }
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute   | Type    | Description
+------------|---------|------------
+boolean     | boolean |
+choices     | array   |
+updated_at  | date    |
+range       | integer |
+text        | string  |
+video_token | string  |
+
+
+### Relations
+
+The <code>job-application</code> object always has a relation to a <code>candidate</code> and a <code>job</code>
+
+Relation  | Description
+----------|------------
+question  |
+candidate |
