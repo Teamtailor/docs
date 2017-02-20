@@ -1,0 +1,66 @@
+# Job Applications
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+## Job application Object
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "job-applications",
+    "links": {
+      "self": "http://api.teamtailor.dev/v1/job-applications/1337"
+    },
+    "attributes": {
+      "created-at": "2017-02-20T10:30:43.910+01:00",
+      "cover-letter": "Dear Sir/Madam…",
+      "updated-at": "2017-02-20T10:30:43.910+01:00",
+      "rejected-at": null,
+      "referring-url": null,
+      "referring-site": null,
+      "sourced": true
+    },
+    "relationships": {
+      "candidate": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/job-applications/1337/relationships/candidate",
+          "related": "http://api.teamtailor.dev/v1/job-applications/1337/candidate"
+        }
+      },
+      "job": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/job-applications/1337/relationships/job",
+          "related": "http://api.teamtailor.dev/v1/job-applications/1337/job"
+        }
+      },
+      "stage": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/job-applications/1337/relationships/stage",
+          "related": "http://api.teamtailor.dev/v1/job-applications/1337/stage"
+        }
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute      | Type    | Description
+---------------|---------|------------
+created_at     | date    |
+cover_letter   | string  |
+updated_at     | date    |
+rejected_at    | date    |
+referring_url  | string  |
+referring_site | string  |
+sourced        | boolean |
+
+### Relations
+
+Relation  | Description
+----------|------------
+candidate |
+job       |
+stage     |
