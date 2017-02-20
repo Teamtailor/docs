@@ -1,0 +1,95 @@
+## Update Candidate
+
+```http
+PATCH https://api.teamtailor.com/v1/candidates/1337 HTTP/1.1
+X-Api-Version: <%= config[:api_version] %>
+Authorization: Token token=abc123abc123
+
+{
+  "data": {
+    "id": "1337",
+    "attributes": {
+      "first-name": "Update"
+    },
+    "type": "candidates"
+  }
+}
+```
+
+```shell
+curl -X "PATCH" "http://api.teamtailor.dev/v1/candidates/1337" \
+    -H "Content-Type: application/vnd.api+json" \
+    -H "X-Api-Version: <%= config[:api_version] %>"
+    -H "Authorization: Token token=abc123abc123" \
+    -d $'{ "data": { "id": "1337", "attributes": { "first-name": "David" }, "type": "candidates" } }'
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "candidates",
+    "links": {
+      "self": "http://api.teamtailor.dev/v1/candidates/1337"
+    },
+    "attributes": {
+      "connected": true,
+      "created-at": "2017-01-18T21:04:56.178+01:00",
+      "email": "john.doe@example.com",
+      "facebook-id": null,
+      "first-name": "David",
+      "last-name": "Doe",
+      "linkedin-uid": null,
+      "linkedin-url": null,
+      "phone": "0700000000",
+      "picture": "https://image.jpg",
+      "pitch": "I like turtles",
+      "referring-site": "Facebook",
+      "referring-url": "http://facebook.com/page",
+      "resume": "https://s3.amazonaws.com/resume.pdf",
+      "sourced": false,
+      "unsubscribed": false,
+      "updated-at": "2017-01-18T21:20:16.646+01:00",
+      "facebook-profile": null,
+      "linkedin-profile": null,
+      "tags": []
+    },
+    "relationships": {
+      "department": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/department",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/department"
+        }
+      },
+      "role": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/role",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/role"
+        }
+      },
+      "job-applications": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/job-applications",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/job-applications"
+        }
+      },
+      "questions": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/questions",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/questions"
+        }
+      },
+      "answers": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/answers",
+          "related": "http://api.teamtailor.dev/v1/candidates/1337/answers"
+        }
+      }
+    }
+  }
+}
+```
+
+Change a candidates's attributes/relationships. Lorem ipsum dolor sit amet.
