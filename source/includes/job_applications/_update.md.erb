@@ -1,0 +1,79 @@
+## Update Job application
+
+```http
+PATCH https://api.teamtailor.com/v1/job-applications/1337 HTTP/1.1
+X-Api-Version: <%= config[:api_version] %>
+Authorization: Token token=abc123abc123
+
+{
+  "data": {
+    "id": "1337",
+    "attributes": {
+      "cover-letter": "To Whom It May Concern…"
+    },
+    "type": "job-applications"
+  }
+}
+```
+
+```shell
+## update
+curl -X "PATCH" "https://api.teamtailor.com/v1/job-applications/1337" \
+     -H "Content-Type: application/vnd.api+json" \
+     -H "X-Api-Version: <%= config[:api_version] %>" \
+     -H "Authorization: Token token=abc123abc123" \
+     -d $'{
+  "data": {
+    "id": "1337",
+    "attributes": {
+      "cover-letter": "To Whom It May Concern…"
+    },
+    "type": "job-applications"
+  }
+}'
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "job-applications",
+    "links": {
+      "self": "http://api.teamtailor.dev/v1/job-applications/1337"
+    },
+    "attributes": {
+      "created-at": "2017-02-20T10:30:43.910+01:00",
+      "cover-letter": "To Whom It May Concern…",
+      "updated-at": "2017-02-20T13:36:12.406+01:00",
+      "rejected-at": null,
+      "referring-url": null,
+      "referring-site": null,
+      "sourced": true
+    },
+    "relationships": {
+      "candidate": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/job-applications/1337/relationships/candidate",
+          "related": "http://api.teamtailor.dev/v1/job-applications/1337/candidate"
+        }
+      },
+      "job": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/job-applications/1337/relationships/job",
+          "related": "http://api.teamtailor.dev/v1/job-applications/1337/job"
+        }
+      },
+      "stage": {
+        "links": {
+          "self": "http://api.teamtailor.dev/v1/job-applications/1337/relationships/stage",
+          "related": "http://api.teamtailor.dev/v1/job-applications/1337/stage"
+        }
+      }
+    }
+  }
+}
+```
+
+Change a candidates's attributes/relationships. Lorem ipsum dolor sit amet.
