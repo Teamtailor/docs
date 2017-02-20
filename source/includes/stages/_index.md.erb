@@ -1,0 +1,52 @@
+# Stages
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Stage Object
+
+```json
+{
+  "id": "1337",
+  "type": "stages",
+  "links": {
+    "self": "http://api.teamtailor.dev/v1/stages/1337"
+  },
+  "attributes": {
+    "created-at": "2015-11-05T20:12:16.053+01:00",
+    "updated-at": "2016-10-05T10:11:04.615+02:00",
+    "name": "Inbox",
+    "stage-type": "Inbox"
+  },
+  "relationships": {
+    "candidates": {
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/stages/1337/relationships/candidates",
+        "related": "http://api.teamtailor.dev/v1/stages/1337/candidates"
+      }
+    },
+    "job": {
+      "links": {
+        "self": "http://api.teamtailor.dev/v1/stages/1337/relationships/job",
+        "related": "http://api.teamtailor.dev/v1/stages/1337/job"
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute  | Type   | Description
+-----------|--------|------------
+created_at | date   |
+name       | string |
+stage_type | string |
+updated_at | date   |
+
+
+### Relations
+
+Relation   | Description
+-----------|------------
+candidates |
+job        |
