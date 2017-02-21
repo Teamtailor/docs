@@ -1,6 +1,11 @@
 # Stages
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+A stage indicate the candidate status for a job-application. The stages are defined for each job. There is always two default stages present which can't be deleted or modified.
+
+* Inbox with the <code>stage-type</code> Inbox
+* Hired with the <code>stage-type</code> Hired
+
+All other user created stages have the <code>stage-type</code> In process
 
 ## Stage Object
 
@@ -40,7 +45,7 @@ Attribute  | Type   | Description
 -----------|--------|------------
 created_at | date   |
 name       | string |
-stage_type | string |
+stage_type | string | Inbox, In process, Hired
 updated_at | date   |
 
 
