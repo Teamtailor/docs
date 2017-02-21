@@ -17,7 +17,7 @@ Authorization: Token token=abc123abc123
 ```
 
 ```shell
-curl -X "PATCH" "http://api.teamtailor.dev/v1/candidates/1337" \
+curl -X "PATCH" "https://api.teamtailor.com/v1/candidates/1337" \
     -H "Content-Type: application/vnd.api+json" \
     -H "X-Api-Version: <%= config[:api_version] %>"
     -H "Authorization: Token token=abc123abc123" \
@@ -32,7 +32,7 @@ curl -X "PATCH" "http://api.teamtailor.dev/v1/candidates/1337" \
     "id": "1337",
     "type": "candidates",
     "links": {
-      "self": "http://api.teamtailor.dev/v1/candidates/1337"
+      "self": "https://api.teamtailor.com/v1/candidates/1337"
     },
     "attributes": {
       "connected": true,
@@ -59,32 +59,32 @@ curl -X "PATCH" "http://api.teamtailor.dev/v1/candidates/1337" \
     "relationships": {
       "department": {
         "links": {
-          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/department",
-          "related": "http://api.teamtailor.dev/v1/candidates/1337/department"
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/department",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/department"
         }
       },
       "role": {
         "links": {
-          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/role",
-          "related": "http://api.teamtailor.dev/v1/candidates/1337/role"
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/role",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/role"
         }
       },
       "job-applications": {
         "links": {
-          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/job-applications",
-          "related": "http://api.teamtailor.dev/v1/candidates/1337/job-applications"
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/job-applications",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/job-applications"
         }
       },
       "questions": {
         "links": {
-          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/questions",
-          "related": "http://api.teamtailor.dev/v1/candidates/1337/questions"
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/questions",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/questions"
         }
       },
       "answers": {
         "links": {
-          "self": "http://api.teamtailor.dev/v1/candidates/1337/relationships/answers",
-          "related": "http://api.teamtailor.dev/v1/candidates/1337/answers"
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/answers",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/answers"
         }
       }
     }
