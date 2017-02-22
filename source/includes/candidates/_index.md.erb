@@ -86,16 +86,16 @@ connected        | boolean |
 created_at       | date    |
 email            | string  | Email to candidate. Always unique.
 facebook_id      | string  | User id if connected with Facebook
-facebook_profile | string  | Html version of Facebook profile
+facebook_profile | string  | __Read only__, html version of Facebook profile
 first_name       | string  |
 last_name        | string  |
-linkedin_profile | string  | Html version of LinkedIn profile
+linkedin_profile | string  | __Read only__, html version of LinkedIn profile
 linkedin_uid     | string  | User id if connected with LinkedIn
 linkedin_url     | string  | URL to LinkedIn profile
 phone            | string  |
 picture          | string  | Url to candidate picture
 pitch            | string  | 140 character pitch
-referring_site   | string  | Friendly name for referring site (i.e. Facebook, Indeed etc)
+referring_site   | string  | __Read only__, friendly name parser from referring_url (i.e. Facebook, Indeed etc)
 referring_url    | string  |
 resume           | string  | Url to Pdf-verison of resume
 sourced          | boolean | True if added by a recruiter without applying
