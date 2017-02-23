@@ -154,7 +154,10 @@ Use this endpoint to retrive lists of jobs.
 
 ### Example parameters
 
-Parameter      | Default   | Description
--------------- | --------- | -----------
-include        | null      | Comma separated list of relations to include in the response. For example `department,role`.
-filter[status] | published | Filter by job status. Available statuses: `Published`.
+Parameter          | Default   | Description
+------------------ | --------- | -----------
+include            | null      | Comma separated list of relations to include in the response. For example `department,role`.
+filter[status]     | published | Filter by job status. Available statuses: `Published`.
+filter[department] | null      | Filter by department id.
+filter[role]       | null      | Filter by role id.
+filter[location]   | null      | Filter by location id.
