@@ -163,6 +163,10 @@ html, body {
     transition-duration: 230ms;
   }
 
+  ul ul {
+      padding-left: 1em;
+  }
+  
   // This is the currently selected ToC entry
   .tocify-focus {
     background-color: $nav-active-bg;
