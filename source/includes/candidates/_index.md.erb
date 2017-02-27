@@ -1,0 +1,115 @@
+# Candidates
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+A candidate is defined by a unqiue email adress. If a candidate don't have any <code>job_applications</code> it can be either <code>sourced</code> or <code>connected</code>
+
+When <code>sourced</code> the candidate was added to the system by a recruiter.
+
+A candidate that is <code>connected</code> has opted in to recieve new job notifications and has also the option to create a richer and more personal profile.
+
+## Candidate Object
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "candidates",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/candidates/1337"
+    },
+    "attributes": {
+      "connected": true,
+      "created-at": "2017-01-18T21:04:56.178+01:00",
+      "email": "john.doe@example.com",
+      "facebook-id": null,
+      "first-name": "John",
+      "last-name": "Doe",
+      "linkedin-uid": null,
+      "linkedin-url": null,
+      "phone": "0700000000",
+      "picture": "https://image.jpg",
+      "pitch": "I like turtles",
+      "referring-site": "Facebook",
+      "referring-url": "http://facebook.com/page",
+      "resume": "https://s3.amazonaws.com/resume.pdf",
+      "sourced": false,
+      "unsubscribed": false,
+      "updated-at": "2017-01-18T21:20:16.646+01:00",
+      "facebook-profile": null,
+      "linkedin-profile": null,
+      "tags": []
+    },
+    "relationships": {
+      "department": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/department",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/department"
+        }
+      },
+      "role": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/role",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/role"
+        }
+      },
+      "job-applications": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/job-applications",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/job-applications"
+        }
+      },
+      "questions": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/questions",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/questions"
+        }
+      },
+      "answers": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/answers",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/answers"
+        }
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute        | Type    | Description
+-----------------|---------|------------
+connected        | boolean |
+created_at       | date    |
+email            | string  | Email to candidate. Always unique.
+facebook_id      | string  | User id if connected with Facebook
+facebook_profile | string  | __Read only__, html version of Facebook profile
+first_name       | string  |
+last_name        | string  |
+linkedin_profile | string  | __Read only__, html version of LinkedIn profile
+linkedin_uid     | string  | User id if connected with LinkedIn
+linkedin_url     | string  | URL to LinkedIn profile
+phone            | string  |
+picture          | string  | Url to candidate picture
+pitch            | string  | 140 character pitch
+referring_site   | string  | __Read only__, friendly name parsed from referring_url (i.e. Facebook, Indeed etc)
+referring_url    | string  |
+resume           | string  | Url to Pdf-verison of resume
+sourced          | boolean | True if added by a recruiter without applying
+tags             | array   |
+unsubscribed     | boolean | If true no new job notifications are sent
+updated_at       | date    |
+
+
+### Relations
+
+Relation         | Description
+-----------------|------------
+department       |
+role             |
+job_applications |
+questions        |
+answers          |

@@ -1,0 +1,147 @@
+## List Job applications
+
+```http
+GET https://api.teamtailor.com/v1/job-applications HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/job-applications" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "1337",
+      "type": "job-applications",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/job-applications/1337"
+      },
+      "attributes": {
+        "created-at": "2015-04-22T19:39:32.902+02:00",
+        "cover-letter": "",
+        "updated-at": "2015-09-09T11:26:33.991+02:00",
+        "rejected-at": "2015-09-09T11:26:33.991+02:00",
+        "referring-url": "http://www.teamtailor.com/sv",
+        "referring-site": "Teamtailor",
+        "sourced": false
+      },
+      "relationships": {
+        "candidate": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/candidate",
+            "related": "https://api.teamtailor.com/v1/job-applications/1337/candidate"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/job",
+            "related": "https://api.teamtailor.com/v1/job-applications/1337/job"
+          }
+        },
+        "stage": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/stage",
+            "related": "https://api.teamtailor.com/v1/job-applications/1337/stage"
+          }
+        }
+      }
+    },
+    {
+      "id": "1338",
+      "type": "job-applications",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/job-applications/1338"
+      },
+      "attributes": {
+        "created-at": "2015-04-21T10:34:35.109+02:00",
+        "cover-letter": "",
+        "updated-at": "2016-06-27T12:28:37.808+02:00",
+        "rejected-at": "2015-09-09T11:26:34.025+02:00",
+        "referring-url": "http://se.indeed.com/visajobb?jk=abc123",
+        "referring-site": "Indeed Sweden",
+        "sourced": false
+      },
+      "relationships": {
+        "candidate": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1338/relationships/candidate",
+            "related": "https://api.teamtailor.com/v1/job-applications/1338/candidate"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1338/relationships/job",
+            "related": "https://api.teamtailor.com/v1/job-applications/1338/job"
+          }
+        },
+        "stage": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1338/relationships/stage",
+            "related": "https://api.teamtailor.com/v1/job-applications/1338/stage"
+          }
+        }
+      }
+    },
+    {
+      "id": "1339",
+      "type": "job-applications",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/job-applications/1339"
+      },
+      "attributes": {
+        "created-at": "2015-04-16T11:34:54.636+02:00",
+        "cover-letter": "",
+        "updated-at": "2016-06-27T12:28:38.980+02:00",
+        "rejected-at": "2015-04-28T13:43:03.947+02:00",
+        "referring-url": "https://www.google.fr/",
+        "referring-site": "Google",
+        "sourced": false
+      },
+      "relationships": {
+        "candidate": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1339/relationships/candidate",
+            "related": "https://api.teamtailor.com/v1/job-applications/1339/candidate"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1339/relationships/job",
+            "related": "https://api.teamtailor.com/v1/job-applications/1339/job"
+          }
+        },
+        "stage": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1339/relationships/stage",
+            "related": "https://api.teamtailor.com/v1/job-applications/1339/stage"
+          }
+        }
+      }
+    },
+  ],
+  "meta": {
+    "record-count": 100,
+    "page-count": 10
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/job-applications?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "next": "https://api.teamtailor.com/v1/job-applications?page%5Bnumber%5D=2&page%5Bsize%5D=10",
+    "last": "https://api.teamtailor.com/v1/job-applications?page%5Bnumber%5D=106&page%5Bsize%5D=10"
+  }
+}
+```
+
+Use this endpoint to retrieve lists of job applications.
+
+### Example parameters
+
+Parameter      | Default   | Description
+-------------- | --------- | -----------
+include        | null      | Comma separated list of relations to include in the response. For example `stage,candidate`.

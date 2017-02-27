@@ -1,0 +1,97 @@
+## List Answers
+
+```http
+GET https://api.teamtailor.com/v1/answers HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/answers" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "1337",
+      "type": "answers",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/answers/1337"
+      },
+      "attributes": {
+        "boolean": null,
+        "choices": [],
+        "updated-at": "2015-06-21T16:38:51.958+02:00",
+        "range": null,
+        "text": "Dear Sir/Madam…",
+        "video-token": null
+      },
+      "relationships": {
+        "question": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/answers/1337/relationships/question",
+            "related": "https://api.teamtailor.com/v1/answers/1337/question"
+          }
+        },
+        "candidate": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/answers/1337/relationships/candidate",
+            "related": "https://api.teamtailor.com/v1/answers/1337/candidate"
+          }
+        }
+      }
+    },
+    {
+      "id": "1338",
+      "type": "answers",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/answers/1338"
+      },
+      "attributes": {
+        "boolean": null,
+        "choices": [],
+        "updated-at": "2015-06-21T16:39:52.181+02:00",
+        "range": null,
+        "text": "To Whom It May Concern…",
+        "video-token": null
+      },
+      "relationships": {
+        "question": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/answers/1338/relationships/question",
+            "related": "https://api.teamtailor.com/v1/answers/1338/question"
+          }
+        },
+        "candidate": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/answers/1338/relationships/candidate",
+            "related": "https://api.teamtailor.com/v1/answers/1338/candidate"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "record-count": 100,
+    "page-count": 10
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/answers?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "next": "https://api.teamtailor.com/v1/answers?page%5Bnumber%5D=2&page%5Bsize%5D=10",
+    "last": "https://api.teamtailor.com/v1/answers?page%5Bnumber%5D=10&page%5Bsize%5D=10"
+  }
+}
+```
+
+Use this endpoint to retrieve lists of answers.
+
+### Example parameters
+
+Parameter      | Default   | Description
+-------------- | --------- | -----------
+include        | null      | Comma separated list of relations to include in the response. For example `candidate,question`.

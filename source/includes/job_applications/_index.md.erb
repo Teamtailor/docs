@@ -1,0 +1,72 @@
+# Job Applications
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+This object represents the job applications.
+
+## Job application Object
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "job-applications",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/job-applications/1337"
+    },
+    "attributes": {
+      "created-at": "2017-02-20T10:30:43.910+01:00",
+      "cover-letter": "Dear Sir/Madam…",
+      "updated-at": "2017-02-20T10:30:43.910+01:00",
+      "rejected-at": null,
+      "referring-url": null,
+      "referring-site": null,
+      "sourced": true
+    },
+    "relationships": {
+      "candidate": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/candidate",
+          "related": "https://api.teamtailor.com/v1/job-applications/1337/candidate"
+        }
+      },
+      "job": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/job",
+          "related": "https://api.teamtailor.com/v1/job-applications/1337/job"
+        }
+      },
+      "stage": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/stage",
+          "related": "https://api.teamtailor.com/v1/job-applications/1337/stage"
+        }
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute      | Type    | Description
+---------------|---------|------------
+created_at     | date    |
+cover_letter   | string  |
+updated_at     | date    |
+rejected_at    | date    | If set, the candidate has been rejected for this job
+referring_url  | string  |
+referring_site | string  | __Read only__, friendly name parsed from referring_url (i.e. Facebook, Indeed etc)
+sourced        | boolean |
+
+### Relations
+
+The <code>job-application</code> object always has a relation to a <code>candidate</code> and a <code>job</code>
+
+Relation  | Description
+----------|------------
+candidate |
+job       |
+stage     | Current stage (i.e Inbox, Reviewing, Hired)

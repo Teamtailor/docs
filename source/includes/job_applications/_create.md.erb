@@ -1,0 +1,115 @@
+## Create Job application
+
+```http
+POST https://api.teamtailor.com/v1/job-applications HTTP/1.1
+
+X-Api-Version: <%= config[:api_version] %>
+Authorization: Token token=abc123abc123
+
+{
+  "data": {
+    "type": "job-applications",
+    "attributes": {
+      "cover-letter": "hej jag gillar data",
+      "sourced": true
+    },
+    "relationships": {
+      "candidate": {
+        "data": {
+          "id": "1337",
+          "type": "candidates"
+        }
+      },
+      "job": {
+        "data": {
+          "id": "12345",
+          "type": "jobs"
+        }
+      }
+    }
+  }
+}
+
+```
+
+```shell
+## create Job Application
+curl -X "POST" "https://api.teamtailor.com/v1/job-applications" \
+     -H "Content-Type: application/vnd.api+json" \
+     -H "X-Api-Version: <%= config[:api_version] %>" \
+     -H "Authorization: Token token=abc123abc123" \
+     -d $'{
+  "data": {
+    "type": "job-applications",
+    "attributes": {
+      "sourced": true,
+      "cover-letter": "Dear Sir/Madam"
+    },
+    "relationships": {
+      "job": {
+        "data": {
+          "id": "1337",
+          "type": "jobs"
+        }
+      },
+      "candidate": {
+        "data": {
+          "id": "12345",
+          "type": "candidates"
+        }
+      }
+    }
+  }
+}'
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "job-applications",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/job-applications/1337"
+    },
+    "attributes": {
+      "created-at": "2017-02-20T10:30:43.910+01:00",
+      "cover-letter": "Dear Sir/Madam…",
+      "updated-at": "2017-02-20T10:30:43.910+01:00",
+      "rejected-at": null,
+      "referring-url": null,
+      "referring-site": null,
+      "sourced": true
+    },
+    "relationships": {
+      "candidate": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/candidate",
+          "related": "https://api.teamtailor.com/v1/job-applications/1337/candidate"
+        }
+      },
+      "job": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/job",
+          "related": "https://api.teamtailor.com/v1/job-applications/1337/job"
+        }
+      },
+      "stage": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/stage",
+          "related": "https://api.teamtailor.com/v1/job-applications/1337/stage"
+        }
+      }
+    }
+  }
+}
+```
+
+Create a new Job application.
+
+<aside class="notice">
+  The relation <code>candidate</code> and <code>job</code> is required to be able to create a new job application.
+</aside>
+
+As a convience method it's also possible to embed an iframe that outputs the job application form. See [example](#embed-application-form). 

@@ -1,0 +1,58 @@
+## Show an Answer
+
+```http
+GET https://api.teamtailor.com/v1/answers/1337 HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/answers/1337" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "answers",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/answers/1337"
+    },
+    "attributes": {
+      "boolean": null,
+      "choices": [
+        3,
+        4
+      ],
+      "updated-at": "2017-02-16T14:06:36.926+01:00",
+      "range": null,
+      "text": null,
+      "video-token": null
+    },
+    "relationships": {
+      "question": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/answers/1337/relationships/question",
+          "related": "https://api.teamtailor.com/v1/answers/1337/question"
+        }
+      },
+      "candidate": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/answers/1337/relationships/candidate",
+          "related": "https://api.teamtailor.com/v1/answers/1337/candidate"
+        }
+      }
+    }
+  }
+}
+```
+
+Retreive a specific answer.
+
+Parameter | Description
+--------- | -----------
+id        | The answers id.

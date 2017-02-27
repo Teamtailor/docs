@@ -1,6 +1,6 @@
 # Jobs
 
-This object represents the job ad and the job process in Teamtailor. You can retrive a list or just a single job, update and create new jobs.
+This object represents the job ad and the job process in Teamtailor. You can retrieve a list or just a single job, update and create new jobs.
 
 ## Job Object
 
@@ -49,6 +49,24 @@ This object represents the job ad and the job process in Teamtailor. You can ret
           "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/user",
           "related": "https://api.teamtailor.com/v1/jobs/7199/user"
         }
+      },
+      "questions": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/questions",
+          "related": "https://api.teamtailor.com/v1/jobs/7199/questions"
+        }
+      },
+      "candidates": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/candidates",
+          "related": "https://api.teamtailor.com/v1/jobs/7199/candidates"
+        }
+      },
+      "stages": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/stages",
+          "related": "https://api.teamtailor.com/v1/jobs/7199/stages"
+        }
       }
     }
   }
@@ -82,6 +100,9 @@ careersite-job-apply-iframe-url  | URL for application iframe `src`
 Relation   | Description
 -----------|------------
 user       | The recruiter
-department | The department where the job i shown under
+department | The department of the job
 role       | The role of the job
 location   | Where the job is located
+questions  | The job's questions
+candidates | Candidates who have applied to the job
+stages     | The recruitment stages of the job

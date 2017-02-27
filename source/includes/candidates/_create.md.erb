@@ -1,0 +1,101 @@
+## Create candidate
+
+```http
+POST https://api.teamtailor.com/v1/candidates HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{"data":{"type":"candidates","attributes":{"first-name":"Jonas","last-name":"Brusman","pitch":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.","email":"jonas@example.com"}}}
+```
+
+```shell
+     curl -X "POST" "https://api.teamtailor.com/v1/candidates" \
+          -H "Content-Type: application/vnd.api+json" \
+          -H "X-Api-Version: <%= config[:api_version] %>"
+          -H "Authorization: Token token=abc123abc123" \
+          -d $'{
+       "data": {
+         "type": "candidates",
+         "attributes": {
+           "email": "jonas@example.com",
+           "pitch": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+           "last-name": "Jonas",
+           "first-name": "Brusman"
+         }
+       }
+     }'
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1337",
+    "type": "candidates",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/candidates/1337"
+    },
+    "attributes": {
+      "connected": false,
+      "created-at": "2017-02-16T15:44:07.150+01:00",
+      "email": "jonas@example.com",
+      "facebook-id": null,
+      "first-name": "Jonas",
+      "last-name": "Brusman",
+      "linkedin-uid": null,
+      "linkedin-url": null,
+      "phone": null,
+      "picture": null,
+      "pitch": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "referring-site": null,
+      "referring-url": null,
+      "resume": null,
+      "sourced": false,
+      "unsubscribed": false,
+      "updated-at": "2017-02-16T15:44:07.150+01:00",
+      "facebook-profile": null,
+      "linkedin-profile": null,
+      "tags": []
+    },
+    "relationships": {
+      "department": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/department",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/department"
+        }
+      },
+      "role": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/role",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/role"
+        }
+      },
+      "job-applications": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/job-applications",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/job-applications"
+        }
+      },
+      "questions": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/questions",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/questions"
+        }
+      },
+      "answers": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/answers",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/answers"
+        }
+      }
+    }
+  }
+}
+```
+
+<aside class="notice">
+  A unique <code>email</code> is a required attribute unless <code>sourced</code> is set to true
+</aside>
+
+Use the <code>merge</code> attribute to merge the candidate attributes in case a candidate with the supplied email address already exists.

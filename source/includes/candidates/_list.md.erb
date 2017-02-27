@@ -1,0 +1,163 @@
+## List Candidates
+
+```http
+GET https://api.teamtailor.com/v1/jobs HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/candidates" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "576",
+      "type": "candidates",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/candidates/576"
+      },
+      "attributes": {
+        "connected": false,
+        "created-at": "2015-04-22T19:39:32.902+02:00",
+        "email": "candidate@example.com",
+        "facebook-id": null,
+        "first-name": "John",
+        "last-name": "Doe",
+        "linkedin-uid": null,
+        "linkedin-url": null,
+        "phone": "07000000000",
+        "picture": null,
+        "pitch": null,
+        "referring-site": "Teamtailor",
+        "referring-url": "http://www.teamtailor.com/sv",
+        "resume": "https://www.s3.amazonaws.com/resumes/cv.pdf",
+        "sourced": false,
+        "unsubscribed": false,
+        "updated-at": "2015-04-25T21:50:02.378+02:00",
+        "facebook-profile": null,
+        "linkedin-profile": null,
+        "tags": []
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/576/relationships/department",
+            "related": "https://api.teamtailor.com/v1/candidates/576/department"
+          }
+        },
+        "role": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/576/relationships/role",
+            "related": "https://api.teamtailor.com/v1/candidates/576/role"
+          }
+        },
+        "job-applications": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/576/relationships/job-applications",
+            "related": "https://api.teamtailor.com/v1/candidates/576/job-applications"
+          }
+        },
+        "questions": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/576/relationships/questions",
+            "related": "https://api.teamtailor.com/v1/candidates/576/questions"
+          }
+        },
+        "answers": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/576/relationships/answers",
+            "related": "https://api.teamtailor.com/v1/candidates/576/answers"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "1106",
+      "type": "candidates",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/candidates/1106"
+      },
+      "attributes": {
+        "connected": false,
+        "created-at": "2015-04-21T10:34:35.109+02:00",
+        "email": "candidate@example.com",
+        "facebook-id": null,
+        "first-name": "John",
+        "last-name": "Doe",
+        "linkedin-uid": null,
+        "linkedin-url": "https://www.linkedin.com/pub/johndoe",
+        "phone": "",
+        "picture": null,
+        "pitch": null,
+        "referring-site": "Indeed Sweden",
+        "referring-url": "http://se.indeed.com/visajobb",
+        "resume": null,
+        "sourced": false,
+        "unsubscribed": false,
+        "updated-at": "2016-06-27T12:37:34.422+02:00",
+        "facebook-profile": null,
+        "linkedin-profile": "<h5 id=\"freelance-financial-journalist--editor-and-project-manager\">Developer</h5>\n\n<p>Sweden • Coding</p>\n\n",
+        "tags": []
+      },
+      "relationships": {
+        "department": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/1106/relationships/department",
+            "related": "https://api.teamtailor.com/v1/candidates/1106/department"
+          }
+        },
+        "role": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/1106/relationships/role",
+            "related": "https://api.teamtailor.com/v1/candidates/1106/role"
+          }
+        },
+        "job-applications": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/1106/relationships/job-applications",
+            "related": "https://api.teamtailor.com/v1/candidates/1106/job-applications"
+          }
+        },
+        "questions": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/1106/relationships/questions",
+            "related": "https://api.teamtailor.com/v1/candidates/1106/questions"
+          }
+        },
+        "answers": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/candidates/1106/relationships/answers",
+            "related": "https://api.teamtailor.com/v1/candidates/1106/answers"
+          },
+          "data": []
+        }
+      }
+    },
+  ],
+  "meta": {
+    "record-count": 20,
+    "page-count": 2
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/candidates",
+    "next": "https://api.teamtailor.com/v1/candidates",
+    "last": "https://api.teamtailor.com/v1/candidates"
+  }
+}
+```
+
+Use this endpoint to retrieve lists of candidates.
+
+### Example parameters
+
+Parameter      | Default   | Description
+-------------- | --------- | -----------
+include        | null      | Comma separated list of relations to include in the response. For example `job-applications,department`.

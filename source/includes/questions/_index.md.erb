@@ -1,0 +1,50 @@
+# Questions
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+There are 5 types of question as specified by the <code>question-type</code> attribute.
+
+* __Boolean__ - true or false
+
+* __Choice__ - array of alternatives. If <code>multiple</code> is true multiple answers are allowed. Otherwise only one.
+
+* __Text__ - free text answers
+
+* __Range__ - answer could be a number within the range defined by <code>start-with</code> and <code>end-with</code>. The unit contains the range unit (i.e year or pieces).
+
+* __Video__ - answer with a video
+
+## Question Object
+
+```json
+{
+  "id": "1337",
+  "type": "questions",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/questions/1337"
+  },
+  "attributes": {
+    "alternatives": null,
+    "end-with": null,
+    "multiple": null,
+    "question-type": "Text",
+    "start-with": null,
+    "title": "Can you describe your ideal work environment?",
+    "unit": null
+  }
+}
+```
+
+### Attributes
+
+Attribute     | Type    | Description
+--------------|---------|------------
+alternatives  | array   |
+end_with      | integer |
+multiple      | boolean |
+question_type | string  |
+start_with    | integer |
+title         | string  |
+unit          | string  |

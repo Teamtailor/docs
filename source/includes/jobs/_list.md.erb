@@ -60,6 +60,18 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
             "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/user",
             "related": "https://api.teamtailor.com/v1/jobs/7263/user"
           }
+        },
+        "candidates": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/candidates",
+            "related": "https://api.teamtailor.com/v1/jobs/7263/candidates"
+          }
+        },
+        "stages": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/stages",
+            "related": "https://api.teamtailor.com/v1/jobs/7263/stages"
+          }
         }
       }
     },
@@ -105,6 +117,24 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
             "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/user",
             "related": "https://api.teamtailor.com/v1/jobs/7262/user"
           }
+        },
+        "questions": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/questions",
+            "related": "https://api.teamtailor.com/v1/jobs/7262/questions"
+          }
+        },
+        "candidates": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/candidates",
+            "related": "https://api.teamtailor.com/v1/jobs/7262/candidates"
+          }
+        },
+        "stages": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/stages",
+            "related": "https://api.teamtailor.com/v1/jobs/7262/stages"
+          }
         }
       }
     }
@@ -120,11 +150,14 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
 }
 ```
 
-Use this endpoint to retrive lists of jobs.
+Use this endpoint to retrieve lists of jobs.
 
 ### Example parameters
 
-Parameter      | Default   | Description
--------------- | --------- | -----------
-include        | null      | Comma separated list of relations to include in the response. For example `department,role`.
-filter[status] | published | Filter by job status. Available statuses: `Published`.
+Parameter          | Default   | Description
+------------------ | --------- | -----------
+include            | null      | Comma separated list of relations to include in the response. For example `department,role`.
+filter[status]     | published | Filter by job status. Available statuses: `published` and `unlisted`. See [Permissions](#permissions) for more info.
+filter[department] | null      | Filter by department id.
+filter[role]       | null      | Filter by role id.
+filter[location]   | null      | Filter by location id.
