@@ -310,6 +310,44 @@ X-Rate-Limit-Reset
 </tr>
 </tbody></table>
 
+<h2 id="list-latest-hired-candidates">List latest hired candidates</h2>
+
+<p>Get a list of the most recent hired candidates</p>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://api.teamtailor.com/v1/job-applications?include=candidate&amp;filter%5Bstage_type%5D=hired&amp;sort=-changed_stage_at</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Token token=abc123abc123</span>
+<span class="na">X-Api-Version</span><span class="p">:</span> <span class="s">20161108</span>
+</code></pre>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.teamtailor.com/v1/job-applications?include=candidate&amp;filter%5Bstage_type%5D=hired&amp;sort=-changed_stage_at"</span> <span class="se">\</span>
+     -H <span class="s2">"Authorization: Token token=abc123abc123"</span> <span class="se">\</span>
+     -H <span class="s2">"X-Api-Version: 20161108"</span>
+</code></pre>
+
+<h3 id="parameters-used-in-this-example">Parameters used in this example</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include</td>
+<td>candidate</td>
+<td>Since we&rsquo;re fetching latest job applications, we must include the candidate if we wan&rsquo;t more data about each hire.</td>
+</tr>
+<tr>
+<td>filter[stage_type]</td>
+<td>hired</td>
+<td>Just list job applications marked as hired</td>
+</tr>
+<tr>
+<td>sort</td>
+<td><span class="no-wrap">-changed_stage_at</span></td>
+<td>Sort applications by most recent added to current (hired) stage</td>
+</tr>
+</tbody></table>
+
 <h2 id="embed-application-form">Embed application form</h2>
 
 <blockquote>
@@ -345,6 +383,13 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
 <pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.teamtailor.com/v1/jobs"</span> <span class="se">\</span>
      -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
+
+<h3 id="2017-03-10-non-breaking-update">2017-03-10 <em>Non breaking update</em></h3>
+
+<ul>
+<li>Added <code class="prettyprint">changed_stage_at</code> to <a href="#job-applications">job applications</a></li>
+<li>Made it possible to filter on <code class="prettyprint">stage_type</code> when listing <a href="#job-applications">job applications</a>.</li>
+</ul>
 
 <h3 id="2017-02-23-non-breaking-update">2017-02-23 <em>Non breaking update</em></h3>
 
@@ -2370,7 +2415,8 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
       </span><span class="nt">"rejected-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"referring-url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"referring-site"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"changed-stage-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-11T11:29:48.841+01:00"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"candidate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2414,6 +2460,11 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
 <td>cover_letter</td>
 <td>string</td>
 <td></td>
+</tr>
+<tr>
+<td>changed-stage-at</td>
+<td>date</td>
+<td>Date when candidate was added to current stage</td>
 </tr>
 <tr>
 <td>updated_at</td>
@@ -2494,7 +2545,8 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
         </span><span class="nt">"rejected-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-09T11:26:33.991+02:00"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"referring-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.teamtailor.com/sv"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"referring-site"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Teamtailor"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"changed-stage-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-11T11:29:48.841+01:00"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"candidate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2530,7 +2582,8 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
         </span><span class="nt">"rejected-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-09T11:26:34.025+02:00"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"referring-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://se.indeed.com/visajobb?jk=abc123"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"referring-site"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indeed Sweden"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"changed-stage-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-11T11:29:48.841+01:00"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"candidate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2566,7 +2619,8 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
         </span><span class="nt">"rejected-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-04-28T13:43:03.947+02:00"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"referring-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.google.fr/"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"referring-site"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Google"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"changed-stage-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-11T11:29:48.841+01:00"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"candidate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2618,6 +2672,16 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
 <td>null</td>
 <td>Comma separated list of relations to include in the response. For example <code class="prettyprint">stage,candidate</code>.</td>
 </tr>
+<tr>
+<td>filter[stage_type]</td>
+<td>null</td>
+<td>Filter by current stage type (<code class="prettyprint">Inbox</code>, <code class="prettyprint">In process</code> or <code class="prettyprint">Hired</code>)</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>null</td>
+<td>Sort applications, for example <code class="prettyprint">-changed_stage_at</code> to sort by latest added to current stage.</td>
+</tr>
 </tbody></table>
 
           <h2 id="show-a-job-application">Show a Job application</h2>
@@ -2647,7 +2711,8 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
       </span><span class="nt">"rejected-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"referring-url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"referring-site"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"changed-stage-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-11T11:29:48.841+01:00"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"candidate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2765,7 +2830,8 @@ curl -X <span class="s2">"POST"</span> <span class="s2">"https://api.teamtailor.
       </span><span class="nt">"rejected-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"referring-url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"referring-site"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"changed-stage-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-11T11:29:48.841+01:00"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"candidate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2797,7 +2863,7 @@ curl -X <span class="s2">"POST"</span> <span class="s2">"https://api.teamtailor.
   The relation <code>candidate</code> and <code>job</code> is required to be able to create a new job application.
 </aside>
 
-<p>As a convience method it&rsquo;s also possible to embed an iframe that outputs the job application form. See <a href="#embed-application-form">example</a>. </p>
+<p>As a convience method it&rsquo;s also possible to embed an iframe that outputs the job application form. See <a href="#embed-application-form">example</a>.</p>
 
           <h2 id="update-job-application">Update Job application</h2>
 <pre class="highlight http"><code><span class="nf">PATCH</span> <span class="nn">https://api.teamtailor.com/v1/job-applications/1337</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
@@ -2847,7 +2913,8 @@ curl -X <span class="s2">"PATCH"</span> <span class="s2">"https://api.teamtailor
       </span><span class="nt">"rejected-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"referring-url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"referring-site"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="nt">"sourced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"changed-stage-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-01-11T11:29:48.841+01:00"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"candidate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
