@@ -23,7 +23,8 @@ This object represents the job applications.
       "rejected-at": null,
       "referring-url": null,
       "referring-site": null,
-      "sourced": true
+      "sourced": true,
+      "changed-stage-at": "2017-01-11T11:29:48.841+01:00"
     },
     "relationships": {
       "candidate": {
@@ -51,15 +52,16 @@ This object represents the job applications.
 
 ### Attributes
 
-Attribute      | Type    | Description
----------------|---------|------------
-created_at     | date    |
-cover_letter   | string  |
-updated_at     | date    |
-rejected_at    | date    | If set, the candidate has been rejected for this job
-referring_url  | string  |
-referring_site | string  | __Read only__, friendly name parsed from referring_url (i.e. Facebook, Indeed etc)
-sourced        | boolean |
+Attribute        | Type    | Description
+-----------------|---------|------------
+created_at       | date    |
+cover_letter     | string  |
+changed-stage-at | date    | Date when candidate was added to current stage
+updated_at       | date    |
+rejected_at      | date    | If set, the candidate has been rejected for this job
+referring_url    | string  |
+referring_site   | string  | __Read only__, friendly name parsed from referring_url (i.e. Facebook, Indeed etc)
+sourced          | boolean |
 
 ### Relations
 

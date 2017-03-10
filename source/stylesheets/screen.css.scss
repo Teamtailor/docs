@@ -166,7 +166,7 @@ html, body {
   ul ul {
       padding-left: 1em;
   }
-  
+
   // This is the currently selected ToC entry
   .tocify-focus {
     background-color: $nav-active-bg;
@@ -680,4 +680,8 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
