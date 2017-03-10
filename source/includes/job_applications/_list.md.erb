@@ -145,6 +145,8 @@ Use this endpoint to retrieve lists of job applications.
 
 ### Example parameters
 
-Parameter      | Default   | Description
--------------- | --------- | -----------
-include        | null      | Comma separated list of relations to include in the response. For example `stage,candidate`.
+Parameter          | Default | Description
+------------------ | ------- | -----------
+include            | null    | Comma separated list of relations to include in the response. For example `stage,candidate`.
+filter[stage_type] | null    | Filter by current stage type (`Inbox`, `In process` or `Hired`)
+sort               | null    | Sort applications, for example `-changed_stage_at` to sort by latest added to current stage.
