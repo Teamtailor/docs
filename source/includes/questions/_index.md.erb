@@ -10,7 +10,7 @@ There are 5 types of question as specified by the <code>question-type</code> att
 
 * __Choice__ - array of alternatives. If <code>multiple</code> is true multiple answers are allowed. Otherwise only one.
 
-* __Text__ - free text answers
+* __Text__ - free text answers. If <code>single-line</code> is true input will be an input field with type text. Otherwise it will be a text area.
 
 * __Range__ - answer could be a number within the range defined by <code>start-with</code> and <code>end-with</code>. The unit contains the range unit (i.e year or pieces).
 
@@ -42,11 +42,11 @@ There are 5 types of question as specified by the <code>question-type</code> att
 
 Attribute     | Type    | Description
 --------------|---------|------------
-alternatives  | array   |
-end_with      | integer |
-multiple      | boolean |
-question_type | string  |
-start_with    | integer |
-title         | string  |
-unit          | string  |
-single_line   | boolean | 
+alternatives  | array   | Alternatives for choice question
+end_with      | integer | Range end
+multiple      | boolean | Allow multiple answers or not for choice question
+question_type | string  | Type of question
+start_with    | integer | Range start
+title         | string  | Question title
+unit          | string  | Unit for range question
+single_line   | boolean | Single line answer for text question
