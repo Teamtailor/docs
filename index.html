@@ -384,6 +384,12 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
      -H <span class="s2">"X-Api-Version: 20161108"</span>
 </code></pre>
 
+<h3 id="2017-03-15-non-breaking-update">2017-03-15 <em>Non breaking update</em></h3>
+
+<ul>
+<li>Added <code class="prettyprint">single-line</code> attribute to <a href="#questions">questions</a></li>
+</ul>
+
 <h3 id="2017-03-10-non-breaking-update">2017-03-10 <em>Non breaking update</em></h3>
 
 <ul>
@@ -3160,7 +3166,7 @@ curl -X <span class="s2">"PATCH"</span> <span class="s2">"https://api.teamtailor
 <ul>
 <li><p><strong>Boolean</strong> - true or false</p></li>
 <li><p><strong>Choice</strong> - array of alternatives. If <code>multiple</code> is true multiple answers are allowed. Otherwise only one.</p></li>
-<li><p><strong>Text</strong> - free text answers</p></li>
+<li><p><strong>Text</strong> - free text answers. If <code>single-line</code> is true input will be an input field with type text. Otherwise it will be a text area.</p></li>
 <li><p><strong>Range</strong> - answer could be a number within the range defined by <code>start-with</code> and <code>end-with</code>. The unit contains the range unit (i.e year or pieces).</p></li>
 <li><p><strong>Video</strong> - answer with a video</p></li>
 </ul>
@@ -3179,7 +3185,8 @@ curl -X <span class="s2">"PATCH"</span> <span class="s2">"https://api.teamtailor
     </span><span class="nt">"question-type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Text"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"start-with"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Can you describe your ideal work environment?"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"single-line"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -3196,37 +3203,42 @@ curl -X <span class="s2">"PATCH"</span> <span class="s2">"https://api.teamtailor
 <tr>
 <td>alternatives</td>
 <td>array</td>
-<td></td>
+<td>Alternatives for choice question</td>
 </tr>
 <tr>
 <td>end_with</td>
 <td>integer</td>
-<td></td>
+<td>Range end</td>
 </tr>
 <tr>
 <td>multiple</td>
 <td>boolean</td>
-<td></td>
+<td>Allow multiple answers or not for choice question</td>
 </tr>
 <tr>
 <td>question_type</td>
 <td>string</td>
-<td></td>
+<td>Type of question</td>
 </tr>
 <tr>
 <td>start_with</td>
 <td>integer</td>
-<td></td>
+<td>Range start</td>
 </tr>
 <tr>
 <td>title</td>
 <td>string</td>
-<td></td>
+<td>Question title</td>
 </tr>
 <tr>
 <td>unit</td>
 <td>string</td>
-<td></td>
+<td>Unit for range question</td>
+</tr>
+<tr>
+<td>single_line</td>
+<td>boolean</td>
+<td>Single line answer for text question</td>
 </tr>
 </tbody></table>
 
