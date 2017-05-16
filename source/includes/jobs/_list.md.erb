@@ -30,6 +30,7 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
         "body": "hello",
         "end-date": null,
         "human-status": "published",
+        "internal": false,
         "picture": null,
         "pinned": false,
         "start-date": null,
@@ -154,10 +155,12 @@ Use this endpoint to retrieve lists of jobs.
 
 ### Example parameters
 
-Parameter          | Default   | Description
------------------- | --------- | -----------
-include            | null      | Comma separated list of relations to include in the response. For example `department,role`.
-filter[status]     | published | Filter by job status. Available statuses: `published` and `unlisted`. See [Permissions](#permissions) for more info.
-filter[department] | null      | Filter by department id.
-filter[role]       | null      | Filter by role id.
-filter[location]   | null      | Filter by location id.
+Parameter          | Default      | Description
+------------------ | ------------ | -----------
+include            | null         | Comma separated list of relations to include in the response. For example `department,role`.
+filter[status]     | published    | Filter by job status. Available statuses: `published` and `unlisted`. See [Permissions](#permissions) for more info.
+filter[feed]       | public       | Filter by `public` and/or `internal` jobs. See [Permissions](#permissions) for more info.
+filter[department] | null         | Filter by department id.
+filter[role]       | null         | Filter by role id.
+filter[location]   | null         | Filter by location id.
+sort               | -pinned,date | Default sorting based on pinned status and publish date

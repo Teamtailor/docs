@@ -19,6 +19,7 @@ This object represents the job ad and the job process in Teamtailor. You can ret
       "body": "<p>lopl</p>",
       "end-date": "2016-11-25T00:00:00.000+01:00",
       "human-status": "scheduled",
+      "internal": false,
       "picture": null,
       "pinned": false,
       "start-date": "2016-11-17T00:00:00.000+01:00",
@@ -80,6 +81,7 @@ Attribute                | Type    | Description
 body                     | string  | The ad text, simple html is supported
 end-date                 | date    | The Job ad's expire date
 human-status             | string  | Human readable status of the job, can be one of the following: `archived`, `unlisted`, `expired`, `draft`, `published`, `scheduled` or `unsaved`
+internal                 | boolean | True if internal job
 picture                  | object  | Job ad's picture
 pinned                   | boolean | `true` if the job is pinned to the top on the career site
 start-date               | date    | Scheduled date to publish the job ad
