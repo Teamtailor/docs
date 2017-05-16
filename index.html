@@ -169,11 +169,11 @@ You must replace <code>abc123abc123</code> with your own API key.
 
 <h3 id="internal">Internal</h3>
 
-<p>Same as <code class="prettyprint">Public</code>, but can also access unlisted jobs</p>
+<p>Same as <code class="prettyprint">Public</code>, but can also access internal &amp; unlisted jobs</p>
 
 <h4 id="read">read</h4>
 
-<p>Can read all public data, for example jobs (including unlisted jobs), departments, locations.</p>
+<p>Can read all public data, for example jobs (including internal and unlisted jobs), departments, locations.</p>
 
 <h4 id="write">write</h4>
 
@@ -361,7 +361,7 @@ X-Rate-Limit-Reset
 <blockquote>
 <p>Iframe helper script</p>
 </blockquote>
-<pre class="highlight html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://www.teamtailor.com/widget/apply.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<pre class="highlight html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://scripts.teamtailor-cdn.com/widgets/production/apply.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre>
 
 <p>To embed an application form on your website, create an <code class="prettyprint">&lt;iframe&gt;</code> and set
@@ -1740,6 +1740,7 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
       </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;lopl&lt;/p&gt;"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"end-date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-11-25T00:00:00.000+01:00"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"human-status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"scheduled"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"internal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"pinned"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"start-date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-11-17T00:00:00.000+01:00"</span><span class="p">,</span><span class="w">
@@ -1817,6 +1818,11 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
 <td>human-status</td>
 <td>string</td>
 <td>Human readable status of the job, can be one of the following: <code class="prettyprint">archived</code>, <code class="prettyprint">unlisted</code>, <code class="prettyprint">expired</code>, <code class="prettyprint">draft</code>, <code class="prettyprint">published</code>, <code class="prettyprint">scheduled</code> or <code class="prettyprint">unsaved</code></td>
+</tr>
+<tr>
+<td>internal</td>
+<td>boolean</td>
+<td>True if internal job</td>
 </tr>
 <tr>
 <td>picture</td>
@@ -1933,6 +1939,7 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
         </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"end-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"human-status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"internal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"pinned"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="nt">"start-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -2075,6 +2082,11 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
 <td>Filter by job status. Available statuses: <code class="prettyprint">published</code> and <code class="prettyprint">unlisted</code>. See <a href="#permissions">Permissions</a> for more info.</td>
 </tr>
 <tr>
+<td>filter[feed]</td>
+<td>public</td>
+<td>Filter by <code class="prettyprint">public</code> and/or <code class="prettyprint">internal</code> jobs. See <a href="#permissions">Permissions</a> for more info.</td>
+</tr>
+<tr>
 <td>filter[department]</td>
 <td>null</td>
 <td>Filter by department id.</td>
@@ -2088,6 +2100,11 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
 <td>filter[location]</td>
 <td>null</td>
 <td>Filter by location id.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>-pinned,date</td>
+<td>Default sorting based on pinned status and publish date</td>
 </tr>
 </tbody></table>
 
@@ -2117,6 +2134,7 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
       </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;hello world&lt;/p&gt;"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"end-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"human-status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"internal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"pinned"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"start-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -2243,6 +2261,7 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
       </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;hello&lt;/p&gt;"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"end-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"human-status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"internal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"pinned"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"start-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -2342,6 +2361,7 @@ to the right in the <code class="prettyprint">&lt;head&gt;</code> section of you
       </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;lopl&lt;/p&gt;"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"end-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"human-status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"internal"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"pinned"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"start-date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
