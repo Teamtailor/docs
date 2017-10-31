@@ -25,7 +25,11 @@ This object represents the job ad and the job process in Teamtailor. You can ret
       "pinned": false,
       "start-date": "2016-11-17T00:00:00.000+01:00",
       "status": "open",
-      "title": "New Title"
+      "title": "New Title",
+      "tags": [
+        "JavaScript",
+        "Ruby"
+      ]
     },
     "relationships": {
       "department": {
@@ -89,6 +93,7 @@ pinned                   | boolean | `true` if the job is pinned to the top on t
 start-date               | date    | Scheduled date to publish the job ad
 status                   | string  | The job's status, can be one of the following: `open`, `draft`, `archived`, `unlisted` or `temp`
 title                    | string  | The title on the job ad
+tags                     | array   | Array of string for each tag
 
 ### Links
 

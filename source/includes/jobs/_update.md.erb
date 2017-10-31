@@ -11,6 +11,9 @@ X-Api-Version: <%= config[:api_version] %>
     "attributes": {
       "title": "New Title",
       "status": "unlisted"
+      "tags": [
+        "JavaScript"
+      ]
     },
     "type": "jobs"
   }
@@ -47,7 +50,10 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/jobs/7199" \
       "pinned": false,
       "start-date": null,
       "status": "open",
-      "title": "yay horray"
+      "title": "yay horray",
+      "tags": [
+        "JavaScript"
+      ]
     },
     "relationships": {
       "department": {
