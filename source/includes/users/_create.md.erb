@@ -1,0 +1,80 @@
+## Create User
+
+```http
+POST https://api.teamtailor.com/v1/users HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{
+  "data": {
+    "attributes": {
+      "title": "CMO",
+      "name": "Erik Eriksson",
+      "email": "erik@example.com",
+      "role": "recruiter"
+    },
+    "type": "users"
+  }
+}
+```
+
+```shell
+curl -X "PATCH" "https://api.teamtailor.com/v1/users" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+     -H "Content-Type: application/vnd.api+json" \
+     -d "{\"data\":{\"attributes\":{\"title\":\"My New Title\",\"name\":\"Erik Eriksson\",\"email\":\"erik@example.com\",\"role\":\"recruiter\"},\"type\":\"users\"}}"
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "819",
+    "type": "users",
+    "links": {
+      "self": "http://api.teamtailor.com/v1/users/819"
+    },
+    "attributes": {
+      "description": null,
+      "email": "erik@example.com",
+      "facebook-profile": null,
+      "google-profile": null,
+      "hide-email": false,
+      "instagram-profile": null,
+      "linkedin-profile": null,
+      "name": "Erik Eriksson",
+      "other-profile": null,
+      "phone": null,
+      "picture": null,
+      "role": "recruiter",
+      "title": null,
+      "twitter-profile": null,
+      "username": "erikeriksson",
+      "visible": true
+    },
+    "relationships": {
+      "department": {
+        "links": {
+          "self": "http://api.teamtailor.com/v1/users/819/relationships/department",
+          "related": "http://api.teamtailor.com/v1/users/819/department"
+        }
+      },
+      "location": {
+        "links": {
+          "self": "http://api.teamtailor.com/v1/users/819/relationships/location",
+          "related": "http://api.teamtailor.com/v1/users/819/location"
+        }
+      }
+    }
+  }
+}
+```
+
+<aside class="notice">
+  A unique <code>email</code> is required
+</aside>
+
+Create a user. An email invitation will be sent to the specified email if role is not "no-access".
+The user will be able to create a password using the link in the invitation email.
