@@ -398,3 +398,13 @@ curl -X "GET" "https://api.teamtailor.com/v1/users" \
   }
 }
 ```
+
+Use this endpoint to retrieve lists of users.
+
+### Example parameters
+
+Parameter          | Default      | Description
+------------------ | ------------ | -----------
+include            | null         | Comma separated list of relations to include in the response. For example `department,location`.
+filter[email]      | null         | Filter by email address.
+sort               | id           | Sort list by any of the user attributes.
