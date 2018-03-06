@@ -1,0 +1,61 @@
+## List uploads
+
+```http
+GET https://api.teamtailor.com/v1/uploads HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/uploads" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "446842",
+      "type": "uploads",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/uploads/446842"
+      },
+      "attributes": {
+        "url": "https://teamtailor-production.s3.amazonaws.com/uploads/213fd22e8dce6665edfb3922d31f4c22124547e8/cover_letter.pdf",
+        "file-name": "cover_letter.pdf",
+        "internal": false
+      },
+      "relationships": {
+        "candidate": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/uploads/446842/relationships/candidate",
+            "related": "https://api.teamtailor.com/v1/uploads/446842/candidate"
+          }
+        }
+      }
+    },
+    …
+  ],
+  "meta": {
+    "record-count": 20,
+    "page-count": 1
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/uploads?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "next": "https://api.teamtailor.com/v1/uploads?page%5Bnumber%5D=2&page%5Bsize%5D=10",
+    "last": "https://api.teamtailor.com/v1/uploads?page%5Bnumber%5D=2&page%5Bsize%5D=10"
+  }
+}
+```
+
+Use this endpoint to retrieve lists of uploads.
+
+### Example parameters
+
+Parameter          | Default      | Description
+------------------ | ------------ | -----------
+include            | null         | Comma separated list of relations to include in the response. For example `candidate`.
+sort               | id           | Sort list by any of the upload attributes.

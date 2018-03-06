@@ -1,0 +1,44 @@
+# Uploads
+
+A file uploaded to a candidate. Can be uploaded by either the candidate, or a user.
+
+## Upload Object
+
+```json
+{
+  "data": {
+    "id": "446842",
+    "type": "uploads",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/uploads/446842"
+    },
+    "attributes": {
+      "url": "https://teamtailor-production.s3.amazonaws.com/uploads/213fd22e8dce6665edfb3922d31f4c22124547e8/cover_letter.pdf",
+      "file-name": "cover_letter.pdf",
+      "internal": false
+    },
+    "relationships": {
+      "candidate": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/uploads/446842/relationships/candidate",
+          "related": "https://api.teamtailor.com/v1/uploads/446842/candidate"
+        }
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute         | Type    | Description
+------------------|---------|------------
+url               | string  | URL to file
+file-name         | string  | Original file name
+internal          | boolean | Internal files were uploaded by a user, not the candidate
+
+### Relations
+
+Relation   | Description
+-----------|------------
+candidate  |
