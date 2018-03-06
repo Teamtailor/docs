@@ -13,14 +13,20 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
 ```
 
 ### 2018-03-02 *Non breaking update*
- * Filter candidates by `locations`.
+ * Filter [candidates](#candidates) by `locations`.
 
 ### 2018-02-13 *Non breaking update*
  * New resource [Uploads](#uploads)
- * Filter candidates by `connected`, `department` and `role`.
+ * Filter [candidates](#candidates) by `connected`, `department` and `role`.
+
+### 2018-01-25 *Non breaking update*
+ * Added `locations` resource to [candidates](#candidates)
+ * Filter [users](#users) by `email`
+ * Can update `email` attribute on [users](#users)
 
 ### 2018-01-16 *Non breaking update*
  * Added `create` and `update` actions to [users](#users)
+ * Set `picture` to [jobs](#jobs) by passing an URL to a picture.
 
 ### 2017-10-31 *Non breaking update*
  * Added `tags` to [jobs](#jobs)
