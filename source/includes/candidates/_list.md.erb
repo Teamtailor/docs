@@ -158,8 +158,12 @@ Use this endpoint to retrieve lists of candidates.
 
 ### Example parameters
 
-Parameter      | Default   | Description
--------------- | --------- | -----------
-include        | null      | Comma separated list of relations to include in the response. For example `job-applications,department`.
-filter[email]  | null      | Filter by email address.
-sort           | id        | Sort list by any of the candidate attributes.
+Parameter           | Default   | Description
+--------------      | --------- | -----------
+include             | null      | Comma separated list of relations to include in the response. For example `job-applications,department`.
+filter[email]       | null      | Filter by email address.
+filter[department]  | null      | Filter by department.
+filter[role]        | null      | Filter by role.
+filter[locations]   | null      | Filter by locations.
+filter[email]       | null      | Filter by email address.
+sort                | id        | Sort list by any of the candidate attributes. Use `-id` to sort by id descending.
