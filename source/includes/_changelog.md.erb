@@ -12,37 +12,40 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
      -H "X-Api-Version: 20161108"
 ```
 
+### 2018-04-05 *Non breaking update*
+ * Add `colleagues` relation to `jobs` (lists `users` related to the job ad).
+
 ### 2018-04-04 *Non breaking update*
- * Add `external-application-url` field to `jobs`
+ * Add `external-application-url` field to `jobs`.
 
 ### 2018-03-02 *Non breaking update*
  * Filter [candidates](#candidates) by `locations`.
 
 ### 2018-02-13 *Non breaking update*
- * New resource [Uploads](#uploads)
- * Added `uploads` resource to [candidates](#candidates)
+ * New resource [Uploads](#uploads).
+ * Added `uploads` resource to [candidates](#candidates).
  * Filter [candidates](#candidates) by `connected`, `department` and `role`.
 
 ### 2018-01-25 *Non breaking update*
- * Added `locations` resource to [candidates](#candidates)
- * Filter [users](#users) by `email`
- * Can update `email` attribute on [users](#users)
+ * Added `locations` resource to [candidates](#candidates).
+ * Filter [users](#users) by `email`.
+ * Can update `email` attribute on [users](#users).
 
 ### 2018-01-16 *Non breaking update*
- * Added `create` and `update` actions to [users](#users)
+ * Added `create` and `update` actions to [users](#users).
  * Set `picture` to [jobs](#jobs) by passing an URL to a picture.
 
 ### 2017-10-31 *Non breaking update*
- * Added `tags` to [jobs](#jobs)
+ * Added `tags` to [jobs](#jobs).
 
 ### 2017-09-06 *Non breaking update*
- * Added `apply-button-text` attribute to [jobs](#jobs)
+ * Added `apply-button-text` attribute to [jobs](#jobs).
 
 ### 2017-03-15 *Non breaking update*
- * Added `single-line` attribute to [questions](#questions)
+ * Added `single-line` attribute to [questions](#questions).
 
 ### 2017-03-10 *Non breaking update*
- * Added `changed_stage_at` to [job applications](#job-applications)
+ * Added `changed_stage_at` to [job applications](#job-applications).
  * Made it possible to filter on `stage_type` when listing [job applications](#job-applications).
 
 ### 2017-02-23 *Non breaking update*
@@ -53,9 +56,9 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
   * [Job Applications](#job-applications)
   * [Questions](#questions)
   * [Stages](#stages).
-* New scopes [Admin](#authentication) and [Internal](#authentication)
-* [Embed job appliction form as an iframe](#embed-application-form)
+* New scopes [Admin](#authentication) and [Internal](#authentication).
+* [Embed job appliction form as an iframe](#embed-application-form).
 
 
 ### 2016-11-08 *New version*
-* First public version
+* First public version.
