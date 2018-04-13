@@ -4,7 +4,7 @@
   Required scope: Admin
 </aside>
 
-A candidate is defined by a unqiue email adress. If a candidate don't have any <code>job_applications</code> it can be either <code>sourced</code> or <code>connected</code>
+A candidate is defined by a unqiue email adress. If a candidate don't have any <code>job-applications</code> it can be either <code>sourced</code> or <code>connected</code>
 
 When <code>sourced</code> the candidate was added to the system by a recruiter.
 
@@ -89,25 +89,25 @@ A candidate that is <code>connected</code> has opted in to recieve new job notif
 Attribute        | Type    | Description
 -----------------|---------|------------
 connected        | boolean |
-created_at       | date    |
+created-at       | date    |
 email            | string  | Email to candidate. Always unique.
-facebook_id      | string  | User id if connected with Facebook
-facebook_profile | string  | __Read only__, html version of Facebook profile
-first_name       | string  |
-last_name        | string  |
-linkedin_profile | string  | __Read only__, html version of LinkedIn profile
-linkedin_uid     | string  | User id if connected with LinkedIn
-linkedin_url     | string  | URL to LinkedIn profile
+facebook-id      | string  | User id if connected with Facebook
+facebook-profile | string  | __Read only__, html version of Facebook profile
+first-name       | string  |
+last-name        | string  |
+linkedin-profile | string  | __Read only__, html version of LinkedIn profile
+linkedin-uid     | string  | User id if connected with LinkedIn
+linkedin-url     | string  | URL to LinkedIn profile
 phone            | string  |
 picture          | string  | Url to candidate picture
 pitch            | string  | 140 character pitch
-referring_site   | string  | __Read only__, friendly name parsed from referring_url (i.e. Facebook, Indeed etc)
-referring_url    | string  |
+referring-site   | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
+referring-url    | string  |
 resume           | string  | Url to Pdf-verison of resume
 sourced          | boolean | True if added by a recruiter without applying
 tags             | array   |
 unsubscribed     | boolean | If true no new job notifications are sent
-updated_at       | date    |
+updated-at       | date    |
 
 
 ### Relations
@@ -116,7 +116,7 @@ Relation         | Description
 -----------------|------------
 department       |
 role             |
-job_applications |
+job-applications |
 questions        |
 answers          |
 locations        |

@@ -29,13 +29,13 @@ page[size] | 15                  | Page size, get 15 jobs in one request
 Get a list of the most recent hired candidates
 
 ```http
-GET https://api.teamtailor.com/v1/job-applications?include=candidate&filter%5Bstage_type%5D=hired&sort=-changed_stage_at HTTP/1.1
+GET https://api.teamtailor.com/v1/job-applications?include=candidate&filter%5Bstage-type%5D=hired&sort=-changed_stage_at HTTP/1.1
 Authorization: Token token=abc123abc123
 X-Api-Version: <%= config[:api_version] %>
 ```
 
 ```shell
-curl "https://api.teamtailor.com/v1/job-applications?include=candidate&filter%5Bstage_type%5D=hired&sort=-changed_stage_at" \
+curl "https://api.teamtailor.com/v1/job-applications?include=candidate&filter%5Bstage-type%5D=hired&sort=-changed_stage_at" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
 ```
@@ -45,7 +45,7 @@ curl "https://api.teamtailor.com/v1/job-applications?include=candidate&filter%5B
 Parameter          | Value                  | Description
 ------------------ | ---------------------- | -----------
 include            | candidate              | Since we're fetching latest job applications, we must include the candidate if we wan't more data about each hire.
-filter[stage_type] | hired                  | Just list job applications marked as hired
+filter[stage-type] | hired                  | Just list job applications marked as hired
 sort               | <span class="no-wrap">-changed_stage_at</span>      | Sort applications by most recent added to current (hired) stage
 
 ## Embed application form
