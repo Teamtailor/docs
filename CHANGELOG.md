@@ -6,8 +6,8 @@
 
 **Features:**
 
-* Add the 8 user notification settings attributes to the user object.
-* Add TeamMembership object to enable index, view, create and destroy actions on hiring team members.
+- Add the 8 user notification settings attributes to the user object.
+- Add TeamMembership object to enable index, view, create and destroy actions on hiring team members.
 
 ## Version 1.3.3
 
@@ -41,18 +41,18 @@ Instead of `rake build` and `rake deploy`, you should now run `bundle exec middl
 
 **Fixes:**
 
-* Remove crash on invalid languages
-* Update Tocify to scroll to the highlighted header in the Table of Contents
-* Fix variable leak and update search algorithms
-* Update Python examples to be valid Python
-* Update gems
-* More misc. bugfixes of Javascript errors
-* Add Dockerfile
-* Remove unused gems
-* Optimize images, fonts, and generated asset files
-* Add chinese font support
-* Remove RedCarpet header ID patch
-* Update language tabs to not disturb existing query strings
+- Remove crash on invalid languages
+- Update Tocify to scroll to the highlighted header in the Table of Contents
+- Fix variable leak and update search algorithms
+- Update Python examples to be valid Python
+- Update gems
+- More misc. bugfixes of Javascript errors
+- Add Dockerfile
+- Remove unused gems
+- Optimize images, fonts, and generated asset files
+- Add chinese font support
+- Remove RedCarpet header ID patch
+- Update language tabs to not disturb existing query strings
 
 ## Version 1.1
 
@@ -60,7 +60,7 @@ Instead of `rake build` and `rake deploy`, you should now run `bundle exec middl
 
 **Fixes:**
 
-* Finally, a fix for the redcarpet upgrade bug
+- Finally, a fix for the redcarpet upgrade bug
 
 ## Version 1.0
 
@@ -70,15 +70,15 @@ Instead of `rake build` and `rake deploy`, you should now run `bundle exec middl
 
 **Features:**
 
-* Responsive designs for phones and tablets
-* Started tagging versions
+- Responsive designs for phones and tablets
+- Started tagging versions
 
 **Fixes:**
 
-* Fixed 'unrecognized expression' error
-* Fixed #undefined hash bug
-* Fixed bug where the current language tab would be unselected
-* Fixed bug where tocify wouldn't highlight the current section while searching
-* Fixed bug where ids of header tags would have special characters that caused problems
-* Updated layout so that pages with disabled search wouldn't load search.js
-* Cleaned up Javascript
+- Fixed 'unrecognized expression' error
+- Fixed #undefined hash bug
+- Fixed bug where the current language tab would be unselected
+- Fixed bug where tocify wouldn't highlight the current section while searching
+- Fixed bug where ids of header tags would have special characters that caused problems
+- Updated layout so that pages with disabled search wouldn't load search.js
+- Cleaned up Javascript
