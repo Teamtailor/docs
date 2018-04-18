@@ -1,4 +1,4 @@
-## Show an User
+## Show a User
 
 ```http
 GET https://api.teamtailor.com/v1/users/4468 HTTP/1.1
@@ -40,7 +40,15 @@ curl -X "GET" "https://api.teamtailor.com/v1/users/4468" \
       "title": "Developer",
       "twitter-profile": "https://twitter.com/himynameisjonas",
       "username": "jonas5",
-      "visible": true
+      "visible": true,
+      "notification-new-message": true,
+      "notification-new-job": true,
+      "notification-new-open-resume": true,
+      "notification-new-mention": true,
+      "notification-lead": true,
+      "notification-new-resume-as-hiring-team": true,
+      "notification-daily-digest": true,
+      "notification-new-resume-as-recruiter": true
     },
     "relationships": {
       "department": {

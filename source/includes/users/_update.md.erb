@@ -10,7 +10,8 @@ X-Api-Version: <%= config[:api_version] %>
     "id": "819",
     "attributes": {
       "title": "My New Title",
-      "name": "Erik Eriksson"
+      "name": "Erik Eriksson",
+      "notification-daily-digest": false
     },
     "type": "users"
   }
@@ -53,7 +54,15 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/users/819" \
       "title": "My New Title",
       "twitter-profile": "",
       "username": "erikeriksson",
-      "visible": true
+      "visible": true,
+      "notification-new-message": true,
+      "notification-new-job": true,
+      "notification-new-open-resume": true,
+      "notification-new-mention": true,
+      "notification-lead": true,
+      "notification-new-resume-as-hiring-team": true,
+      "notification-daily-digest": false,
+      "notification-new-resume-as-recruiter": true
     },
     "relationships": {
       "department": {
