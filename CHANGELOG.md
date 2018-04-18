@@ -2,7 +2,7 @@
 
 ## Version 1.3.4
 
-_April 18, 2018_
+*April 18, 2018*
 
 **Features:**
 
@@ -11,25 +11,25 @@ _April 18, 2018_
 
 ## Version 1.3.3
 
-_June 11, 2016_
+*June 11, 2016*
 
 Documentation and example changes.
 
 ## Version 1.3.2
 
-_February 3, 2016_
+*February 3, 2016*
 
 A small bugfix for slightly incorrect background colors on code samples in some cases.
 
 ## Version 1.3.1
 
-_January 31, 2016_
+*January 31, 2016*
 
 A small bugfix for incorrect whitespace in code blocks.
 
 ## Version 1.3
 
-_January 27, 2016_
+*January 27, 2016*
 
 We've upgraded Middleman and a number of other dependencies, which should fix quite a few bugs.
 
@@ -37,7 +37,7 @@ Instead of `rake build` and `rake deploy`, you should now run `bundle exec middl
 
 ## Version 1.2
 
-_June 20, 2015_
+*June 20, 2015*
 
 **Fixes:**
 
@@ -56,7 +56,7 @@ _June 20, 2015_
 
 ## Version 1.1
 
-_July 27, 2014_
+*July 27, 2014*
 
 **Fixes:**
 
@@ -64,7 +64,7 @@ _July 27, 2014_
 
 ## Version 1.0
 
-_July 2, 2014_
+*July 2, 2014*
 
 [View Issues](https://github.com/tripit/slate/issues?milestone=1&state=closed)
 
