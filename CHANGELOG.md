@@ -1,14 +1,5 @@
 # Changelog
 
-## Version 1.3.4
-
-*April 18, 2018*
-
-**Features:**
-
-- Add the 8 user notification settings attributes to the user object.
-- Add TeamMembership object to enable index, view, create and destroy actions on hiring team members.
-
 ## Version 1.3.3
 
 *June 11, 2016*
