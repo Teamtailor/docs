@@ -1,0 +1,101 @@
+## List Team Memberships
+
+```http
+GET https://api.teamtailor.com/v1/team-memberships HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/team-memberships" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "7",
+      "type": "team-memberships",
+      "links": {
+        "self": "https://api.teamtailor.localhost/v1/team-memberships/7"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "https://api.teamtailor.localhost/v1/team-memberships/7/relationships/user",
+            "related": "https://api.teamtailor.localhost/v1/team-memberships/7/user"
+          }
+        },
+        "team": {
+          "links": {
+            "self": "https://api.teamtailor.localhost/v1/team-memberships/7/relationships/team",
+            "related": "https://api.teamtailor.localhost/v1/team-memberships/7/team"
+          }
+        }
+      }
+    },
+    {
+      "id": "8",
+      "type": "team-memberships",
+      "links": {
+        "self": "https://api.teamtailor.localhost/v1/team-memberships/8"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "https://api.teamtailor.localhost/v1/team-memberships/8/relationships/user",
+            "related": "https://api.teamtailor.localhost/v1/team-memberships/8/user"
+          }
+        },
+        "team": {
+          "links": {
+            "self": "https://api.teamtailor.localhost/v1/team-memberships/8/relationships/team",
+            "related": "https://api.teamtailor.localhost/v1/team-memberships/8/team"
+          }
+        }
+      }
+    },
+    {
+      "id": "9",
+      "type": "team-memberships",
+      "links": {
+        "self": "https://api.teamtailor.localhost/v1/team-memberships/9"
+      },
+      "relationships": {
+        "user": {
+          "links": {
+            "self": "https://api.teamtailor.localhost/v1/team-memberships/9/relationships/user",
+            "related": "https://api.teamtailor.localhost/v1/team-memberships/9/user"
+          }
+        },
+        "team": {
+          "links": {
+            "self": "https://api.teamtailor.localhost/v1/team-memberships/9/relationships/team",
+            "related": "https://api.teamtailor.localhost/v1/team-memberships/9/team"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+      "record-count": 3,
+      "page-count": 1
+  },
+  "links": {
+      "first": "https://api.teamtailor.localhost/v1/team-memberships?page%5Bnumber%5D=1&page%5Bsize%5D=3",
+      "last": "https://api.teamtailor.localhost/v1/team-memberships?page%5Bnumber%5D=1&page%5Bsize%5D=3"
+  }
+}
+```
+
+Use this endpoint to retrieve lists of team memberships.
+
+### Example parameters
+
+Parameter          | Default | Description
+------------------ | ------- | -----------
+include            | null    | Comma separated list of relations to include in the response. For example `user,team`

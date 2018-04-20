@@ -28,7 +28,15 @@
       "title": "Developer",
       "twitter-profile": "https://twitter.com/himynameisjonas",
       "username": "jonas5",
-      "visible": true
+      "visible": true,
+      "notification-candidate-message": true,
+      "notification-job": true,
+      "notification-connected-candidate": true,
+      "notification-mention": true,
+      "notification-lead-message": true,
+      "notification-hiring-team-application": true,
+      "notification-daily-digest": true,
+      "notification-recruiter-application": true
     },
     "relationships": {
       "department": {
@@ -50,24 +58,32 @@
 
 ### Attributes
 
-Attribute         | Type    | Description
-------------------|---------|------------
-description       | string  | About text, visible on the public profile
-email             | string  | Used for notifications and might be visible on career site
-facebook-profile  | string  | URL to Facebook profile
-google-profile    | string  | URL to Google+ profile
-hide-email        | boolean | `true` if e-mail address should be hidden on career site
-instagram-profile | string  | URL to Instagram profile
-linkedin-profile  | string  | URL to LinkedIn profile
-name              | string  | The user's name
-other-profile     | string  | URL to other profile
-phone             | string  | Phone number
-picture           | object  | Picture object (Profile picture)
-role              | string  | Permission role (`no_access`, `user`, `recruiter` or `admin`)
-title             | string  | Title, e.g 'CEO' or 'Account manager'
-twitter-profile   | string  | URL to Twitter profile
-username          | string  | Internal username, used in mentions
-visible           | boolean | `true` if profile is visible on the career site
+Attribute                               | Type    | Description
+----------------------------------------|---------|---------------------------
+description                             | string  | About text, visible on the public profile
+email                                   | string  | Used for notifications and might be visible on career site
+facebook-profile                        | string  | URL to Facebook profile
+google-profile                          | string  | URL to Google+ profile
+hide-email                              | boolean | `true` if e-mail address should be hidden on career site
+instagram-profile                       | string  | URL to Instagram profile
+linkedin-profile                        | string  | URL to LinkedIn profile
+name                                    | string  | The user's name
+other-profile                           | string  | URL to other profile
+phone                                   | string  | Phone number
+picture                                 | object  | Picture object (Profile picture)
+role                                    | string  | Permission role (`no_access`, `user`, `recruiter` or `admin`)
+title                                   | string  | Title, e.g 'CEO' or 'Account manager'
+twitter-profile                         | string  | URL to Twitter profile
+username                                | string  | Internal username, used in mentions
+visible                                 | boolean | `true` if profile is visible on the career site
+notification-candidate-message                | boolean | `true` notifies user when candidate replies to an email
+notification-job                    | boolean | `true` notifies user when new job is published
+notification-connected-candidate            | boolean | `true` notifies user when candidate connects with your company
+notification-mention                | boolean | `true` notifies user when team member mentions them
+notification-lead-message                       | boolean | `true` notifies user when lead writes a message
+notification-hiring-team-application  | boolean | `true` notifies user when candidate applies for a job where they're part of the hiring team
+notification-daily-digest               | boolean | `true` means the user will receive the daily digest email with all activities in their hiring teams
+notification-recruiter-application    | boolean | `true` notifies user when candidate applies for a job where they are a recruiter
 
 ### Relations
 
