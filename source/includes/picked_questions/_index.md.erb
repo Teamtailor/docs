@@ -1,6 +1,6 @@
 # Picked questions
 
-Picked question is a junction table between job and question. It tells you if question is mandatory for that job.
+A picked question represents the relationship between job and question. It tells you if question is mandatory for that job.
 
 ## Picked Question Object
 
@@ -44,3 +44,10 @@ curl -X "GET" "https://api.teamtailor.com/v1/picked-question/1" \
 Attribute     | Type    | Description
 --------------|---------|------------
 mandatory     | bolean  | Is question mandatory. Default is false
+
+
+### Relations
+
+Relation   | Description
+-----------|------------
+question   | The question related to job
