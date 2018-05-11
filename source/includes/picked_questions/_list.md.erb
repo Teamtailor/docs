@@ -1,0 +1,84 @@
+## List picked questions
+
+```http
+GET https://api.teamtailor.com/v1/picked-questions HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/picked-questions" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+  {
+    "data": [
+      {
+        "id": "1",
+        "type": "picked-questions",
+        "links": {
+          "self": "https://api.teamtailor.com/v1/picked-questions/1"
+        },
+        "attributes": {
+          "mandatory": false
+        },
+        "relationships": {
+          "question": {
+            "links": {
+              "self": "https://api.teamtailor.com/v1/picked-questions/1/relationships/question",
+              "related": "https://api.teamtailor.com/v1/picked-questions/1/question"
+            }
+          }
+        }
+      },
+      {
+        "id": "2",
+        "type": "picked-questions",
+        "links": {
+          "self": "https://api.teamtailor.com/v1/picked-questions/2"
+        },
+        "attributes": {
+          "mandatory": false
+        },
+        "relationships": {
+          "question": {
+            "links": {
+              "self": "https://api.teamtailor.com/v1/picked-questions/2/relationships/question",
+              "related": "https://api.teamtailor.com/v1/picked-questions/2/question"
+            }
+          }
+        }
+      },
+      {
+        "id": "3",
+        "type": "picked-questions",
+        "links": {
+          "self": "https://api.teamtailor.com/v1/picked-questions/3"
+        },
+        "attributes": {
+          "mandatory": false
+        },
+        "relationships": {
+          "question": {
+            "links": {
+              "self": "https://api.teamtailor.com/v1/picked-questions/3/relationships/question",
+              "related": "https://api.teamtailor.com/v1/picked-questions/3/question"
+            }
+          }
+        }
+      }
+  ],
+  "meta": {
+    "record-count": 3,
+    "page-count": 1
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/picked-questions?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "last": "https://api.teamtailor.com/v1/picked-questions?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+  }
+}
+```
