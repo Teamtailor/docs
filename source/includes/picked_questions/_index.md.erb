@@ -1,0 +1,46 @@
+# Picked questions
+
+Picked question is a junction table between job and question. It tells you if question is mandatory for that job.
+
+## Picked Question Object
+
+```http
+GET https://api.teamtailor.com/v1/picked-question/1 HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/picked-question/1" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+```json
+  {
+    "data": {
+      "id": "1",
+      "type": "picked-questions",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/picked-questions/1"
+      },
+      "attributes": {
+        "mandatory": false
+      },
+      "relationships": {
+        "question": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/picked-questions/1/relationships/question",
+            "related": "https://api.teamtailor.com/v1/picked-questions/1/question"
+          }
+        }
+      }
+    }
+  }
+```
+
+### Attributes
+
+Attribute     | Type    | Description
+--------------|---------|------------
+mandatory     | bolean  | Is question mandatory. Default is false

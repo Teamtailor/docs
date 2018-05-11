@@ -30,7 +30,11 @@ This object represents the job ad and the job process in Teamtailor. You can ret
         "JavaScript",
         "Ruby"
       ],
-      "external-application-url": null
+      "external-application-url": null,
+      "name-requirement": "name_optional",
+      "resume-requirement": "resume_optional",
+      "cover-letter-requirement": "cover_letter_optional",
+      "phone-requirement": "phone_optional"
     },
     "relationships": {
       "department": {
@@ -61,6 +65,12 @@ This object represents the job ad and the job process in Teamtailor. You can ret
         "links": {
           "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/questions",
           "related": "https://api.teamtailor.com/v1/jobs/7199/questions"
+        }
+      },
+      "picked-questions": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/picked-questions",
+          "related": "https://api.teamtailor.com/v1/jobs/7199/picked-questions"
         }
       },
       "candidates": {
@@ -102,6 +112,10 @@ status                   | string  | The job's status, can be one of the followi
 title                    | string  | The title on the job ad
 tags                     | array   | Array of string for each tag
 external-application-url | string  | Optional attribute for where candidates should be linked when applying for the job.
+name-requirement         | string  | Allowed options: `name_off`, `name_optional`, `name_required`
+resume_requirement       | string  | Allowed options: `resume_off`, `resume_optional`, `resume_required`
+cover-letter-requirement | string  | Allowed options: `cover_letter_off`, `cover_letter_optional`, `cover_letter_required`
+phone-requirement        | string  | Allowed options: `phone_off`, `phone_optional`, `phone_required`
 
 ### Links
 
