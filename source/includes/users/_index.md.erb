@@ -36,7 +36,9 @@
       "notification-lead-message": true,
       "notification-hiring-team-application": true,
       "notification-daily-digest": true,
-      "notification-recruiter-application": true
+      "notification-recruiter-application": true,
+      "notification-removal-request": true,
+      "notification-gdpr-digest": true
     },
     "relationships": {
       "department": {
@@ -84,6 +86,8 @@ notification-lead-message                       | boolean | `true` notifies user
 notification-hiring-team-application  | boolean | `true` notifies user when candidate applies for a job where they're part of the hiring team
 notification-daily-digest               | boolean | `true` means the user will receive the daily digest email with all activities in their hiring teams
 notification-recruiter-application    | boolean | `true` notifies user when candidate applies for a job where they are a recruiter
+notification-removal-request          | boolean | `true` notifies user when a candidate asked to be removed (for GDPR managers only)
+notification-gdpr-digest              | boolean | `true` sends daily digest of GDPR/data retention activities (for GDPR managers only)
 
 ### Relations
 
