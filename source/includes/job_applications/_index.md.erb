@@ -52,16 +52,17 @@ This object represents the job applications.
 
 ### Attributes
 
-Attribute        | Type    | Description
------------------|---------|------------
-created-at       | date    |
-cover-letter     | string  |
-changed-stage-at | date    | Date when candidate was added to current stage
-updated-at       | date    |
-rejected-at      | date    | If set, the candidate has been rejected for this job
-referring-url    | string  |
-referring-site   | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
-sourced          | boolean |
+Attribute          | Type    | Description
+-------------------|---------|------------
+created-at         | date    |
+cover-letter       | string  |
+changed-stage-at   | date    | Date when candidate was added to current stage
+updated-at         | date    |
+rejected-at        | date    | If set, the candidate has been rejected for this job
+referring-url      | string  |
+referring-site     | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
+sourced            | boolean |
+send-default-reply | boolean | __Create only__, set to true if you want to send the "Default reply" email to the candidate, default: false
 
 ### Relations
 
