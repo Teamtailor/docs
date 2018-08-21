@@ -1,0 +1,53 @@
+## Update departments
+```http
+PATCH https://api.teamtailor.com/v1/departments/5 HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{"data":{"id":"5","type":"departments","attributes":{"name":"Magic"}}}
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "5",
+    "type": "departments",
+    "links": {
+      "self": "https://api.teamtailor.localhost/v1/departments/5"
+    },
+    "attributes": {
+      "name": "Magic",
+      "people-headline": null,
+      "people-text": null,
+      "row-order": 7864320,
+      "pictures": [],
+      "headline": "Product Development",
+      "text": null
+    },
+    "relationships": {
+      "roles": {
+	"links": {
+	  "self": "https://api.teamtailor.localhost/v1/departments/5/relationships/roles",
+	  "related": "https://api.teamtailor.localhost/v1/departments/5/roles"
+	}
+      },
+      "team-memberships": {
+	"links": {
+	  "self": "https://api.teamtailor.localhost/v1/departments/5/relationships/team-memberships",
+	  "related": "https://api.teamtailor.localhost/v1/departments/5/team-memberships"
+	}
+      }
+    }
+  },
+  "meta": {
+    "texts": {
+      "name-singular": "department",
+      "name-plural": "departments",
+      "all": "All departments"
+    }
+  }
+}
+```
+
