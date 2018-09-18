@@ -103,12 +103,8 @@ curl -X "POST" "https://api.teamtailor.com/v1/answers" \
 }
 ```
 
-Create a new Answer.
+Update an Answer. Current answer will be found via candidate and question and update automatically.
 
 <aside class="notice">
-  The relations <code>question</code> and <code>candidate</code> are required to be able to create a new answer.
-</aside>
-
-<aside class="notice">
-  If the candidate already has answered the question, the answer will be updated.
+  The relations <code>question</code> and <code>candidate</code> are required to be able to update an answer.
 </aside>
