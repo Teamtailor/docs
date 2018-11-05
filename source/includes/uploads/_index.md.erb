@@ -13,7 +13,7 @@ A file uploaded to a candidate. Can be uploaded by either the candidate, or a us
       "self": "https://api.teamtailor.com/v1/uploads/446842"
     },
     "attributes": {
-      "url": "https://teamtailor-production.s3.amazonaws.com/uploads/213fd22e8dce6665edfb3922d31f4c22124547e8/cover_letter.pdf",
+      "url": "https://teamtailor-production.s3.amazonaws.com/uploads/213fd22e8dce6665edfb3922d31f4c22124547e8/cover_letter.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=EKIAI4NUY2WMURK1W5HA%2F20181106%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20181106T140003Z&X-Amz-Expires=10&X-Amz-SignedHeaders=host&X-Amz-Signature=468a0c89385dc39e5981d0003d84488a492fdc0b44d3bce4522bc01896509863",
       "file-name": "cover_letter.pdf",
       "internal": false
     },
@@ -33,7 +33,7 @@ A file uploaded to a candidate. Can be uploaded by either the candidate, or a us
 
 Attribute         | Type    | Description
 ------------------|---------|------------
-url               | string  | URL to file
+url               | string  | Signed URL to file, valid for 1 minute.
 file-name         | string  | Original file name
 internal          | boolean | Internal files were uploaded by a user, not the candidate
 
