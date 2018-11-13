@@ -1,0 +1,65 @@
+## Create a upload
+
+```http
+POST https://api.teamtailor.com/v1/uploads HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{
+  "data": {
+    "type": "uploads",
+    "attributes": {
+      "url": "https://my.fileurl.com/testfile.pdf",
+      "file-name": "testfile.pdf"
+    },
+    "relationships": {
+      "candidate": {
+      "data":{
+        "id": "12345",
+        "type": "candidates"
+        }
+      }
+    }
+  }
+}
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/uploads" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>" \
+     -d "{\"data\":{\"type\":\"uploads\",\"attributes\":{\"url\":\"https://my.fileurl.com/testfile.pdf\",\"file-name\":\"testfile.pdf\"},\"relationships\":{\"candidate\":{\"data\":{\"id\":\"12345\",\"type\":\"candidates\"}}}}}"
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1234",
+    "type": "uploads",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/uploads/1234"
+    },
+    "attributes": {
+      "url": "http://file-download-url.com/testfile.pdf",
+      "file-name": "testfile.pdf",
+      "internal": false
+    },
+    "relationships": {
+      "candidate": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/uploads/1234/relationships/candidate",
+          "related": "https://api.teamtailor.com/v1/uploads/1234/candidate"
+        }
+      }
+    }
+  }
+}
+```
+
+Create an upload for a specific candidate.
+
+<aside class="notice">
+  A public <code>url</code> is required for the file
+</aside>
