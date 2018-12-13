@@ -1,0 +1,42 @@
+## Update locations
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+```http
+PATCH https://api.teamtailor.com/v1/locations/5 HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{"data":{"id":"4","type":"locations","attributes":{"name":"Teamtailor Stockholm"}}}
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "4",
+    "type": "locations",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/locations/4"
+    },
+    "attributes": {
+      "address": "Östgötagatan 16",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "email": null,
+      "headquarters": false,
+      "name": "Teamtailor Stockholm",
+      "phone": null,
+      "zip": "116 21"
+    }
+  },
+  "meta": {
+    "texts": {
+      "all": "All locations"
+    }
+  }
+}
+```
