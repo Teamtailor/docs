@@ -35,6 +35,7 @@ A candidate that is <code>connected</code> has opted in to recieve new job notif
       "referring-site": "Facebook",
       "referring-url": "http://facebook.com/page",
       "resume": "https://s3.amazonaws.com/resume.pdf",
+      "set-consent-expiration": true,
       "sourced": false,
       "unsubscribed": false,
       "updated-at": "2017-01-18T21:20:16.646+01:00",
@@ -86,28 +87,29 @@ A candidate that is <code>connected</code> has opted in to recieve new job notif
 
 ### Attributes
 
-Attribute        | Type    | Description
------------------|---------|------------
-connected        | boolean |
-created-at       | date    |
-email            | string  | Email to candidate. Always unique.
-facebook-id      | string  | User id if connected with Facebook
-facebook-profile | string  | __Read only__, html version of Facebook profile
-first-name       | string  |
-last-name        | string  |
-linkedin-profile | string  | __Read only__, html version of LinkedIn profile
-linkedin-uid     | string  | User id if connected with LinkedIn
-linkedin-url     | string  | URL to LinkedIn profile
-phone            | string  |
-picture          | string  | Url to candidate picture
-pitch            | string  | 140 character pitch
-referring-site   | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
-referring-url    | string  |
-resume           | string  | Signed URL to pdf-version of resume, valid for 30 seconds.
-sourced          | boolean | True if added by a recruiter without applying
-tags             | array   |
-unsubscribed     | boolean | If true no new job notifications are sent
-updated-at       | date    |
+Attribute                 | Type    | Description
+--------------------------|---------|------------
+connected                 | boolean |
+created-at                | date    |
+email                     | string  | Email to candidate. Always unique.
+facebook-id               | string  | User id if connected with Facebook
+facebook-profile          | string  | __Read only__, html version of Facebook profile
+first-name                | string  |
+last-name                 | string  |
+linkedin-profile          | string  | __Read only__, html version of LinkedIn profile
+linkedin-uid              | string  | User id if connected with LinkedIn
+linkedin-url              | string  | URL to LinkedIn profile
+phone                     | string  |
+picture                   | string  | Url to candidate picture
+pitch                     | string  | 140 character pitch
+referring-site            | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
+referring-url             | string  |
+resume                    | string  | Signed URL to pdf-version of resume, valid for 30 seconds.
+sourced                   | boolean | True if added by a recruiter without applying
+set-consent-expiration    | boolean | __Write only__ True if candidate have given their consent to store their personal details. Will set an expiration period according to your GDPR settings.
+tags                      | array   |
+unsubscribed              | boolean | If true no new job notifications are sent
+updated-at                | date    |
 
 
 ### Relations
