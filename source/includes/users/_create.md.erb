@@ -11,7 +11,8 @@ X-Api-Version: <%= config[:api_version] %>
       "title": "CMO",
       "name": "Erik Eriksson",
       "email": "erik@example.com",
-      "role": "recruiter"
+      "role": "recruiter",
+      "merge": true
     },
     "type": "users"
   }
@@ -88,3 +89,5 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/users" \
 
 Create a user. An email invitation will be sent to the specified email if role is not "no-access".
 The user will be able to create a password using the link in the invitation email.
+
+Use the <code>merge</code> attribute to merge the candidate attributes in case a candidate with a matching email address already exists.
