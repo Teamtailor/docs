@@ -20,7 +20,8 @@ X-Api-Version: <%= config[:api_version] %>
            "email": "jonas@example.com",
            "pitch": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
            "last-name": "Jonas",
-           "first-name": "Brusman"
+           "first-name": "Brusman",
+           "merge": true
          }
        }
      }'
@@ -99,4 +100,4 @@ X-Api-Version: <%= config[:api_version] %>
   A unique <code>email</code> is a required attribute unless <code>sourced</code> is set to true
 </aside>
 
-Use the <code>merge</code> attribute to merge the candidate attributes in case a candidate with the supplied email address already exists.
+Use the <code>merge</code> attribute to merge the candidate attributes in case a candidate with a matching email address already exists.
