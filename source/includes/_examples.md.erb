@@ -1,18 +1,41 @@
 # Examples
 Here are some real world usage examples of the Teamtailor API.
 
-## List published jobs with their department and location
+## Paginate a list
 
-Get a list of 15 published jobs and include their departments and locations in one request.
+Get the second page of jobs, with 20 jobs per page.
 
 ```http
-GET https:://api.teamtailor.com/v1/jobs?include=department,location&page%5Bsize%5D=15 HTTP/1.1
+GET https://api.teamtailor.com/v1/jobs?page%5Bsize%5D=20&page%5Bnumber%5D=2 HTTP/1.1
 Authorization: Token token=abc123abc123
 X-Api-Version: <%= config[:api_version] %>
 ```
 
 ```shell
-curl -X "GET" "https://api.teamtailor.com/v1/jobs?include=department,location&page%5Bsize%5D=15" \
+curl -X "GET" "https://api.teamtailor.com/v1/jobs?page%5Bsize%5D=20&page%5Bnumber%5D=2" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+### Parameters used in this example
+
+Parameter   | Value               | Description
+----------  | ------------------- | -----------
+page[size]  | 20                  | Get 20 jobs in the list.
+page[number]| 2                   | Get the second page of jobs.
+
+## List published jobs with their department and location
+
+Get a list of published jobs and include their departments and locations in one request.
+
+```http
+GET //api.teamtailor.com/v1/jobs?include=department,location HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/jobs?include=department,location" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
 ```
@@ -22,7 +45,6 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs?include=department,location&pa
 Parameter  | Value               | Description
 ---------- | ------------------- | -----------
 include    | department,location | Comma separated list of relations to include in the response.
-page[size] | 15                  | Page size, get 15 jobs in one request
 
 ## List latest hired candidates
 
