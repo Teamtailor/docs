@@ -24,7 +24,8 @@ This object represents the job applications.
       "referring-url": null,
       "referring-site": null,
       "sourced": true,
-      "changed-stage-at": "2017-01-11T11:29:48.841+01:00"
+      "changed-stage-at": "2017-01-11T11:29:48.841+01:00",
+      "send-user-notifications": true
     },
     "relationships": {
       "candidate": {
@@ -62,7 +63,8 @@ rejected-at        | date    | If set, the candidate has been rejected for this 
 referring-url      | string  |
 referring-site     | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
 sourced            | boolean |
-send-default-reply | boolean | __Create only__, set to true if you want to send the "Default reply" email to the candidate, default: false
+send-default-reply | boolean | __Create only__, set to true if you want to send the "Default reply" email to the candidate. Default: false
+send-user-notifications | boolean | __Create only__, set to true if you want to send notification emails to users. Default: false
 
 ### Relations
 
