@@ -70,10 +70,10 @@
 Attribute                               | Type    | Description
 ----------------------------------------|---------|---------------------------
 description                             | string  | About text, visible on the public profile
-email                                   | string  | Used for notifications and might be visible on career site
+email                                   | string  | Used for notifications and might be visible on career site **Requires admin permission if hidden.**
 facebook-profile                        | string  | URL to Facebook profile
 google-profile                          | string  | URL to Google+ profile
-hide-email                              | boolean | `true` if e-mail address should be hidden on career site
+hide-email                              | boolean | If e-mail address should be hidden on career site
 instagram-profile                       | string  | URL to Instagram profile
 linkedin-profile                        | string  | URL to LinkedIn profile
 merge                                   | boolean | __Write only__ True if the attributes should be merged with an existing user, matched by email address.
@@ -85,17 +85,17 @@ role                                    | string  | Permission role (`no_access`
 title                                   | string  | Title, e.g 'CEO' or 'Account manager'
 twitter-profile                         | string  | URL to Twitter profile
 username                                | string  | Internal username, used in mentions
-visible                                 | boolean | `true` if profile is visible on the career site
-notification-candidate-message                | boolean | `true` notifies user when candidate replies to an email
-notification-job                    | boolean | `true` notifies user when new job is published
-notification-connected-candidate            | boolean | `true` notifies user when candidate connects with your company
-notification-mention                | boolean | `true` notifies user when team member mentions them
-notification-lead-message                       | boolean | `true` notifies user when lead writes a message
-notification-hiring-team-application  | boolean | `true` notifies user when candidate applies for a job where they're part of the hiring team
-notification-daily-digest               | boolean | `true` means the user will receive the daily digest email with all activities in their hiring teams
-notification-recruiter-application    | boolean | `true` notifies user when candidate applies for a job where they are a recruiter
-notification-removal-request          | boolean | `true` notifies user when a candidate asked to be removed (for GDPR managers only)
-notification-gdpr-digest              | boolean | `true` sends daily digest of GDPR/data retention activities (for GDPR managers only)
+visible                                 | boolean | If profile is visible on the career site
+notification-candidate-message                | boolean | Notifiy user when candidate replies to an email **Requires admin permission.**
+notification-job                    | boolean | Notify user when new job is published **Requires admin permission.**
+notification-connected-candidate            | boolean | Notify user when a candidate connects with your company **Requires admin permission.**
+notification-mention                | boolean | Notify user when a team member mentions them **Requires admin permission.**
+notification-lead-message                       | boolean | Notify user when a visitor writes a message **Requires admin permission.**
+notification-hiring-team-application  | boolean | Notify user when a candidate applies for a job where they're part of the hiring team **Requires admin permission.**
+notification-daily-digest               | boolean | Receive a daily digest email with all activities in the hiring teams **Requires admin permission.**
+notification-recruiter-application    | boolean | Notify user when a candidate applies for a job where they are a recruiter **Requires admin permission.**
+notification-removal-request          | boolean | Notify user when a candidate asked to be removed (for GDPR managers only) **Requires admin permission.**
+notification-gdpr-digest              | boolean | Sends daily digest of GDPR/data retention activities (for GDPR managers only) **Requires admin permission.**
 
 ### Relations
 
