@@ -101,23 +101,23 @@ This object represents the job ad and the job process in Teamtailor. You can ret
 
 Attribute                | Type    | Description
 -------------------------|---------|------------
-apply-button-text        | string  | Custom text for apply button
+title                    | string  | The title on the job ad
 body                     | string  | The ad text, simple html is supported
-end-date                 | date    | The Job ad's expire date
+apply-button-text        | string  | Custom text for apply button
+created-at               | date    | When job was first created. **Requires admin permission.**
+end-date                 | date    | The Job ad's expire date. **Requires admin permission.**
 human-status             | string  | Human readable status of the job, can be one of the following: `archived`, `unlisted`, `expired`, `draft`, `published`, `scheduled` or `unsaved`
 internal                 | boolean | True if internal job
 picture                  | object  | Job ad's picture
 pinned                   | boolean | `true` if the job is pinned to the top on the career site
 start-date               | date    | Scheduled date to publish the job ad
 status                   | string  | The job's status, can be one of the following: `open`, `draft`, `archived`, `unlisted` or `temp`
-title                    | string  | The title on the job ad
-tags                     | array   | Array of string for each tag
+tags                     | array   | Array of string for each tag **Requires admin permission.**
 external-application-url | string  | Optional attribute for where candidates should be linked when applying for the job.
 name-requirement         | string  | Allowed options: `off`, `optional`, `required`
 resume_requirement       | string  | Allowed options: `off`, `optional`, `required`
 cover-letter-requirement | string  | Allowed options: `off`, `optional`, `required`
 phone-requirement        | string  | Allowed options: `off`, `optional`, `required`
-created_at               | date    |
 
 ### Links
 
