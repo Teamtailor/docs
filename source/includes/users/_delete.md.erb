@@ -1,12 +1,5 @@
 ## Delete a User
 
-<aside class="notice">
-  Required scope: Admin
-</aside>
-
-When a user is recruiter for a job, you can't delete the user without first assigning the jobs to a different user.
-To automatically assign all jobs to a different user, use the parameter `assign_jobs_to_user_id`.
-
 ```http
 DELETE https://api.teamtailor.com/v1/users/4468?assign_jobs_to_user_id=5542 HTTP/1.1
 Authorization: Token token=abc123abc123
@@ -18,3 +11,10 @@ curl -X "DELETE" "https://api.teamtailor.com/v1/users/4468?assign_jobs_to_user_i
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
 ```
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+When a user is recruiter for a job, you can't delete the user without first assigning the jobs to a different user.
+To automatically assign all jobs to a different user, use the parameter `assign_jobs_to_user_id`.
