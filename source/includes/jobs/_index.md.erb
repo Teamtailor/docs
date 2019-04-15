@@ -17,7 +17,7 @@ This object represents the job ad and the job process in Teamtailor. You can ret
     },
     "attributes": {
       "apply-button-text": "Join us!",
-      "body": "<p>lopl</p>",
+      "body": "<p>Job body HTML goes here.</p>",
       "end-date": "2016-11-25T00:00:00.000+01:00",
       "human-status": "scheduled",
       "internal": false,
@@ -25,7 +25,8 @@ This object represents the job ad and the job process in Teamtailor. You can ret
       "pinned": false,
       "start-date": "2016-11-17T00:00:00.000+01:00",
       "status": "open",
-      "title": "New Title",
+      "title": "Marketing Manager",
+      "pitch": "Become part of something great!",
       "tags": [
         "JavaScript",
         "Ruby"
@@ -101,7 +102,8 @@ This object represents the job ad and the job process in Teamtailor. You can ret
 
 Attribute                | Type    | Description
 -------------------------|---------|------------
-title                    | string  | The title on the job ad
+title                    | string  | The title of the job ad
+pitch                    | string  | The pitch of the job ad, displayed below the title
 body                     | string  | The ad text, simple html is supported
 apply-button-text        | string  | Custom text for apply button
 created-at               | date    | When job was first created. **Requires admin permission.**
@@ -141,4 +143,4 @@ questions        | The job's questions
 picked_questions | Relation betwen job and question
 candidates       | Candidates who have applied to the job
 stages           | The recruitment stages of the job
-colleagues       | The `users` that are displayed as colleagues on the job ad
+colleagues       | The `users` that are displayed as colleagues of the job ad

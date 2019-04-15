@@ -10,6 +10,7 @@ X-Api-Version: <%= config[:api_version] %>
     "type": "jobs",
     "attributes": {
       "title": "Account Manager",
+      "pitch": "Become part of something great!",
       "body": "<p>hello</p>",
       "picture": "url-to-a-picture"
     },
@@ -42,7 +43,7 @@ curl -X "POST" "https://api.teamtailor.com/v1/jobs" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
      -H "Content-Type: application/vnd.api+json" \
-     -d "{\"data\":{\"type\":\"jobs\",\"attributes\":{\"title\":\"Account Manager\",\"body\":\"<p>hello</p>\"},\"relationships\":{\"user\":{\"data\":{\"id\":\"819\",\"type\":\"users\"}},\"department\":{\"data\":{\"id\":\"337\",\"type\":\"departments\"}},\"location\":{\"data\":{\"id\":\"667\",\"type\":\"locations\"}}}}}"
+     -d "{\"data\":{\"type\":\"jobs\",\"attributes\":{\"title\":\"Account Manager\",\"pitch\":\"Become part of something great!\",\"body\":\"<p>hello</p>\"},\"relationships\":{\"user\":{\"data\":{\"id\":\"819\",\"type\":\"users\"}},\"department\":{\"data\":{\"id\":\"337\",\"type\":\"departments\"}},\"location\":{\"data\":{\"id\":\"667\",\"type\":\"locations\"}}}}}"
 ```
 
 > Example response
@@ -68,6 +69,7 @@ curl -X "POST" "https://api.teamtailor.com/v1/jobs" \
       "start-date": null,
       "status": "open",
       "title": "Account Manager",
+      "pitch": "Become part of something great!",
       "external-application-url": null,
       "created-at": "2016-11-17T00:00:00.000+01:00"
     },
