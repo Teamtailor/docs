@@ -1,0 +1,48 @@
+# Companies
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+This resource represents your account in Teamtailor. Each API key belongs to only one Company. Use the [show endpoint](#show-your-company) to get the Company belonging to your API key.
+
+## Company Object
+
+```json
+{
+  "data": {
+    "id": "FkZE7LWdUXo",
+    "type": "companies",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/companies/FkZE7LWdUXo"
+    },
+    "attributes": {
+      "name": "Acme Corp",
+      "locale": "en",
+      "website": "https://www.acmecorp.com"
+    },
+    "relationships": {
+      "manager": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/companies/FkZE7LWdUXo/relationships/manager",
+          "related": "https://api.teamtailor.com/v1/companies/FkZE7LWdUXo/manager"
+        }
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute                               | Type    | Description
+----------------------------------------|---------|---------------------------
+name                                    | string  | Company name
+locale                                  | string  | Career site language. Possible values: ar, cs, da, de, en, es, et, fi, fil, fr, hu, it, ja, ko, lv, ms, nl, no, pl, pt, ro, ru, sv, th, tr, zh-CN
+website                                 | string  | Company website URL
+
+### Relations
+
+Relation   | Description
+-----------|------------
+manager    | The Admin user who is assigned `manager` for this company. Used as default sender of some emails, and as fallback where a user is always needed.
