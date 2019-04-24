@@ -15,28 +15,30 @@ All other user created stages have the *stage-type* `In process`
 
 ```json
 {
-  "id": "1337",
+  "id": "22505",
   "type": "stages",
   "links": {
-    "self": "https://api.teamtailor.com/v1/stages/1337"
+    "self": "https://api.teamtailor.com/v1/stages/22505"
   },
   "attributes": {
-    "created-at": "2015-11-05T20:12:16.053+01:00",
-    "updated-at": "2016-10-05T10:11:04.615+02:00",
+    "created-at": "2015-11-05T20:12:27.984+01:00",
+    "updated-at": "2015-11-06T10:02:57.452+01:00",
     "name": "Inbox",
-    "stage-type": "Inbox"
+    "stage-type": "Inbox",
+    "active-job-applications-count": 7,
+    "rejected-job-applications-count": 2
   },
   "relationships": {
-    "candidates": {
+    "job-applications": {
       "links": {
-        "self": "https://api.teamtailor.com/v1/stages/1337/relationships/candidates",
-        "related": "https://api.teamtailor.com/v1/stages/1337/candidates"
+        "self": "https://api.teamtailor.com/v1/stages/22505/relationships/job-applications",
+        "related": "https://api.teamtailor.com/v1/stages/22505/job-applications"
       }
     },
     "job": {
       "links": {
-        "self": "https://api.teamtailor.com/v1/stages/1337/relationships/job",
-        "related": "https://api.teamtailor.com/v1/stages/1337/job"
+        "self": "https://api.teamtailor.com/v1/stages/22505/relationships/job",
+        "related": "https://api.teamtailor.com/v1/stages/22505/job"
       }
     }
   }
