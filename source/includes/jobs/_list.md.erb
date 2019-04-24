@@ -61,6 +61,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
             "related": "https://api.teamtailor.com/v1/jobs/7263/location"
           }
         },
+        "locations": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/locations",
+            "related": "https://api.teamtailor.com/v1/jobs/7263/locations"
+          }
+        },
         "user": {
           "links": {
             "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/user",
@@ -126,6 +132,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
             "related": "https://api.teamtailor.com/v1/jobs/7262/location"
           }
         },
+        "locations": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/locations",
+            "related": "https://api.teamtailor.com/v1/jobs/7262/locations"
+          }
+        },
         "user": {
           "links": {
             "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/user",
@@ -175,5 +187,6 @@ filter[status]     | published    | Filter by job status. Available statuses: `p
 filter[feed]       | public       | Filter by `public` and/or `internal` jobs. See [Permissions](#permissions) for more info.
 filter[department] | null         | Filter by department id.
 filter[role]       | null         | Filter by role id.
-filter[location]   | null         | Filter by location id.
+filter[location]   | null         | Filter by location id. __Removed__, use `filter[locations]` instead.
+filter[locations]  | null         | Filter by location id.
 sort               | -pinned,date | Default sorting based on pinned status and publish date
