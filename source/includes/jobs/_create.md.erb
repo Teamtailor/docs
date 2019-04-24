@@ -27,11 +27,17 @@ X-Api-Version: <%= config[:api_version] %>
           "type": "departments"
         }
       },
-      "location": {
-        "data": {
-          "id": "667",
-          "type": "locations"
-        }
+      "locations": {
+        "data": [
+          {
+            "id": "89",
+            "type": "locations"
+          },
+          {
+            "id": "90",
+            "type": "locations"
+          }
+        ]
       }
     }
   }
@@ -90,6 +96,12 @@ curl -X "POST" "https://api.teamtailor.com/v1/jobs" \
         "links": {
           "self": "https://api.teamtailor.com/v1/jobs/7265/relationships/location",
           "related": "https://api.teamtailor.com/v1/jobs/7265/location"
+        }
+      },
+      "locations": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/jobs/7265/relationships/locations",
+          "related": "https://api.teamtailor.com/v1/jobs/7265/locations"
         }
       },
       "user": {

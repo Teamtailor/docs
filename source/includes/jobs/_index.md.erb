@@ -57,6 +57,12 @@ This object represents the job ad and the job process in Teamtailor. You can ret
           "related": "https://api.teamtailor.com/v1/jobs/7199/location"
         }
       },
+      "locations": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/locations",
+          "related": "https://api.teamtailor.com/v1/jobs/7199/locations"
+        }
+      },
       "user": {
         "links": {
           "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/user",
@@ -138,7 +144,8 @@ Relation         | Description
 user             | The recruiter
 department       | The department of the job
 role             | The role of the job
-location         | Where the job is located
+location         | Where the job is located. __Deprecated__, use `locations` instead. Will be removed after __2019.08.01__
+locations        | Where the job is located
 questions        | The job's questions
 picked_questions | Relation betwen job and question
 candidates       | Candidates who have applied to the job
