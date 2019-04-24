@@ -4,7 +4,7 @@
   Required scope: Admin
 </aside>
 
-A stage indicate the candidate status for a job-application. The stages are defined for each job. There is always two default stages present which can't be deleted or modified.
+A stage indicate the candidate status for a job-application. The stages are defined for each job. Each job has two default stages which can't be deleted or modified:
 
 * Inbox with the *stage-type* `Inbox`
 * Hired with the *stage-type* `Hired`
@@ -48,14 +48,15 @@ All other user created stages have the *stage-type* `In process`
 Attribute  | Type   | Description
 -----------|--------|------------
 created-at | date   |
-name       | string |
-stage-type | string | Inbox, In process, Hired
 updated-at | date   |
-
+name       | string |
+stage-type | string | Possible values: Inbox, In process, Hired
+active-job-applications-count | integer | Number of active applications in the stage
+rejected-job-applications-count | integer | Number of rejected applications in the stage
 
 ### Relations
 
-Relation   | Description
+Relation   |
 -----------|------------
 candidates |
 job        |

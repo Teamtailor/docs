@@ -1,0 +1,213 @@
+## List stages
+
+```http
+GET https://api.teamtailor.com/v1/stages HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/stages" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "22505",
+      "type": "stages",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/stages/22505"
+      },
+      "attributes": {
+        "created-at": "2015-11-05T20:12:27.984+01:00",
+        "updated-at": "2015-11-06T10:02:57.452+01:00",
+        "name": "Inbox",
+        "stage-type": "Inbox",
+        "active-job-applications-count": 7,
+        "rejected-job-applications-count": 0
+      },
+      "relationships": {
+        "job-applications": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22505/relationships/job-applications",
+            "related": "https://api.teamtailor.com/v1/stages/22505/job-applications"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22505/relationships/job",
+            "related": "https://api.teamtailor.com/v1/stages/22505/job"
+          }
+        }
+      }
+    },
+    {
+      "id": "22508",
+      "type": "stages",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/stages/22508"
+      },
+      "attributes": {
+        "created-at": "2015-11-05T20:12:28.038+01:00",
+        "updated-at": "2015-11-06T10:02:57.492+01:00",
+        "name": "Reviewing",
+        "stage-type": "In process",
+        "active-job-applications-count": 3,
+        "rejected-job-applications-count": 12
+      },
+      "relationships": {
+        "job-applications": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22508/relationships/job-applications",
+            "related": "https://api.teamtailor.com/v1/stages/22508/job-applications"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22508/relationships/job",
+            "related": "https://api.teamtailor.com/v1/stages/22508/job"
+          }
+        }
+      }
+    },
+    {
+      "id": "22510",
+      "type": "stages",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/stages/22510"
+      },
+      "attributes": {
+        "created-at": "2015-11-05T20:12:28.075+01:00",
+        "updated-at": "2015-11-06T10:02:57.511+01:00",
+        "name": "Interview",
+        "stage-type": "In process",
+        "active-job-applications-count": 0,
+        "rejected-job-applications-count": 0
+      },
+      "relationships": {
+        "job-applications": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22510/relationships/job-applications",
+            "related": "https://api.teamtailor.com/v1/stages/22510/job-applications"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22510/relationships/job",
+            "related": "https://api.teamtailor.com/v1/stages/22510/job"
+          }
+        }
+      }
+    },
+    {
+      "id": "22507",
+      "type": "stages",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/stages/22507"
+      },
+      "attributes": {
+        "created-at": "2015-11-05T20:12:28.021+01:00",
+        "updated-at": "2015-11-06T10:02:57.479+01:00",
+        "name": "Offered",
+        "stage-type": "In process",
+        "active-job-applications-count": 0,
+        "rejected-job-applications-count": 0
+      },
+      "relationships": {
+        "job-applications": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22507/relationships/job-applications",
+            "related": "https://api.teamtailor.com/v1/stages/22507/job-applications"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22507/relationships/job",
+            "related": "https://api.teamtailor.com/v1/stages/22507/job"
+          }
+        }
+      }
+    },
+    {
+      "id": "22509",
+      "type": "stages",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/stages/22509"
+      },
+      "attributes": {
+        "created-at": "2015-11-05T20:12:28.058+01:00",
+        "updated-at": "2015-11-05T20:12:28.058+01:00",
+        "name": "Scheduling Interview",
+        "stage-type": "In process",
+        "active-job-applications-count": 2,
+        "rejected-job-applications-count": 0
+      },
+      "relationships": {
+        "job-applications": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22509/relationships/job-applications",
+            "related": "https://api.teamtailor.com/v1/stages/22509/job-applications"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22509/relationships/job",
+            "related": "https://api.teamtailor.com/v1/stages/22509/job"
+          }
+        }
+      }
+    },
+    {
+      "id": "22506",
+      "type": "stages",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/stages/22506"
+      },
+      "attributes": {
+        "created-at": "2015-11-05T20:12:28.005+01:00",
+        "updated-at": "2015-11-06T09:05:42.875+01:00",
+        "name": "Hired",
+        "stage-type": "Hired",
+        "active-job-applications-count": 1,
+        "rejected-job-applications-count": 0
+      },
+      "relationships": {
+        "job-applications": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22506/relationships/job-applications",
+            "related": "https://api.teamtailor.com/v1/stages/22506/job-applications"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/stages/22506/relationships/job",
+            "related": "https://api.teamtailor.com/v1/stages/22506/job"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "record-count": 6,
+    "page-count": 1
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/jobs/1426/stages?page%5Bnumber%5D=1\u0026page%5Bsize%5D=10\u0026sort=row_order",
+    "last": "https://api.teamtailor.com/v1/jobs/1426/stages?page%5Bnumber%5D=1\u0026page%5Bsize%5D=10\u0026sort=row_order"
+  }
+}
+```
+
+Use this endpoint to retrieve lists of stages.
+
+### Example parameters
+
+Parameter          | Default      | Description
+------------------ | ------------ | -----------
+include            | null         | Comma separated list of relations to include in the response. For example `candidate`.
+sort               | id           | Sort list by any of the stage attributes.
