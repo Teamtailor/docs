@@ -1,0 +1,48 @@
+# Triggers
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+A trigger is created per stage to execute various actions on the candidates placed in the stage.
+
+## Trigger Object
+
+```json
+{
+  "id": "44",
+  "type": "triggers",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/triggers/44"
+  },
+  "attributes": {
+    "created-at": "2019-05-02T11:50:05.939+02:00",
+    "updated-at": "2019-05-02T11:50:05.939+02:00",
+    "trigger-type": "Message",
+    "data": "{\"subject\":\"Welcome for interview!\",\"body\":\"\Welcome to our office for interview...\",\"is_sms\":\"0\",\"fallback_sms_to_email\":\"0\"}"
+  },
+  "relationships": {
+    "stage": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/triggers/44/relationships/stage",
+        "related": "https://api.teamtailor.com/v1/triggers/44/stage"
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute      | Type   | Description
+---------------|--------|------------
+created-at     | date   |
+updated-at     | date   |
+trigger-type   | string | Possible values: Assessment, Message, Note, Nps, Share, SmartMove, SmartSchedule, Tag, Todo, Webhook
+data           | string | Json string with trigger settings, specific to the trigger type.
+
+### Relations
+
+Relation   |
+-----------|------------
+stage      |

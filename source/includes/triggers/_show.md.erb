@@ -1,0 +1,43 @@
+## Show a trigger
+
+```http
+GET https://api.teamtailor.com/v1/triggers/44 HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/triggers/44" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "44",
+    "type": "triggers",
+    "links": {
+      "self": "https://api.teamtailor.localhost/v1/triggers/44"
+    },
+    "attributes": {
+      "created-at": "2019-05-02T11:50:05.939+02:00",
+      "updated-at": "2019-05-02T11:50:05.939+02:00",
+      "trigger-type": "Message",
+      "data": "{\"subject\":\"ASD!\",\"body\":\"\\u003cp\\u003e-- \\u003cbr\\u003eRichard Johansson\\u003cbr\\u003eTeamtailor\\u003cbr\\u003e\\u003c/p\\u003e\",\"is_sms\":\"0\",\"fallback_sms_to_email\":\"0\"}"
+    },
+    "relationships": {
+      "stage": {
+        "links": {
+          "self": "https://api.teamtailor.localhost/v1/triggers/44/relationships/stage",
+          "related": "https://api.teamtailor.localhost/v1/triggers/44/stage"
+        }
+      }
+    }
+  }
+}
+```
+
+Use this endpoint to retrieve a specific trigger.

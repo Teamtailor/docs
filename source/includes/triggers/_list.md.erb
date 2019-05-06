@@ -1,0 +1,81 @@
+## List triggers
+
+```http
+GET https://api.teamtailor.com/v1/triggers HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/triggers" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "triggers",
+      "links": {
+        "self": "https://api.teamtailor.localhost/v1/triggers/1"
+      },
+      "attributes": {
+        "created-at": "2017-10-06T17:55:43.979+02:00",
+        "updated-at": "2019-03-26T17:53:13.261+01:00",
+        "trigger-type": "Tag",
+        "data": "{\"tags\":[\"interesting\"]}"
+      },
+      "relationships": {
+        "stage": {
+          "links": {
+            "self": "https://api.teamtailor.localhost/v1/triggers/1/relationships/stage",
+            "related": "https://api.teamtailor.localhost/v1/triggers/1/stage"
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "type": "triggers",
+      "links": {
+        "self": "https://api.teamtailor.localhost/v1/triggers/2"
+      },
+      "attributes": {
+        "created-at": "2017-11-01T10:49:12.252+01:00",
+        "updated-at": "2019-03-26T17:53:13.387+01:00",
+        "trigger-type": "Share",
+        "data": "{\"subject\":\"Please help me review candidates.\",\"body\":\"Hi!\\r\\n\\r\\nIf you have a moment, it would be great to hear your feedback on this candidate.\",\"emails\":\"john.doe@example.com\",\"share_options\":{\"pitch\":true,\"answers\":false,\"locations\":true,\"linked_in\":true,\"recommendations\":true,\"attachments\":true}}"
+      },
+      "relationships": {
+        "stage": {
+          "links": {
+            "self": "https://api.teamtailor.localhost/v1/triggers/2/relationships/stage",
+            "related": "https://api.teamtailor.localhost/v1/triggers/2/stage"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "record-count": 2,
+    "page-count": 1
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/jobs/1426/triggers?page%5Bnumber%5D=1\u0026page%5Bsize%5D=10\u0026sort=row_order",
+    "last": "https://api.teamtailor.com/v1/jobs/1426/triggers?page%5Bnumber%5D=1\u0026page%5Bsize%5D=10\u0026sort=row_order"
+  }
+}
+```
+
+Use this endpoint to retrieve lists of triggers.
+
+### Example parameters
+
+Parameter          | Default      | Description
+------------------ | ------------ | -----------
+include            | null         | Comma separated list of relations to include in the response. For example `stage`.
+sort               | id           | Sort list by any of the trigger attributes.
