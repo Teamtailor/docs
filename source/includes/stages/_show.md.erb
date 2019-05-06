@@ -37,6 +37,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/stages/22505" \
           "related": "https://api.teamtailor.com/v1/stages/22505/job-applications"
         }
       },
+      "triggers": {
+        "links": {
+          "self": "https://api.teamtailor.localhost/v1/stages/22505/relationships/triggers",
+          "related": "https://api.teamtailor.localhost/v1/stages/22505/triggers"
+        }
+      },
       "job": {
         "links": {
           "self": "https://api.teamtailor.com/v1/stages/22505/relationships/job",
@@ -54,5 +60,5 @@ Use this endpoint to retrieve a specific stage.
 
 Parameter          | Default      | Description
 ------------------ | ------------ | -----------
-include            | null         | Comma separated list of relations to include in the response. For example `candidate`.
+include            | null         | Comma separated list of relations to include in the response. For example `candidates`.
 sort               | id           | Sort list by any of the upload attributes.
