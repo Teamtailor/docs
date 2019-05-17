@@ -24,18 +24,18 @@ Parameter   | Value               | Description
 page[size]  | 20                  | Get 20 jobs in the list.
 page[number]| 2                   | Get the second page of jobs.
 
-## List published jobs with their department and location
+## List published jobs with their department and locations
 
 Get a list of published jobs and include their departments and locations in one request.
 
 ```http
-GET https://api.teamtailor.com/v1/jobs?include=department,location HTTP/1.1
+GET https://api.teamtailor.com/v1/jobs?include=department,locations HTTP/1.1
 Authorization: Token token=abc123abc123
 X-Api-Version: <%= config[:api_version] %>
 ```
 
 ```shell
-curl -X "GET" "https://api.teamtailor.com/v1/jobs?include=department,location" \
+curl -X "GET" "https://api.teamtailor.com/v1/jobs?include=department,locations" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
 ```
@@ -44,7 +44,7 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs?include=department,location" \
 
 Parameter  | Value               | Description
 ---------- | ------------------- | -----------
-include    | department,location | Comma separated list of relations to include in the response.
+include    | department,locations | Comma separated list of relations to include in the response.
 
 ## List latest hired candidates
 
