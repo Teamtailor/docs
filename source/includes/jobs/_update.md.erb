@@ -25,7 +25,25 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/jobs/7199" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
      -H "Content-Type: application/vnd.api+json" \
-     -d "{\"data\":{\"id\":\"7199\",\"attributes\":{\"title\":\"New Title\",\"status\":\"unlisted\"},\"type\":\"jobs\"}}"
+     -d '{
+  "data": {
+    "id": "7236",
+    "attributes": {
+      "title": "New Title",
+      "status": "unlisted"
+    },
+    "type": "jobs",
+    "relationships": {
+      "locations": {
+        "data": [{
+          "type": "locations", "id": "667"
+        }, {
+          "type": "locations", "id": "668"
+        }]
+      }
+    }
+  }
+}'
 ```
 
 > Example response
