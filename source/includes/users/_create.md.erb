@@ -20,7 +20,7 @@ X-Api-Version: <%= config[:api_version] %>
 ```
 
 ```shell
-curl -X "PATCH" "https://api.teamtailor.com/v1/users" \
+curl -X "PUT" "https://api.teamtailor.com/v1/users" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
      -H "Content-Type: application/vnd.api+json" \

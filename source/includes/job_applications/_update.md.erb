@@ -1,7 +1,7 @@
 ## Update Job application
 
 ```http
-PATCH https://api.teamtailor.com/v1/job-applications/1337 HTTP/1.1
+PUT https://api.teamtailor.com/v1/job-applications/1337 HTTP/1.1
 X-Api-Version: <%= config[:api_version] %>
 Authorization: Token token=abc123abc123
 
@@ -18,7 +18,7 @@ Authorization: Token token=abc123abc123
 
 ```shell
 ## update
-curl -X "PATCH" "https://api.teamtailor.com/v1/job-applications/1337" \
+curl -X "PUT" "https://api.teamtailor.com/v1/job-applications/1337" \
      -H "Content-Type: application/vnd.api+json" \
      -H "X-Api-Version: <%= config[:api_version] %>" \
      -H "Authorization: Token token=abc123abc123" \
