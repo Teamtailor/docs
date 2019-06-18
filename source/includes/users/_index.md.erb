@@ -18,6 +18,7 @@
       "hide-email": false,
       "instagram-profile": "http://instagram.com/himynameisjonas",
       "linkedin-profile": "https://www.linkedin.com/in/himynameisjonas",
+      "login-email": "jonas@example.com",
       "name": "Jonas Brusman",
       "other-profile": "http://himynameisjonas.net",
       "phone": "",
@@ -70,12 +71,13 @@
 Attribute                               | Type    | Description
 ----------------------------------------|---------|---------------------------
 description                             | string  | About text, visible on the public profile
-email                                   | string  | Used for notifications and might be visible on career site **Requires admin permission if hidden.**
+email                                   | string  | Used for notifications and might be visible on career site profile **Requires admin permission if hidden.**
 facebook-profile                        | string  | URL to Facebook profile
 google-profile                          | string  | URL to Google+ profile
 hide-email                              | boolean | If e-mail address should be hidden on career site
 instagram-profile                       | string  | URL to Instagram profile
 linkedin-profile                        | string  | URL to LinkedIn profile
+login-email                            | string  | Account email used to login (might be separate than email on career site profile). Can be null until user accepts invitation. **Requires admin permission**
 merge                                   | boolean | __Write only__ True if the attributes should be merged with an existing user, matched by email address.
 name                                    | string  | The user's name
 other-profile                           | string  | URL to other profile
