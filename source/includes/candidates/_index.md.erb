@@ -4,11 +4,11 @@
   Required scope: Admin
 </aside>
 
-A candidate is defined by a unqiue email adress. If a candidate don't have any <code>job-applications</code> it can be either <code>sourced</code> or <code>connected</code>
+A candidate is defined by a unqiue email adress. If a candidate don't have any <code>job-applications</code> it can be either <code>sourced</code> or <code>connected</code>.
 
-When <code>sourced</code> the candidate was added to the system by a recruiter.
-
-A candidate that is <code>connected</code> has opted in to recieve new job notifications and has also the option to create a richer and more personal profile.
+* When <code>sourced</code> the candidate was added to the system by a recruiter.<br>
+* When <code>referred</code> the candidate was added to the system by an employee.
+* When <code>connected</code> the candidate has opted in to recieve new job notifications and has also the option to create a richer and more personal profile.
 
 ## Candidate Object
 
@@ -34,6 +34,7 @@ A candidate that is <code>connected</code> has opted in to recieve new job notif
       "pitch": "I like turtles",
       "referring-site": "Facebook",
       "referring-url": "http://facebook.com/page",
+      "referred": false,
       "resume": "https://s3.amazonaws.com/resume.pdf",
       "set-consent-expiration": true,
       "sourced": false,
@@ -89,7 +90,7 @@ A candidate that is <code>connected</code> has opted in to recieve new job notif
 
 Attribute                 | Type    | Description
 --------------------------|---------|------------
-connected                 | boolean |
+connected                 | boolean | __Read only__
 created-at                | date    |
 email                     | string  | Email to candidate. Always unique.
 facebook-id               | string  | User id if connected with Facebook
@@ -105,8 +106,9 @@ picture                   | string  | Url to candidate picture
 pitch                     | string  | 140 character pitch
 referring-site            | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
 referring-url             | string  |
+referred                  | boolean | __Read only__ True if added by an employee.
 resume                    | string  | Signed URL to pdf-version of resume, valid for 30 seconds.
-sourced                   | boolean | True if added by a recruiter without applying
+sourced                   | boolean | __Read only__ True if added by a recruiter without applying
 set-consent-expiration    | boolean | __Write only__ True if candidate have given their consent for you to store their personal details. Will set an expiration period according to [your data retention settings](https://teamtailor.com/app/settings/gdpr).
 tags                      | array   |
 unsubscribed              | boolean | If true no new job notifications are sent
