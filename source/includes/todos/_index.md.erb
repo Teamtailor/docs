@@ -1,0 +1,68 @@
+# Todos
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+
+## Todo Object
+
+```json
+{
+  "id": "15",
+  "type": "todos",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/todos/15"
+  },
+  "attributes": {
+    "completed-at": null,
+    "created-at": "2019-07-30T15:14:09.311+02:00",
+    "due": "2019-08-13",
+    "value": "Arrange an interview with him"
+  },
+  "relationships": {
+    "assignee": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/todos/15/relationships/assignee",
+        "related": "https://api.teamtailor.com/v1/todos/15/assignee"
+      }
+    },
+    "assigner": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/todos/15/relationships/assigner",
+        "related": "https://api.teamtailor.com/v1/todos/15/assigner"
+      }
+    },
+    "candidate": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/todos/15/relationships/candidate",
+        "related": "https://api.teamtailor.com/v1/todos/15/candidate"
+      }
+    },
+    "user": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/todos/15/relationships/user",
+        "related": "https://api.teamtailor.com/v1/todos/15/user"
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute      | Type   | Description
+---------------|--------|------------
+completed-at   | date   | Date of completion
+created-at     | date   |
+due            | date   | Due date
+value          | string | Text value
+
+### Relations
+
+Relation   | Description
+-----------|------------
+assignee   | User who is assigned to the todo
+assigner   | User who assigned the todo
+candidate  | Candidate which the todo concerns
+user       | User who creates a todo

@@ -1,0 +1,101 @@
+## Create Todo
+
+```http
+POST https://api.teamtailor.com/v1/todos HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{
+  "data": {
+    "type": "todos",
+    "attributes": {
+      "value": "Arrange an interview with him"
+    },
+    "relationships": {
+      "candidate": {
+        "data": {
+          "id": 105,
+          "type": "candidates"
+        }
+      },
+      "user": {
+        "data": {
+          "id": 30,
+          "type": "users"
+        }
+      },
+      "assigner": {
+        "data": {
+          "id": 25,
+          "type": "users"
+        }
+      },
+      "assignee": {
+        "data": {
+          "id": 28,
+          "type": "users"
+        }
+      }
+    }
+  }
+}
+```
+
+```shell
+curl -X "POST" "https://api.teamtailor.com/v1/todos" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+     -H "Content-Type: application/vnd.api+json" \
+     -d "{\"data\":{\"type\":\"todos\",\"attributes\":{\"value\":\"Arrange an interview with him\"},\"relationships\":{\"candidate\":{\"data\":{\"id\":105,\"type\":\"candidates\"}},\"user\":{\"data\":{\"id\":30,\"type\":\"users\"}},\"assigner\":{\"data\":{\"id\":25,\"type\":\"users\"}},\"assignee\":{\"data\":{\"id\":28,\"type\":\"users\"}}}}}
+"
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "15",
+    "type": "todos",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/todos/15"
+    },
+    "attributes": {
+      "completed-at": null,
+      "created-at": "2019-07-30T15:14:09.311+02:00",
+      "due": null,
+      "value": "Arrange an interview with him"
+    },
+    "relationships": {
+      "assignee": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/todos/15/relationships/assignee",
+          "related": "https://api.teamtailor.com/v1/todos/15/assignee"
+        }
+      },
+      "assigner": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/todos/15/relationships/assigner",
+          "related": "https://api.teamtailor.com/v1/todos/15/assigner"
+        }
+      },
+      "candidate": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/todos/15/relationships/candidate",
+          "related": "https://api.teamtailor.com/v1/todos/15/candidate"
+        }
+      },
+      "user": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/todos/15/relationships/user",
+          "related": "https://api.teamtailor.com/v1/todos/15/user"
+        }
+      }
+    }
+  }
+}
+```
+
+<aside class="notice">
+  <code>candidate</code>, <code>user</code> and <code>value</code> are required attributes to be able to save a new todo.
+</aside>
