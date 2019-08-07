@@ -1,0 +1,59 @@
+# Partner Results
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+
+## Partner Result Object
+
+```json
+{
+  "id": "85ab953c-b8ea-11e9-a2a3-2a2ae2dbcce4",
+  "type": "partner-results",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/partner-results/85ab953c-b8ea-11e9-a2a3-2a2ae2dbcce4"
+  },
+  "attributes": {
+    "assessment-score": 100,
+    "attachments": [
+      {
+        "url": "https://test.com",
+        "description": "Test description"
+      }
+    ],
+    "created-at": "2019-08-07T16:14:04.289+02:00",
+    "details": "",
+    "partner-name": null,
+    "status": "completed",
+    "summary": "The candidate already taken the test",
+    "url": "https://test.com"
+  },
+  "relationships": {
+    "candidate": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/partner-results/85ab953c-b8ea-11e9-a2a3-2a2ae2dbcce4/relationships/candidate",
+        "related": "https://api.teamtailor.com/v1/partner-results/85ab953c-b8ea-11e9-a2a3-2a2ae2dbcce4/candidate"
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute         | Type    | Description
+------------------|---------|------------
+assessment-score  | integer | Score value
+attachments       | array   | Array of attachments
+details           | string  | Json string with partner-result details
+partner-name      | string  | Partner name
+status            | string  | Status
+summary           | string  | Summary
+url               | string  | Url
+
+### Relations
+
+Relation   | Description
+-----------|------------
+candidate  | Candidate which the test concerns
