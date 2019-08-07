@@ -1,0 +1,59 @@
+# Activities
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+
+## Activity Object
+
+```json
+{
+  "id": "1",
+  "type": "activities",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/activities/1"
+  },
+  "attributes": {
+    "code": "created",
+    "created-at": "2019-07-25T16:14:04.289+02:00",
+    "data": "{}"
+  },
+  "relationships": {
+    "candidate": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/activities/1/relationships/candidate",
+        "related": "https://api.teamtailor.com/v1/activities/1/candidate"
+      }
+    },
+    "job": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/activities/1/relationships/job",
+        "related": "https://api.teamtailor.com/v1/activities/1/job"
+      }
+    },
+    "user": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/activities/1/relationships/user",
+        "related": "https://api.teamtailor.com/v1/activities/1/user"
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute      | Type   | Description
+---------------|--------|------------
+code           | string | Activity type
+created-at     | date   |
+data           | string | Json string with activity data, like note text, todo value etc.
+
+### Relations
+
+Relation   | Description
+-----------|------------
+candidate  | Candidate which the activity concerns
+job        | Job which the activity concerns
+user       | User who creates the activity
