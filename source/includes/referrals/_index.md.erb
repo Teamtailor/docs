@@ -1,0 +1,77 @@
+# Referrals
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+
+## Referral Object
+
+```json
+{
+  "id": "1",
+  "type": "referrals",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/referrals/1"
+  },
+  "attributes": {
+    "comment": "Very nice person",
+    "created-at": "2019-08-07T16:21:15.728+02:00",
+    "email": "piotr@example.com",
+    "name": "Piotr Klupa",
+    "phone": null
+  },
+  "relationships": {
+    "candidate": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/referrals/1/relationships/candidate",
+        "related": "https://api.teamtailor.com/v1/referrals/1/candidate"
+      }
+    },
+    "department": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/referrals/1/relationships/department",
+        "related": "https://api.teamtailor.com/v1/referrals/1/department"
+      }
+    },
+    "job": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/referrals/1/relationships/job",
+        "related": "https://api.teamtailor.com/v1/referrals/1/job"
+      }
+    },
+    "role": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/referrals/1/relationships/role",
+        "related": "https://api.teamtailor.com/v1/referrals/1/role"
+      }
+    },
+    "user": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/referrals/1/relationships/user",
+        "related": "https://api.teamtailor.com/v1/referrals/1/user"
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute      | Type   | Description
+---------------|--------|------------
+comment        | string | Referral's comment
+created-at     | date   |
+email          | string | Candidate's email
+name           | string | Candidate's name
+phone          | string | Candidate's phone
+
+### Relations
+
+Relation   | Description
+-----------|------------
+candidate  | Candidate which the referral concerns
+department |
+job        | Job which the referral concerns
+role       |
+user       | User who creates the referral
