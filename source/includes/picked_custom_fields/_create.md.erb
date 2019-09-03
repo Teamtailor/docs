@@ -1,0 +1,100 @@
+## Create Picked Custom Field
+
+```http
+POST https://api.teamtailor.com/v1/picked-custom-fields HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{
+  "data": {
+    "type": "picked-custom-fields",
+    "attributes": {
+      "value": "2019-08-28T18:56:53+02:00",
+    },
+    "relationships": {
+      "custom-field": {
+        "data": {
+          "id": 4,
+          "type": "custom-fields",
+        },
+      },
+      "owner": {
+        "data": {
+          "id": 3,
+          "type": "candidates",
+        },
+      },
+    },
+  },
+}
+```
+
+```shell
+curl -X "POST" "https://api.teamtailor.com/v1/picked-custom-fields" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+     -H "Content-Type: application/vnd.api+json" \
+     -d '{
+   "data": {
+     "type": "picked-custom-fields",
+     "attributes": {
+       "value": "2019-08-28T18:56:53+02:00",
+     },
+     "relationships": {
+       "custom-field": {
+         "data": {
+           "id": 4,
+           "type": "custom-fields",
+         },
+       },
+       "owner": {
+         "data": {
+           "id": 1,
+           "type": "candidates",
+         },
+       },
+     },
+   },
+}'
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1",
+    "type": "picked-custom-fields",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/picked-custom-fields/1"
+    },
+    "attributes": {
+      "field-type": "CustomField::Date",
+      "value": "2019-08-28T14:11:34+02:00",
+      "custom-field-id": 4,
+      "owner-id": 1,
+      "owner-type": "Candidate"
+    },
+    "relationships": {
+      "custom-field": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/picked-custom-fields/1/relationships/custom-field",
+          "related": "https://api.teamtailor.com/v1/picked-custom-fields/1/custom-field"
+        }
+      },
+      "owner": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/picked-custom-fields/1/relationships/owner",
+          "related": "https://api.teamtailor.com/v1/picked-custom-fields/1/owner"
+        }
+      }
+    }
+  }
+}
+```
+
+Create a new picked custom field.
+
+<aside class="notice">
+  <code>value</code>, and both <code>relationships</code> are required to be able to save a new job.
+</aside>
