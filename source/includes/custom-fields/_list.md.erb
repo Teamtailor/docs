@@ -1,0 +1,73 @@
+## List Custom Fields
+
+
+```http
+GET https://api.teamtailor.com/v1/custom-fields HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/custom-fields" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+  {
+    "data": [
+      {
+        "id": "1",
+        "type": "custom-fields",
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-fields/1"
+        },
+        "attributes": {
+          "name": "Birthday",
+          "field-type": "CustomField::Date",
+          "created-at": "2019-09-02T15:35:59.518+02:00",
+          "updated-at": "2019-09-02T15:35:59.518+02:00"
+        },
+        "relationships": {
+          "picked-custom-fields": {
+            "links": {
+              "self": "https://api.teamtailor.com/v1/custom-fields/1/relationships/picked-custom-fields",
+              "related": "https://api.teamtailor.com/v1/custom-fields/1/picked-custom-fields"
+            }
+          }
+        }
+      },
+      {
+        "id": "2",
+        "type": "custom-fields",
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-fields/2"
+        },
+        "attributes": {
+          "name": "home phone",
+          "field-type": "CustomField::Phone",
+          "created-at": "2019-09-02T15:35:59.518+02:00",
+          "updated-at": "2019-09-02T15:35:59.518+02:00"
+        },
+        "relationships": {
+          "picked-custom-fields": {
+            "links": {
+              "self": "https://api.teamtailor.com/v1/custom-fields/2/relationships/picked-custom-fields",
+              "related": "https://api.teamtailor.com/v1/custom-fields/2/picked-custom-fields"
+            }
+          }
+        }
+      }
+  ],
+  "meta": {
+    "record-count": 2,
+    "page-count": 1
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/custom-fields?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "last": "https://api.teamtailor.com/v1/custom-fields?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+  }
+}
+```
