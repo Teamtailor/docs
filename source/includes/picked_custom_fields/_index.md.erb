@@ -18,17 +18,6 @@ There are 5 types of custom field as specified by the <code>field-type</code> at
 
 ## Picked custom field object
 
-```http
-GET https://api.teamtailor.com/v1/picked-custom-fields/1 HTTP/1.1
-Authorization: Token token=abc123abc123
-X-Api-Version: <%= config[:api_version] %>
-```
-
-```shell
-curl -X "GET" "https://api.teamtailor.com/v1/picked-custom-fields/1" \
-     -H "Authorization: Token token=abc123abc123" \
-     -H "X-Api-Version: <%= config[:api_version] %>"
-```
 
 ```json
   {
@@ -40,10 +29,7 @@ curl -X "GET" "https://api.teamtailor.com/v1/picked-custom-fields/1" \
       },
       "attributes": {
         "field-type": "CustomField::Date",
-        "value": "2019-08-28",
-        "custom-field-id": 4,
-        "owner-id": 1,
-        "owner-type": "Candidate"
+        "value": "2019-08-28"
       },
       "relationships": {
         "custom-field": {
@@ -69,9 +55,6 @@ Attribute       | Type    | Description
 ----------------|---------|------------
 value           | string  | Mandatory. Depending on the type, format may change. Check the available types above"
 field-type      | string  | Read only. Tells of which type the picked-custom-field is.
-custom-field-id | Integer | Read only. Id of related custom field
-owner-id        | Integer | Read only. Id of related owner of the polymorphic relationship
-owner-type      | string  | Read only. Type of owner. Available types are: `candidate`
 
 ### Relations
 
