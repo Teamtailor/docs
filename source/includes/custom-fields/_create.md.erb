@@ -1,0 +1,75 @@
+## Create Custom Field
+
+```http
+POST https://api.teamtailor.com/v1/custom-fields HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{
+  "data": {
+    "type": "custom-fields",
+    "attributes": {
+      "name": "Home phone",
+      "field-type": "CustomField::Phone"
+    }
+  }
+}
+```
+
+```shell
+curl -X "POST" "https://api.teamtailor.com/v1/custom-fields" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+     -H "Content-Type: application/vnd.api+json" \
+     -d '{
+       {
+         "data": {
+           "type": "custom-fields",
+           "attributes": {
+             "name": "Home phone",
+             "field-type": "CustomField::Phone"
+           }
+         }
+       }
+}'
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "23",
+    "type": "custom-fields",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/custom-fields/23"
+    },
+    "attributes": {
+      "name": "Home phone",
+      "field-type": "CustomField::Phone",
+      "created-at": "2019-09-04T12:49:06.076+02:00",
+      "updated-at": "2019-09-04T12:49:06.076+02:00"
+    },
+    "relationships": {
+      "picked-custom-fields": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-fields/23/relationships/picked-custom-fields",
+          "related": "https://api.teamtailor.com/v1/custom-fields/23/picked-custom-fields"
+        }
+      },
+      "owner": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-fields/23/relationships/owner",
+          "related": "https://api.teamtailor.com/v1/custom-fields/23/owner"
+        }
+      }
+    }
+  }
+}
+```
+
+Create a new custom field.
+
+<aside class="notice">
+  <code>name</code> and <code>field-type</code> are required to be able to save a new custom field.
+</aside>

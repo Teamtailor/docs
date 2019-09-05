@@ -1,0 +1,52 @@
+# Custom fields
+
+There are 5 types of custom field as specified by the <code>field-type</code> attribute.
+
+
+* __CustomField::Text__   any kind of text
+
+* __CustomField::Email__  valid email address e.g `example@example.com`
+
+* __CustomField::Url__  valid url e.g `https://google.com`
+
+* __CustomField::Phone__ It is an number, only ineger values are allowed
+
+* __CustomField::Date__ Date in  ISO 8601 format e.g `2019-08-28`
+
+* __CustomField::Checkbox__ `true` or `false`
+
+## Custom field object
+
+
+```json
+  {
+    "data": {
+      "id": "1",
+      "type": "custom-fields",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/custom-fields/1"
+      },
+      "attributes": {
+        "name": "Additional email",
+        "field-type": "CustomField::Email",
+        "created-at": "2019-09-02T15:35:50.311+02:00",
+        "updated-at": "2019-09-02T15:35:50.311+02:00"
+      },
+      "relationships": {
+        "picked-custom-fields": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/custom-fields/1/relationships/picked-custom-fields",
+            "related": "https://api.teamtailor.com/v1/custom-fields/1/picked-custom-fields"
+          }
+        }
+      }
+    }
+  }
+```
+
+### Attributes
+
+Attribute       | Type    | Description
+----------------|---------|------------
+name            | string  | Mandatory. Name of the custom field
+field-type      | string  | Mandatory. To see available types see description above
