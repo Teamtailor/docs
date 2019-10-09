@@ -1,6 +1,6 @@
-# Picked custom fields
+# Custom field value
 
-A picked custom field represents the relationship between custom field and an owner (which - for now - is only a candidate).
+A custom field value represents the relationship between custom field and an owner (which - for now - is only a candidate).
 There are 5 types of custom field as specified by the <code>field-type</code> attribute.
 
 
@@ -16,16 +16,16 @@ There are 5 types of custom field as specified by the <code>field-type</code> at
 
 * __CustomField::Checkbox__ `true` or `false`
 
-## Picked custom field object
+## Custom field value object
 
 
 ```json
   {
     "data": {
       "id": "1",
-      "type": "picked-custom-fields",
+      "type": "custom-field-values",
       "links": {
-        "self": "https://api.teamtailor.com/v1/picked-custom-fields/1"
+        "self": "https://api.teamtailor.com/v1/custom-field-values/1"
       },
       "attributes": {
         "field-type": "CustomField::Date",
@@ -34,14 +34,14 @@ There are 5 types of custom field as specified by the <code>field-type</code> at
       "relationships": {
         "custom-field": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/picked-custom-fields/1/relationships/custom-field",
-            "related": "https://api.teamtailor.com/v1/picked-custom-fields/1/custom-field"
+            "self": "https://api.teamtailor.com/v1/custom-field-values/1/relationships/custom-field",
+            "related": "https://api.teamtailor.com/v1/custom-field-values/1/custom-field"
           }
         },
         "owner": {
           "links": {
-            "self": "https://api.teamtailor.com/v1/picked-custom-fields/1/relationships/owner",
-            "related": "https://api.teamtailor.com/v1/picked-custom-fields/1/owner"
+            "self": "https://api.teamtailor.com/v1/custom-field-values/1/relationships/owner",
+            "related": "https://api.teamtailor.com/v1/custom-field-values/1/owner"
           }
         }
       }
