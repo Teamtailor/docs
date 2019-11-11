@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+set -x
+
+if ! [ `rbenv install -l | grep "$(cat .ruby-version)"` ]; then
+  rbenv install
+  gem install bundler
+fi
+
+bundle install
