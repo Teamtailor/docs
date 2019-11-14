@@ -12,6 +12,7 @@ X-Api-Version: <%= config[:api_version] %>
       "name": "Erik Eriksson",
       "email": "erik@example.com",
       "role": "recruiter",
+      "signature": "// Erik"
       "merge": true
     },
     "type": "users"
@@ -24,7 +25,7 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/users" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
      -H "Content-Type: application/vnd.api+json" \
-     -d "{\"data\":{\"attributes\":{\"title\":\"My New Title\",\"name\":\"Erik Eriksson\",\"email\":\"erik@example.com\",\"role\":\"recruiter\"},\"type\":\"users\"}}"
+     -d "{\"data\":{\"attributes\":{\"title\":\"My New Title\",\"name\":\"Erik Eriksson\",\"email\":\"erik@example.com\",\"role\":\"recruiter\",\"signature\":\"// Erik\"},\"type\":\"users\"}}"
 ```
 
 > Example response
@@ -55,6 +56,7 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/users" \
       "twitter-profile": null,
       "username": "erikeriksson",
       "visible": true,
+      "signature": "// Erik",
       "notification-candidate-message": true,
       "notification-job": true,
       "notification-connected-candidate": true,
