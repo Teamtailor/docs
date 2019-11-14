@@ -1,0 +1,86 @@
+# Requisitions
+
+## Requisition Object
+
+```json
+{
+  "id": "1",
+  "type": "requisitions",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/requisitions/1"
+  },
+  "attributes": {
+    "job-title": "Backend developer",
+    "job-description": "We need someone to refactor our API endpoints",
+    "country": "Sweden",
+    "min-salary": 30000,
+    "max-salary": 35000,
+    "currency": "SEK",
+    "salary-time-unit": "monthly",
+    "number-of-openings": 1,
+    "custom-form-answers": {
+      "division": "Europe",
+      "comments": "We should make sure that the applicant is familiar with the Go programming language"
+    },
+    "requisition-status": "pending"
+  },
+  "relationships": {
+    "location": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/requisitions/1/relationships/location",
+        "related": "https://api.teamtailor.com/v1/requisitions/1/location"
+      }
+    },
+    "department": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/requisitions/1/relationships/department",
+        "related": "https://api.teamtailor.com/v1/requisitions/1/department"
+      }
+    },
+    "role": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/requisitions/1/relationships/role",
+        "related": "https://api.teamtailor.com/v1/requisitions/1/role"
+      }
+    },
+    "recruiter": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/requisitions/1/relationships/recruiter",
+        "related": "https://api.teamtailor.com/v1/requisitions/1/recruiter"
+      }
+    },
+    "requisition-step-verdicts": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/requisitions/1/relationships/requisition-step-verdicts",
+        "related": "https://api.teamtailor.com/v1/requisitions/1/requisition-step-verdicts"
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute           | Type    | Description
+--------------------|---------|------------
+job-title           | string  |
+job-description     | string  |
+country             | string  |
+min-salary          | integer |
+max-salary          | integer |
+currency            | string  | The currency that the salary is set in
+salary-time-unit    | string  | "monthly" / "yearly" / "hourly"
+number-of-openings  | integer | The number of people expected to be hired
+custom-form-answers | JSON    | A list of key-value pairs. This will only have a value if the company has actively created a custom form in their requisition settings
+requisition-status  | string  | "pending" / "rejected" / "approved" / "archived" / "completed"
+
+
+### Relations
+
+Relation                  | Description
+--------------------------|------------
+location                  |
+department                |
+role                      |
+recruiter                 | A user object
+requisition-step-verdicts | The verdict of each user involved in the requisition's approval flow
