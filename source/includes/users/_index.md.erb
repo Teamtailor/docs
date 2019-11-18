@@ -30,6 +30,7 @@
       "twitter-profile": "https://twitter.com/himynameisjonas",
       "username": "jonas5",
       "visible": true,
+      "signature": " -- John Doe",
       "notification-candidate-message": true,
       "notification-job": true,
       "notification-connected-candidate": true,
@@ -77,7 +78,7 @@ google-profile                          | string  | URL to Google+ profile
 hide-email                              | boolean | If e-mail address should be hidden on career site
 instagram-profile                       | string  | URL to Instagram profile
 linkedin-profile                        | string  | URL to LinkedIn profile
-login-email                            | string  | Account email used to login (might be separate than email on career site profile). Can be null until user accepts invitation. **Requires admin permission**
+login-email                             | string  | Account email used to login (might be separate than email on career site profile). Can be null until user accepts invitation. **Requires admin permission**
 merge                                   | boolean | __Write only__ True if the attributes should be merged with an existing user, matched by email address.
 name                                    | string  | The user's name
 other-profile                           | string  | URL to other profile
@@ -88,16 +89,17 @@ title                                   | string  | Title, e.g 'CEO' or 'Account
 twitter-profile                         | string  | URL to Twitter profile
 username                                | string  | Internal username, used in mentions
 visible                                 | boolean | If profile is visible on the career site
-notification-candidate-message                | boolean | Notifiy user when candidate replies to an email **Requires admin permission.**
-notification-job                    | boolean | Notify user when new job is published **Requires admin permission.**
-notification-connected-candidate            | boolean | Notify user when a candidate connects with your company **Requires admin permission.**
-notification-mention                | boolean | Notify user when a team member mentions them **Requires admin permission.**
-notification-lead-message                       | boolean | Notify user when a visitor writes a message **Requires admin permission.**
-notification-hiring-team-application  | boolean | Notify user when a candidate applies for a job where they're part of the hiring team **Requires admin permission.**
+signature                               | string  | Email signature
+notification-candidate-message          | boolean | Notifiy user when candidate replies to an email **Requires admin permission.**
+notification-job                        | boolean | Notify user when new job is published **Requires admin permission.**
+notification-connected-candidate        | boolean | Notify user when a candidate connects with your company **Requires admin permission.**
+notification-mention                    | boolean | Notify user when a team member mentions them **Requires admin permission.**
+notification-lead-message               | boolean | Notify user when a visitor writes a message **Requires admin permission.**
+notification-hiring-team-application    | boolean | Notify user when a candidate applies for a job where they're part of the hiring team **Requires admin permission.**
 notification-daily-digest               | boolean | Receive a daily digest email with all activities in the hiring teams **Requires admin permission.**
-notification-recruiter-application    | boolean | Notify user when a candidate applies for a job where they are a recruiter **Requires admin permission.**
-notification-removal-request          | boolean | Notify user when a candidate asked to be removed (for GDPR managers only) **Requires admin permission.**
-notification-gdpr-digest              | boolean | Sends daily digest of GDPR/data retention activities (for GDPR managers only) **Requires admin permission.**
+notification-recruiter-application      | boolean | Notify user when a candidate applies for a job where they are a recruiter **Requires admin permission.**
+notification-removal-request            | boolean | Notify user when a candidate asked to be removed (for GDPR managers only) **Requires admin permission.**
+notification-gdpr-digest                | boolean | Sends daily digest of GDPR/data retention activities (for GDPR managers only) **Requires admin permission.**
 
 ### Relations
 
