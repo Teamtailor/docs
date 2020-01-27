@@ -1,0 +1,41 @@
+# Audit Events
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+An **Audit Event** represents a record (one action) in the **Audit Log**
+
+## Audit Event Object
+
+```json
+{
+  "id": "1",
+  "type": "audit-events",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/audit-events/1"
+  },
+  "attributes": {
+    "action": "bulk-delete",
+    "actor-id": 4,
+    "actor-label": "Kulas",
+    "description": "Deleting 1 candidates",
+    "ip-address": "127.0.0.1",
+    "source-label": "kulas@teamtailor.com",
+    "source-type": "audit-log",
+    "timestamp": "2020-01-27T11:07:52.737+01:00"
+  }
+}
+```
+
+### Attributes
+
+Attribute           | Type    | Description
+--------------------|---------|------------
+action              | string  | Action performed
+actor-id            | integer | Actor id
+actor-label         | string  | Actor name
+description         | string  | Description of the action
+ip-address          | string  | IP where the event was triggered from
+source-label        | string  | Auditable label
+source-type         | string  | "audit-log" / "candidate" / "job" / "nurture-campaign" / "user"
+timestamp           | string  | Action datetime
