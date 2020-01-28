@@ -21,6 +21,7 @@ This object represents the job applications.
       "cover-letter": "Dear Sir/Madam…",
       "updated-at": "2017-02-20T10:30:43.910+01:00",
       "rejected-at": null,
+      "reject-reason": null,
       "referring-url": null,
       "referring-site": null,
       "sourced": true,
@@ -60,6 +61,7 @@ cover-letter       | string  |
 changed-stage-at   | date    | Date when candidate was added to current stage
 updated-at         | date    |
 rejected-at        | date    | If set, the candidate has been rejected for this job
+reject-reason      | string  | If rejected, this field will contain the reason
 referring-url      | string  |
 referring-site     | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
 sourced            | boolean |
