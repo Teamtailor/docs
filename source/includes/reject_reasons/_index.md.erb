@@ -1,0 +1,29 @@
+# Reject Reasons
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+
+## Reject Reason Object
+
+```json
+{
+  "id": "1",
+  "type": "reject-reasons",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/reject-reasons/1"
+  },
+  "attributes": {
+    "reason": "Not a fit",
+    "rejected-by-company": true
+  }
+}
+```
+
+### Attributes
+
+Attribute           | Type   | Description
+--------------------|--------|------------
+reason              | string | Reason why is being rejected
+rejected-by-company | boolean| If `true`, the reason is coming from the company. Otherwise from the candidate
