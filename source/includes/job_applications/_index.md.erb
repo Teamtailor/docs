@@ -21,7 +21,6 @@ This object represents the job applications.
       "cover-letter": "Dear Sir/Madam…",
       "updated-at": "2017-02-20T10:30:43.910+01:00",
       "rejected-at": null,
-      "reject-reason": null,
       "referring-url": null,
       "referring-site": null,
       "sourced": true,
@@ -46,6 +45,12 @@ This object represents the job applications.
           "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/stage",
           "related": "https://api.teamtailor.com/v1/job-applications/1337/stage"
         }
+      },
+      "reject-reason": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/reject-reason",
+          "related": "https://api.teamtailor.com/v1/job-applications/1337/reject-reason"
+        }
       }
     }
   }
@@ -61,7 +66,6 @@ cover-letter       | string  |
 changed-stage-at   | date    | Date when candidate was added to current stage
 updated-at         | date    |
 rejected-at        | date    | If set, the candidate has been rejected for this job
-reject-reason      | string  | If rejected, this field will contain the reason
 referring-url      | string  |
 referring-site     | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
 sourced            | boolean |
@@ -72,8 +76,9 @@ send-user-notifications | boolean | __Create only__, set to true if you want to 
 
 The <code>job-application</code> object always has a relation to a <code>candidate</code> and a <code>job</code>
 
-Relation  | Description
-----------|------------
-candidate |
-job       |
-stage     | Current stage (i.e Inbox, Reviewing, Hired)
+Relation      | Description
+--------------|------------
+candidate     |
+job           |
+stage         | Current stage (i.e Inbox, Reviewing, Hired)
+reject-reason |

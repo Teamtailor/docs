@@ -48,7 +48,6 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/job-applications/1337" \
       "cover-letter": "To Whom It May Concern…",
       "updated-at": "2017-02-20T13:36:12.406+01:00",
       "rejected-at": null,
-      "reject-reason": null,
       "referring-url": null,
       "referring-site": null,
       "sourced": true,
@@ -71,6 +70,12 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/job-applications/1337" \
         "links": {
           "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/stage",
           "related": "https://api.teamtailor.com/v1/job-applications/1337/stage"
+        }
+      },
+      "reject-reason": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/reject-reason",
+          "related": "https://api.teamtailor.com/v1/job-applications/1337/reject-reason"
         }
       }
     }

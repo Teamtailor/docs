@@ -28,7 +28,6 @@ curl -X "GET" "https://api.teamtailor.com/v1/job-applications" \
         "cover-letter": "",
         "updated-at": "2015-09-09T11:26:33.991+02:00",
         "rejected-at": "2015-09-09T11:26:33.991+02:00",
-        "reject-reason": "Lacking desired qualifications",
         "referring-url": "http://www.teamtailor.com/sv",
         "referring-site": "Teamtailor",
         "sourced": false,
@@ -52,6 +51,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/job-applications" \
             "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/stage",
             "related": "https://api.teamtailor.com/v1/job-applications/1337/stage"
           }
+        },
+        "reject-reason": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/reject-reason",
+            "related": "https://api.teamtailor.com/v1/job-applications/1337/reject-reason"
+          }
         }
       }
     },
@@ -66,7 +71,6 @@ curl -X "GET" "https://api.teamtailor.com/v1/job-applications" \
         "cover-letter": "",
         "updated-at": "2016-06-27T12:28:37.808+02:00",
         "rejected-at": "2015-09-09T11:26:34.025+02:00",
-        "reject-reason": "Lacking desired qualifications",
         "referring-url": "http://se.indeed.com/visajobb?jk=abc123",
         "referring-site": "Indeed Sweden",
         "sourced": false,
@@ -90,6 +94,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/job-applications" \
             "self": "https://api.teamtailor.com/v1/job-applications/1338/relationships/stage",
             "related": "https://api.teamtailor.com/v1/job-applications/1338/stage"
           }
+        },
+        "reject-reason": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1338/relationships/reject-reason",
+            "related": "https://api.teamtailor.com/v1/job-applications/1338/reject-reason"
+          }
         }
       }
     },
@@ -104,7 +114,6 @@ curl -X "GET" "https://api.teamtailor.com/v1/job-applications" \
         "cover-letter": "",
         "updated-at": "2016-06-27T12:28:38.980+02:00",
         "rejected-at": "2015-04-28T13:43:03.947+02:00",
-        "reject-reason": "Not a fit",
         "referring-url": "https://www.google.fr/",
         "referring-site": "Google",
         "sourced": false,
@@ -127,6 +136,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/job-applications" \
           "links": {
             "self": "https://api.teamtailor.com/v1/job-applications/1339/relationships/stage",
             "related": "https://api.teamtailor.com/v1/job-applications/1339/stage"
+          }
+        },
+        "reject-reason": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/job-applications/1339/relationships/reject-reason",
+            "related": "https://api.teamtailor.com/v1/job-applications/1339/reject-reason"
           }
         }
       }
