@@ -1,0 +1,49 @@
+## List Reject Reasons
+
+```http
+GET https://api.teamtailor.com/v1/reject-reasons HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/reject-reasons" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "reject-reasons",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/reject-reasons/1"
+      },
+      "attributes": {
+        "reason": "Not a fit",
+        "rejected-by-company": true
+		  },
+      "relationships": {
+        "job-applications": {
+          "links": {
+            "self": "https://api.teamtailor.localhost/v1/reject-reasons/1/relationships/job-applications",
+            "related": "https://api.teamtailor.localhost/v1/reject-reasons/1/job-applications"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "record-count": 1,
+    "page-count": 1
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "last": "https://api.teamtailor.com/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+  }
+}
+```

@@ -45,6 +45,12 @@ This object represents the job applications.
           "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/stage",
           "related": "https://api.teamtailor.com/v1/job-applications/1337/stage"
         }
+      },
+      "reject-reason": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/job-applications/1337/relationships/reject-reason",
+          "related": "https://api.teamtailor.com/v1/job-applications/1337/reject-reason"
+        }
       }
     }
   }
@@ -70,8 +76,9 @@ send-user-notifications | boolean | __Create only__, set to true if you want to 
 
 The <code>job-application</code> object always has a relation to a <code>candidate</code> and a <code>job</code>
 
-Relation  | Description
-----------|------------
-candidate |
-job       |
-stage     | Current stage (i.e Inbox, Reviewing, Hired)
+Relation      | Description
+--------------|------------
+candidate     |
+job           |
+stage         | Current stage (i.e Inbox, Reviewing, Hired)
+reject-reason |
