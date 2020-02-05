@@ -18,10 +18,12 @@ An **Audit Event** represents a record (one action) in the **Audit Log**
     "action": "bulk-delete",
     "actor-id": 4,
     "actor-label": "Kulas",
+    "actor-type": "user",
     "description": "Deleting 1 candidates",
     "ip-address": "127.0.0.1",
+    "source-id": 4,
     "source-label": "kulas@teamtailor.com",
-    "source-type": "audit-log",
+    "source-type": "user",
     "timestamp": "2020-01-27T11:07:52.737+01:00"
   }
 }
@@ -32,10 +34,12 @@ An **Audit Event** represents a record (one action) in the **Audit Log**
 Attribute           | Type    | Description
 --------------------|---------|------------
 action              | string  | Action performed
-actor-id            | integer | Actor id (User)
+actor-id            | integer | Actor id
 actor-label         | string  | Actor name
+actor-type          | string  | Actor type
 description         | string  | Description of the action
 ip-address          | string  | IP where the event was triggered from
+source-id           | integer | Source id
 source-label        | string  | Depends on `source-type`.<br> - `candidate`: name or email <br> - `job`: job title <br> - `nurture-campaign`: name <br> - `user`: email <br> - `audit-log`: `null`
 source-type         | string  | `audit-log` / `candidate` / `job` / `nurture-campaign` / `user`
 timestamp           | string  | Action datetime
