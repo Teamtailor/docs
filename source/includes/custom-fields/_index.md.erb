@@ -28,6 +28,7 @@ There are 5 types of custom field as specified by the <code>field-type</code> at
       },
       "attributes": {
         "name": "Additional email",
+        "api-name": "additional-email",
         "field-type": "CustomField::Email",
         "created-at": "2019-09-02T15:35:50.311+02:00",
         "updated-at": "2019-09-02T15:35:50.311+02:00"
@@ -48,5 +49,6 @@ There are 5 types of custom field as specified by the <code>field-type</code> at
 
 Attribute       | Type    | Description
 ----------------|---------|------------
-name            | string  | Mandatory. Name of the custom field
-field-type      | string  | Mandatory. To see available types see description above
+name            | string  | Mandatory. Name of the custom field.
+api-name        | string  | A lowercase, sanitized version of the name. Useful to use in combination with the [Webhook Partner API](https://partner.teamtailor.com). Optional, but will be set to the sanitized version of the name.
+field-type      | string  | Mandatory. To see available types see description above.
