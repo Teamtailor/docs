@@ -42,7 +42,13 @@ curl -X "GET" "https://api.teamtailor.com/v1/partner-results" \
         "candidate": {
           "links": {
             "self": "https://api.teamtailor.com/v1/partner-results/85ab953c-b8ea-11e9-a2a3-2a2ae2dbcce4/relationships/candidate",
-            "related": "https://api.teamtailor.com/v1/partner-results/85ab953c-b8ea-11e9-a2a3-2a2ae2dbcce4/relationships/candidate"
+            "related": "https://api.teamtailor.com/v1/partner-results/85ab953c-b8ea-11e9-a2a3-2a2ae2dbcce4/candidate"
+          }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/partner-results/85ab953c-b8ea-11e9-a2a3-2a2ae2dbcce4/relationships/job",
+            "related": "https://api.teamtailor.com/v1/partner-results/85ab953c-b8ea-11e9-a2a3-2a2ae2dbcce4/job"
           }
         }
       }
@@ -66,5 +72,5 @@ curl -X "GET" "https://api.teamtailor.com/v1/partner-results" \
 Parameter          | Default      | Description
 ------------------ | ------------ | -----------
 include            | null         | Comma separated list of relations to include in the response. For example `candidate`.
-filter[candidate]  | null         | Filter by candidate.
+filter[candidate]   | null         | Filter by candidate.
 sort               | id           | Sort list by any of the partner result attributes.
