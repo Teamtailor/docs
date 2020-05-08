@@ -13,7 +13,7 @@ Authorization: Token token=abc123abc123
   	  "team": {
   	    "data": {
   	      "id": "17",
-  	      "type": "departments"
+  	      "type": "teams"
   	    }
   	  },
       "user": {
@@ -41,7 +41,7 @@ curl -X "POST" "https://api.teamtailor.com/v1/team-memberships" \
    	  "team": {
    	    "data": {
    	      "id": "17",
-   	      "type": "departments"
+   	      "type": "teams"
    	    }
    	  },
        "user": {
@@ -86,5 +86,5 @@ curl -X "POST" "https://api.teamtailor.com/v1/team-memberships" \
 Create a new Team Membership.
 
 <aside class="notice">
-  The relations <code>user</code> and <code>team</code> are required to be able to create a new team membership. A team is either a job or department.
+  The relations <code>user</code> and <code>team</code> are required to be able to create a new team membership. A team is either a job or team.
 </aside>

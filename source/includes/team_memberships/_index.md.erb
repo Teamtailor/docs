@@ -4,7 +4,7 @@
   Required scope: Admin
 </aside>
 
-This object represents the hiring teams of a job or department.
+This object represents the team memberships of a job or team.
 
 ## Team Membership Object
 
@@ -40,9 +40,9 @@ The <code>team-membership</code> object has no attributes.
 
 ### Relations
 
-The <code>team-membership</code> object always has a relation to a <code>user</code> and a team, which is either a <code>job</code> or <code>department</code>.
+The <code>team-membership</code> object always has a relation to a <code>user</code> and a team, which is either a <code>job</code> or <code>team</code>.
 
 Relation  | Description
 ----------|------------
 user      | One of your company's registered users.
-team      | Either a department or a job.
+team      | Either a Team or a Job.
