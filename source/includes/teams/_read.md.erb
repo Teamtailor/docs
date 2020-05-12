@@ -1,0 +1,64 @@
+## Show a Team
+
+```http
+GET https://api.teamtailor.com/v1/teams/189 HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/teams/189" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "189",
+    "type": "teams",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/teams/189"
+    },
+    "attributes": {
+      "name": "Product Development",
+      "emoji": "👩‍💻",
+      "no-department": false
+    },
+    "relationships": {
+      "user": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/user",
+          "related": "https://api.teamtailor.com/v1/teams/189/user"
+        }
+      },
+      "users": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/users",
+          "related": "https://api.teamtailor.com/v1/teams/189/users"
+        }
+      },
+      "departments": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/departments",
+          "related": "https://api.teamtailor.com/v1/teams/189/departments"
+        }
+      },
+      "locations": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/locations",
+          "related": "https://api.teamtailor.com/v1/teams/189/locations"
+        }
+      },
+      "roles": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/roles",
+          "related": "https://api.teamtailor.com/v1/teams/189/roles"
+        }
+      }
+    }
+  }
+}
+```
