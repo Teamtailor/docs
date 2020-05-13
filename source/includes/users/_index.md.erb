@@ -13,6 +13,7 @@
     "attributes": {
       "description": "<p>test</p>",
       "email": "jonas@example.com",
+      "external-id": null,
       "facebook-profile": "https://www.facebook.com/himynameisjonas",
       "google-profile": "",
       "hide-email": false,
@@ -73,6 +74,7 @@ Attribute                               | Type    | Description
 ----------------------------------------|---------|---------------------------
 description                             | string  | About text, visible on the public profile
 email                                   | string  | Used for notifications and might be visible on career site profile **Requires admin permission if hidden.**
+external-id                             | string  | Use to store your own ID to refernce users by. Will also be used in SSO logins to look up users if sent as name-id.
 facebook-profile                        | string  | URL to Facebook profile
 google-profile                          | string  | URL to Google+ profile
 hide-email                              | boolean | If e-mail address should be hidden on career site
