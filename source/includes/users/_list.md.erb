@@ -26,6 +26,7 @@ curl -X "GET" "https://api.teamtailor.com/v1/users" \
       "attributes": {
         "description": "<p>I have been doing IT-related business/product development for the last 10 years.</p>",
         "email": "erik@example.com",
+        "external-id": null,
         "facebook-profile": "https://www.facebook.com/eandersson",
         "google-profile": "",
         "hide-email": false,
@@ -143,4 +144,5 @@ Parameter          | Default      | Description
 include            | null         | Comma separated list of relations to include in the response. For example `department,location`.
 filter[email]      | null         | Filter by email address.
 filter[department] | null         | Filter by department.
+filter[external-id] | null         | Filter by external-id.
 sort               | id           | Sort list by any of the user attributes.
