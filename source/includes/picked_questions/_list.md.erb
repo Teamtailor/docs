@@ -15,62 +15,44 @@ curl -X "GET" "https://api.teamtailor.com/v1/picked-questions" \
 > Example response
 
 ```json
-  {
-    "data": [
-      {
-        "id": "1",
-        "type": "picked-questions",
-        "links": {
-          "self": "https://api.teamtailor.com/v1/picked-questions/1"
-        },
-        "attributes": {
-          "mandatory": false
-        },
-        "relationships": {
-          "question": {
-            "links": {
-              "self": "https://api.teamtailor.com/v1/picked-questions/1/relationships/question",
-              "related": "https://api.teamtailor.com/v1/picked-questions/1/question"
-            }
-          }
-        }
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "picked-questions",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/picked-questions/1"
       },
-      {
-        "id": "2",
-        "type": "picked-questions",
-        "links": {
-          "self": "https://api.teamtailor.com/v1/picked-questions/2"
-        },
-        "attributes": {
-          "mandatory": false
-        },
-        "relationships": {
-          "question": {
-            "links": {
-              "self": "https://api.teamtailor.com/v1/picked-questions/2/relationships/question",
-              "related": "https://api.teamtailor.com/v1/picked-questions/2/question"
-            }
-          }
-        }
+      "attributes": {
+        "mandatory": false
       },
-      {
-        "id": "3",
-        "type": "picked-questions",
-        "links": {
-          "self": "https://api.teamtailor.com/v1/picked-questions/3"
-        },
-        "attributes": {
-          "mandatory": false
-        },
-        "relationships": {
-          "question": {
-            "links": {
-              "self": "https://api.teamtailor.com/v1/picked-questions/3/relationships/question",
-              "related": "https://api.teamtailor.com/v1/picked-questions/3/question"
-            }
+      "relationships": {
+        "question": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/picked-questions/1/relationships/question",
+            "related": "https://api.teamtailor.com/v1/picked-questions/1/question"
           }
         }
       }
+    },
+    {
+      "id": "2",
+      "type": "picked-questions",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/picked-questions/2"
+      },
+      "attributes": {
+        "mandatory": false
+      },
+      "relationships": {
+        "question": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/picked-questions/2/relationships/question",
+            "related": "https://api.teamtailor.com/v1/picked-questions/2/question"
+          }
+        }
+      }
+    }
   ],
   "meta": {
     "record-count": 3,

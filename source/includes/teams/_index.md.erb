@@ -1,0 +1,74 @@
+# Teams
+
+Use teams to customize your users access to candidates and jobs.
+
+[Read more about how to use Teams](https://support.teamtailor.com/en/articles/3810173-teams-feature)
+
+## Team Object
+
+```json
+{
+  "data": {
+    "id": "189",
+    "type": "teams",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/teams/189"
+    },
+    "attributes": {
+      "name": "Product Development",
+      "emoji": "👩‍💻",
+      "no-department": false
+    },
+    "relationships": {
+      "user": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/user",
+          "related": "https://api.teamtailor.com/v1/teams/189/user"
+        }
+      },
+      "users": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/users",
+          "related": "https://api.teamtailor.com/v1/teams/189/users"
+        }
+      },
+      "departments": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/departments",
+          "related": "https://api.teamtailor.com/v1/teams/189/departments"
+        }
+      },
+      "locations": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/locations",
+          "related": "https://api.teamtailor.com/v1/teams/189/locations"
+        }
+      },
+      "roles": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/teams/189/relationships/roles",
+          "related": "https://api.teamtailor.com/v1/teams/189/roles"
+        }
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute           | Type     | Description
+--------------------|----------|------------
+name                | string   | The team name
+emoji               | string   | The team icon
+no-department       | boolean  | `true` if the team have access to candidates without department. Default: `false`.
+
+### Relations
+
+Relation         | Description
+-----------------|------------
+user             | The team mananger
+users            | The team members
+departments      | The departments the team has access to
+roles            | The roles the team has access to
+locations        | The locations the team access is limited to

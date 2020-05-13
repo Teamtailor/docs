@@ -16,86 +16,61 @@ curl -X "GET" "https://api.teamtailor.com/v1/custom-field-values" \
 > Example response
 
 ```json
-  {
-    "data": [
-      {
-        "id": "1",
-        "type": "custom-field-values",
-        "links": {
-          "self": "https://api.teamtailor.com/v1/custom-field-values/1"
-        },
-        "attributes": {
-          "field-type": "CustomField::Date",
-          "value": "2019-08-28"
-        },
-        "relationships": {
-          "custom-field": {
-            "links": {
-              "self": "https://api.teamtailor.com/v1/custom-field-values/1/relationships/custom-field",
-              "related": "https://api.teamtailor.com/v1/custom-field-values/1/custom-field"
-            }
-          },
-          "owner": {
-            "links": {
-              "self": "https://api.teamtailor.com/v1/custom-field-values/1/relationships/owner",
-              "related": "https://api.teamtailor.com/v1/custom-field-values/1/owner"
-            }
-          }
-        }
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "custom-field-values",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/custom-field-values/1"
       },
-      {
-        "id": "2",
-        "type": "custom-field-values",
-        "links": {
-          "self": "https://api.teamtailor.com/v1/custom-field-values/2"
-        },
-        "attributes": {
-          "field-type": "CustomField::Date",
-          "value": "2019-08-28"
-        },
-        "relationships": {
-          "custom-field": {
-            "links": {
-              "self": "https://api.teamtailor.com/v1/custom-field-values/2/relationships/custom-field",
-              "related": "https://api.teamtailor.com/v1/custom-field-values/1/custom-field"
-            }
-          },
-          "owner": {
-            "links": {
-              "self": "https://api.teamtailor.com/v1/custom-field-values/2/relationships/owner",
-              "related": "https://api.teamtailor.com/v1/custom-field-values/1/owner"
-            }
-          }
-        }
+      "attributes": {
+        "field-type": "CustomField::Date",
+        "value": "2019-08-28"
       },
-      {
-        "id": "3",
-        "type": "custom-field-values",
-        "links": {
-          "self": "https://api.teamtailor.com/v1/custom-field-values/3"
+      "relationships": {
+        "custom-field": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/custom-field-values/1/relationships/custom-field",
+            "related": "https://api.teamtailor.com/v1/custom-field-values/1/custom-field"
+          }
         },
-        "attributes": {
-          "field-type": "CustomField::Text",
-          "value": "Sample description"
-        },
-        "relationships": {
-          "custom-field": {
-            "links": {
-              "self": "https://api.teamtailor.com/v1/custom-field-values/3/relationships/custom-field",
-              "related": "https://api.teamtailor.com/v1/custom-field-values/1/custom-field"
-            }
-          },
-          "owner": {
-            "links": {
-              "self": "https://api.teamtailor.com/v1/custom-field-values/3/relationships/owner",
-              "related": "https://api.teamtailor.com/v1/custom-field-values/1/owner"
-            }
+        "owner": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/custom-field-values/1/relationships/owner",
+            "related": "https://api.teamtailor.com/v1/custom-field-values/1/owner"
           }
         }
       }
+    },
+    {
+      "id": "2",
+      "type": "custom-field-values",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/custom-field-values/2"
+      },
+      "attributes": {
+        "field-type": "CustomField::Date",
+        "value": "2019-08-28"
+      },
+      "relationships": {
+        "custom-field": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/custom-field-values/2/relationships/custom-field",
+            "related": "https://api.teamtailor.com/v1/custom-field-values/1/custom-field"
+          }
+        },
+        "owner": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/custom-field-values/2/relationships/owner",
+            "related": "https://api.teamtailor.com/v1/custom-field-values/1/owner"
+          }
+        }
+      }
+    }
   ],
   "meta": {
-    "record-count": 3,
+    "record-count": 2,
     "page-count": 1
   },
   "links": {
