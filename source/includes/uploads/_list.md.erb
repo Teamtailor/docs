@@ -34,6 +34,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/uploads" \
             "self": "https://api.teamtailor.com/v1/uploads/446842/relationships/candidate",
             "related": "https://api.teamtailor.com/v1/uploads/446842/candidate"
           }
+        },
+        "job": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/uploads/446842/relationships/job",
+            "related": "https://api.teamtailor.com/v1/uploads/446842/job"
+          }
         }
       }
     },
@@ -59,3 +65,4 @@ Parameter          | Default      | Description
 ------------------ | ------------ | -----------
 include            | null         | Comma separated list of relations to include in the response. For example `candidate`.
 sort               | id           | Sort list by any of the upload attributes.
+filter[job]         | null         | Filter uploads for by job.

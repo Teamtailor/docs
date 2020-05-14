@@ -14,9 +14,9 @@ X-Api-Version: <%= config[:api_version] %>
     },
     "relationships": {
       "candidate": {
-      "data":{
-        "id": "12345",
-        "type": "candidates"
+        "data":{
+          "id": "12345",
+          "type": "candidates"
         }
       }
     }
@@ -51,6 +51,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/uploads" \
         "links": {
           "self": "https://api.teamtailor.com/v1/uploads/1234/relationships/candidate",
           "related": "https://api.teamtailor.com/v1/uploads/1234/candidate"
+        }
+      },
+      "job": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/uploads/1234/relationships/job",
+          "related": "https://api.teamtailor.com/v1/uploads/1234/job"
         }
       }
     }
