@@ -1,0 +1,47 @@
+# Notes
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+## Note Object
+
+```json
+{
+  "id": "1",
+  "type": "notes",
+  "links": {
+    "self": "/v1/notes/1"
+  },
+  "attributes": {
+    "note": "Example note",
+    "user-id": 2,
+    "candidate-id": 4,
+    "created-by-trigger": false,
+    "mentioned-user-ids": [],
+    "private-note": false,
+    "created-at": "2020-07-16T11:31:22.389+02:00",
+    "updated-at": "2020-07-16T11:32:25.200+02:00"
+  }
+}
+```
+
+### Attributes
+
+Attribute            | Type     | Description
+---------------------|----------|------------
+note                 | string   | Note
+user-id              | integer  | Note
+candidate-id         | integer  | Note
+created-by-trigger   | boolean  | Note
+mentioned-user-ids   | array    | Note
+private-note         | boolean  | Note
+created-at           | datetime | Note
+updated-at           | datetime | Note
+
+
+### Relations
+
+Relation   | Description
+-----------|------------
+candidate  | Candidate who holds the note
+user       | User who created the note
