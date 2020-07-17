@@ -1,0 +1,43 @@
+# Regions
+
+<aside class="notice">
+  Required scope: Admin
+</aside>
+
+
+## Regions Object
+
+```json
+{
+  "id": "1",
+  "type": "regions",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/regions/1"
+  },
+  "attributes": {
+    "name": "Europe",
+    "created-at": "2019-08-07T16:21:15.728+02:00"
+  },
+  "relationships": {
+    "locations": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/regions/1/relationships/locations",
+        "related": "https://api.teamtailor.com/v1/regions/1/locations"
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute      | Type   | Description
+---------------|--------|------------
+name           | string | Region's name
+created-at     | date   |
+
+### Relations
+
+Relation   | Description
+-----------|------------
+locations  | Locations on the region
