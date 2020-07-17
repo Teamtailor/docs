@@ -84,6 +84,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
             "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/stages",
             "related": "https://api.teamtailor.com/v1/jobs/7263/stages"
           }
+        },
+        "regions": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/jobs/7263/relationships/regions",
+            "related": "https://api.teamtailor.com/v1/jobs/7263/regions"
+          }
         }
       }
     },
@@ -161,6 +167,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/jobs" \
             "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/stages",
             "related": "https://api.teamtailor.com/v1/jobs/7262/stages"
           }
+        },
+        "regions": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/jobs/7262/relationships/regions",
+            "related": "https://api.teamtailor.com/v1/jobs/7262/regions"
+          }
         }
       }
     }
@@ -189,4 +201,5 @@ filter[department] | null         | Filter by department id.
 filter[role]       | null         | Filter by role id.
 filter[location]   | null         | Filter by location id. __Removed__, use `filter[locations]` instead.
 filter[locations]  | null         | Filter by location id.
+filter[regions]    | null         | Filter by region id.
 sort               | -pinned,date | Default sorting based on pinned status and publish date
