@@ -1,0 +1,15 @@
+## Delete Note
+
+```http
+DELETE https://api.teamtailor.com/v1/notes/1 HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "DELETE" "https://api.teamtailor.com/v1/notes/1" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+Use this endpoint to delete a note.
