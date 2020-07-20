@@ -1,0 +1,37 @@
+## Show a Region
+
+```http
+GET https://api.teamtailor.com/v1/regions/1 HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/regions/1" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "id": "1",
+  "type": "regions",
+  "links": {
+    "self": "https://api.teamtailor.com/v1/regions/1"
+  },
+  "attributes": {
+    "name": "Europe",
+    "created-at": "2019-08-07T16:21:15.728+02:00"
+  },
+  "relationships": {
+    "locations": {
+      "links": {
+        "self": "https://api.teamtailor.com/v1/regions/1/relationships/locations",
+        "related": "https://api.teamtailor.com/v1/regions/1/locations"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,50 @@
+## List Regions
+
+```http
+GET https://api.teamtailor.com/v1/regions HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+```
+
+```shell
+curl -X "GET" "https://api.teamtailor.com/v1/regions" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+```
+
+> Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "regions",
+      "links": {
+        "self": "https://api.teamtailor.com/v1/regions/1"
+      },
+      "attributes": {
+        "name": "Europe",
+        "created-at": "2019-08-07T16:21:15.728+02:00"
+      },
+      "relationships": {
+        "locations": {
+          "links": {
+            "self": "https://api.teamtailor.com/v1/regions/1/relationships/locations",
+            "related": "https://api.teamtailor.com/v1/regions/1/locations"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "record-count": 20,
+    "page-count": 1
+  },
+  "links": {
+    "first": "https://api.teamtailor.com/v1/regions?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+    "next": "https://api.teamtailor.com/v1/regions?page%5Bnumber%5D=2&page%5Bsize%5D=10",
+    "last": "https://api.teamtailor.com/v1/regions?page%5Bnumber%5D=3&page%5Bsize%5D=10"
+  }
+}
+```
