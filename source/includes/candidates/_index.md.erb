@@ -45,6 +45,12 @@ A candidate is defined by a unqiue email adress. If a candidate don't have any <
       "tags": []
     },
     "relationships": {
+      "activities": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/activities",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/activities"
+        }
+      },
       "department": {
         "links": {
           "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/department",
@@ -138,6 +144,7 @@ send-welcome-message | boolean | __Create only__, set to true if you want to sen
 
 Relation            | Description
 --------------------|------------
+activities          | Activity log
 department          |
 role                |
 job-applications    |

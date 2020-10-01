@@ -44,6 +44,12 @@
       "notification-gdpr-digest": true
     },
     "relationships": {
+      "activities": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/users/4468/relationships/activities",
+          "related": "https://api.teamtailor.com/v1/users/4468/activities"
+        }
+      },
       "department": {
         "links": {
           "self": "https://api.teamtailor.com/v1/users/4468/relationships/department",
@@ -107,6 +113,7 @@ notification-gdpr-digest                | boolean | Sends daily digest of GDPR/d
 
 Relation   | Description
 -----------|------------
+activities | User activity log
 department | Listed under this department on the career site
 location   | Listed under this location on the career site
 jobs       | Jobs the user is recruiter for

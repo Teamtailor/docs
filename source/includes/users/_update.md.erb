@@ -70,6 +70,12 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/users/819" \
       "notification-gdpr-digest": true
     },
     "relationships": {
+      "activities": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/users/819/relationships/activities",
+          "related": "https://api.teamtailor.com/v1/users/819/activities"
+        }
+      },
       "department": {
         "links": {
           "self": "http://api.teamtailor.com/v1/users/819/relationships/department",
