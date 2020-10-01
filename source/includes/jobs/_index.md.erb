@@ -40,6 +40,12 @@ This object represents the job ad and the job process in Teamtailor. You can ret
       "mailbox": "job-2cc71305-fd98-25c6-ab07-2703c453ad9d@inbound.teamtailor.com"
     },
     "relationships": {
+      "activities": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/activities",
+          "related": "https://api.teamtailor.com/v1/jobs/7199/activities"
+        }
+      },
       "department": {
         "links": {
           "self": "https://api.teamtailor.com/v1/jobs/7199/relationships/department",
@@ -149,13 +155,13 @@ careersite-job-apply-iframe-url  | URL for application iframe `src`
 
 Relation         | Description
 -----------------|------------
+activities       | Activity log
 user             | The recruiter
 department       | The department of the job
 role             | The role of the job
-location         | Where the job is located. __Deprecated__, use `locations` instead. Will be removed after __2019.08.01__
 locations        | Where the job is located
 questions        | The job's questions
-picked-questions | Relation betwen job and question
+picked-questions | Relation between job and question
 candidates       | Candidates who have applied to the job
 stages           | The recruitment stages of the job
 team-memberships | The hiring team memberships

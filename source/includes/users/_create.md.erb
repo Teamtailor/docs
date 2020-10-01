@@ -8,7 +8,7 @@ X-Api-Version: <%= config[:api_version] %>
 {
   "data": {
     "attributes": {
-      "title": "CMO",
+      "title": "My Title",
       "name": "Erik Eriksson",
       "email": "erik@example.com",
       "role": "recruiter",
@@ -21,11 +21,11 @@ X-Api-Version: <%= config[:api_version] %>
 ```
 
 ```shell
-curl -X "PATCH" "https://api.teamtailor.com/v1/users" \
+curl -X "POST" "https://api.teamtailor.com/v1/users" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>"
      -H "Content-Type: application/vnd.api+json" \
-     -d "{\"data\":{\"attributes\":{\"title\":\"My New Title\",\"name\":\"Erik Eriksson\",\"email\":\"erik@example.com\",\"role\":\"recruiter\",\"signature\":\"// Erik\"},\"type\":\"users\"}}"
+     -d "{\"data\":{\"attributes\":{\"title\":\"My Title\",\"name\":\"Erik Eriksson\",\"email\":\"erik@example.com\",\"role\":\"recruiter\",\"signature\":\"// Erik\"},\"type\":\"users\"}}"
 ```
 
 > Example response
@@ -53,7 +53,7 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/users" \
       "phone": null,
       "picture": null,
       "role": "recruiter",
-      "title": null,
+      "title": "My Title",
       "twitter-profile": null,
       "username": "erikeriksson",
       "visible": true,
@@ -70,6 +70,12 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/users" \
       "notification-gdpr-digest": true
     },
     "relationships": {
+      "activities": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/users/819/relationships/activities",
+          "related": "https://api.teamtailor.com/v1/users/819/activities"
+        }
+      },
       "department": {
         "links": {
           "self": "http://api.teamtailor.com/v1/users/819/relationships/department",

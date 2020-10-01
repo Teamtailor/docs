@@ -9,7 +9,7 @@ Authorization: Token token=abc123abc123
   "data": {
     "id": "1337",
     "attributes": {
-      "first-name": "Update"
+      "first-name": "David"
     },
     "type": "candidates"
   }
@@ -58,6 +58,12 @@ curl -X "PATCH" "https://api.teamtailor.com/v1/candidates/1337" \
       "tags": []
     },
     "relationships": {
+      "activities": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/activities",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/activities"
+        }
+      },
       "department": {
         "links": {
           "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/department",

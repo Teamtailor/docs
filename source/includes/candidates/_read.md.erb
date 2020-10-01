@@ -46,6 +46,12 @@ curl -X "GET" "https://api.teamtailor.com/v1/candidates/{id}" \
       "tags": []
     },
     "relationships": {
+      "activities": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/activities",
+          "related": "https://api.teamtailor.com/v1/candidates/1337/activities"
+        }
+      },
       "department": {
         "links": {
           "self": "https://api.teamtailor.com/v1/candidates/1337/relationships/department",
