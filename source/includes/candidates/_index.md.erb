@@ -116,6 +116,7 @@ Attribute                 | Type    | Description
 --------------------------|---------|------------
 connected                 | boolean |
 created-at                | date    |
+updated-at                | date    |
 email                     | string  | Email to candidate. Always unique.
 facebook-id               | string  | User id if connected with Facebook
 facebook-profile          | string  | __Read only__, html version of Facebook profile
@@ -136,7 +137,6 @@ sourced                   | boolean | __Read only__ True if added by a recruiter
 set-consent-expiration    | boolean | __Write only__ True if candidate have given their consent for you to store their personal details. Will set an expiration period according to [your data retention settings](https://teamtailor.com/app/settings/gdpr).
 tags                      | array   |
 unsubscribed              | boolean | If true no new job notifications are sent
-updated-at                | date    |
 send-welcome-message | boolean | __Create only__, set to true if you want to send the "Welcome to connect" email to the candidate. Default: false
 
 
