@@ -124,4 +124,10 @@ Parameter          | Default | Description
 ------------------ | ------- | -----------
 include            | null    | Comma separated list of relations to include in the response. For example `stage,candidate`.
 filter[stage-type] | null    | Filter by current stage type (`Inbox`, `In process` or `Hired`)
+filter[created-at][from]       | null | Filter by created-at newer than this date.
+filter[created-at][to]         | null | Filter by created-at older than this date.
+filter[updated-at][from]       | null | Filter by updated-at newer than this date.
+filter[updated-at][to]         | null | Filter by updated-at older than this date.
+filter[changed-stage-at][from] | null | Filter by changed-stage-at newer than this date.
+filter[changed-stage-at][to]   | null | Filter by changed-stage-at older than this date.
 sort               | null    | Sort applications, for example `-changed_stage_at` to sort by latest added to current stage.
