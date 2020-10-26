@@ -22,7 +22,9 @@
       "division": "Europe",
       "comments": "We should make sure that the applicant is familiar with the Go programming language"
     },
-    "status": "pending"
+    "status": "pending",
+    "hired_count": 1,
+    "created_at": "2017-01-18T21:20:16.646+01:00"
   },
   "relationships": {
     "location": {
@@ -73,6 +75,8 @@ salary-time-unit    | string  | "monthly" / "yearly" / "hourly"
 number-of-openings  | integer | The number of people expected to be hired
 custom-form-answers | JSON    | A list of key-value pairs. This will only have a value if the company has actively created a custom form in their requisition settings
 status              | string  | "pending" / "rejected" / "approved" / "archived" / "completed"
+hired_count         | integer | The number of hires from jobs related to the requisition
+created_at          | date    |
 
 
 ### Relations
