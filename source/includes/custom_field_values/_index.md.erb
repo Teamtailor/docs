@@ -1,7 +1,8 @@
 # Custom field value
 
 A custom field value represents the relationship between custom field and an owner (which - for now - is only a candidate).
-There are 5 types of custom field as specified by the <code>field-type</code> attribute.
+
+There are a number of custom field types as specified by the <code>field-type</code> attribute.
 
 
 * __CustomField::Text__   any kind of text
@@ -15,6 +16,13 @@ There are 5 types of custom field as specified by the <code>field-type</code> at
 * __CustomField::Date__ Date in  ISO 8601 format e.g `2019-08-28`
 
 * __CustomField::Checkbox__ `true` or `false`
+
+* __CustomField::Number__ any number
+
+* __CustomField::Select__ id for selected __CustomFieldOption__
+
+* __CustomField::MultiSelect__ array of ids for selected __CustomFieldOption__
+
 
 ## Custom field value object
 
