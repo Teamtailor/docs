@@ -1,0 +1,87 @@
+## Create Custom Field Selects
+
+```http
+POST https://api.teamtailor.com/v1/custom-fields HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{
+  "data": {
+    "type": "custom-field-selects",
+    "attributes": {
+      "name": "Spoken languages",
+      "field-type": "CustomField::MultiSelect",
+      "select-options": ["English", "French", "German"]
+    }
+  }
+}
+```
+
+```shell
+curl -X "POST" "https://api.teamtailor.com/v1/custom-fields" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+     -H "Content-Type: application/vnd.api+json" \
+     -d '{
+       {
+         "data": {
+           "type": "custom-field-selects",
+           "attributes": {
+             "name": "Spoken languages",
+             "field-type": "CustomField::MultiSelect",
+             "select-options": ["English", "French", "German"]
+           }
+         }
+       }
+}'
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1",
+    "type": "custom-field-selects",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/custom-field-selects/1"
+    },
+    "attributes": {
+      "api-name": "spoken-languages",
+      "name": "Spoken languages",
+      "field-type": "CustomField::MultiSelect",
+      "created-at": "2020-10-28T10:57:56.650+01:00",
+      "updated-at": "2020-10-28T10:57:56.650+01:00"
+    },
+    "relationships": {
+      "custom-field-values": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-field-selects/1/relationships/custom-field-values",
+          "related": "https://api.teamtailor.com/v1/custom-field-selects/1/custom-field-values"
+        }
+      },
+      "custom-field-options": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-field-selects/1/relationships/custom-field-options",
+          "related": "https://api.teamtailor.com/v1/custom-field-selects/1/custom-field-options"
+        }
+      }
+    }
+  }
+}
+```
+
+Create a new custom field select.
+
+### Attributes
+
+Attribute       | Type    | Description
+----------------|---------|------------
+name            | string  | Mandatory. Name of the custom field.
+api-name        | string  | A lowercase, sanitized version of the name. Useful to use in combination with the [Webhook Partner API](https://partner.teamtailor.com). Optional, but will be set to the sanitized version of the name.
+field-type      | string  | Mandatory. To see available types see description above.
+select-options  | array   | Contains a list of values (string) to set as options.
+
+<aside class="notice">
+  <code>name</code> and <code>field-type</code> are required to be able to save a new custom field select.
+</aside>

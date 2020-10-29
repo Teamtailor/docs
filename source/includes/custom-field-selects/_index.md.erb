@@ -1,0 +1,49 @@
+# Custom field selects
+
+Custom field selects can be eiter __CustomField::Select__ or __CustomField::MultiSelect__.
+They work similar to __CustomField__ except that they have a relationship to __CustomFieldOptions__.
+
+
+## Custom field selects object
+
+
+```json
+{
+  "data": {
+    "id": "1",
+    "type": "custom-field-selects",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/custom-field-selects/1"
+    },
+    "attributes": {
+      "api-name": "multi-select",
+      "name": "Multi-select",
+      "field-type": "CustomField::MultiSelect",
+      "created-at": "2020-10-26T08:27:04.941+01:00",
+      "updated-at": "2020-10-26T08:27:04.941+01:00"
+    },
+    "relationships": {
+      "custom-field-values": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-field-selects/1/relationships/custom-field-values",
+          "related": "https://api.teamtailor.com/v1/custom-field-selects/1/custom-field-values"
+        }
+      },
+      "custom-field-options": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-field-selects/1/relationships/custom-field-options",
+          "related": "https://api.teamtailor.com/v1/custom-field-selects/1/custom-field-options"
+        }
+      }
+    }
+  }
+}
+```
+
+### Attributes
+
+Attribute       | Type    | Description
+----------------|---------|------------
+name            | string  | Mandatory. Name of the custom field.
+api-name        | string  | A lowercase, sanitized version of the name. Useful to use in combination with the [Webhook Partner API](https://partner.teamtailor.com). Optional, but will be set to the sanitized version of the name.
+field-type      | string  | Mandatory. To see available types see description above.
