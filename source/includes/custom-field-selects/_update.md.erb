@@ -1,0 +1,67 @@
+## Update Custom Field Selects
+
+```http
+PATCH https://api.teamtailor.com/v1/custom-field-selects/1 HTTP/1.1
+Authorization: Token token=abc123abc123
+X-Api-Version: <%= config[:api_version] %>
+
+{
+  "data": {
+    "id": 1,
+    "type": "custom-field-selects",
+    "attributes": {
+      "name": "Updated name",
+  }
+},
+```
+
+```shell
+curl -X "PATCH" "https://api.teamtailor.com/v1/custom-field-selects/1" \
+     -H "Authorization: Token token=abc123abc123" \
+     -H "X-Api-Version: <%= config[:api_version] %>"
+     -H "Content-Type: application/vnd.api+json" \
+     -d '{
+   "data": {
+     "id": 1,
+     "type": "custom-field-selects",
+     "attributes": {
+       "name": "Updated name"
+     }
+   }
+}'
+```
+
+> Example response
+
+```json
+{
+  "data": {
+    "id": "1",
+    "type": "custom-field-selects",
+    "links": {
+      "self": "https://api.teamtailor.com/v1/custom-field-selects/1"
+    },
+    "attributes": {
+      "field-type": "CustomField::MultiSelect",
+      "name": "Updated name",
+      "api-name": "updated-name",
+      "created-at": "2019-09-05T10:12:02.899+02:00",
+      "updated-at": "2019-09-05T11:03:58.209+02:00"
+    },
+    "relationships": {
+      "custom-field-values": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-field-selects/1/relationships/custom-field-values",
+          "related": "https://api.teamtailor.com/v1/custom-field-selects/1/custom-field-values"
+        }
+      },
+      "custom-field-options": {
+        "links": {
+          "self": "https://api.teamtailor.com/v1/custom-field-selects/1/relationships/custom-field-options",
+          "related": "https://api.teamtailor.com/v1/custom-field-selects/1/custom-field-options"
+        }
+      }
+    }
+  }
+}
+```
