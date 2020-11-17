@@ -45,4 +45,4 @@ end
 # If you want Middleman to listen on a different port, you can set that below
 set :port, 4567
 
-config[:api_version] = "20161108"
+config[:api_version] = "20201113"

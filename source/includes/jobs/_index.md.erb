@@ -20,7 +20,7 @@ This object represents the job ad and the job process in Teamtailor. You can ret
       "body": "<p>Job body HTML goes here.</p>",
       "end-date": "2016-11-25T00:00:00.000+01:00",
       "human-status": "scheduled",
-      "internal": false,
+      "target": "public",
       "picture": null,
       "pinned": false,
       "start-date": "2016-11-17T00:00:00.000+01:00",
@@ -129,7 +129,6 @@ apply-button-text        | string  | Custom text for apply button
 created-at               | date    | When job was first created. **Requires admin permission.**
 end-date                 | date    | The Job ad's expire date
 human-status             | string  | Human readable status of the job, can be one of the following: `archived`, `unlisted`, `expired`, `draft`, `published`, `scheduled` or `unsaved`
-internal                 | boolean | True if internal job
 picture                  | object  | Job ad's picture
 pinned                   | boolean | `true` if the job is pinned to the top on the career site
 start-date               | date    | Scheduled date to publish the job ad
@@ -142,6 +141,7 @@ cover-letter-requirement | string  | Allowed options: `off`, `optional`, `requir
 phone-requirement        | string  | Allowed options: `off`, `optional`, `required`
 mailbox                  | string  | Job email **Read only**
 remote-status            | string  | The remote status of the job. Can be one of the following: `none`, `temporary`, `hybrid` or `fully`
+target                   | string  | Can be one of the following: `public`, `internal`, `both`. Default: `public`
 
 ### Links
 
