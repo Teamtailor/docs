@@ -23,6 +23,7 @@ This object represents the job applications.
       "rejected-at": null,
       "referring-url": null,
       "referring-site": null,
+      "row-order": -5000,
       "sourced": true,
       "changed-stage-at": "2017-01-11T11:29:48.841+01:00",
       "send-user-notifications": true
@@ -68,6 +69,8 @@ updated-at         | date    |
 rejected-at        | date    | If set, the candidate has been rejected for this job
 referring-url      | string  |
 referring-site     | string  | __Read only__, friendly name parsed from referring-url (i.e. Facebook, Indeed etc)
+row_order          | integer | __Read only__, auto generated number for ordering job applications in the stage view.
+row-order-position | integer | __Create only__, set job application order in the stage view. First position starts at zero
 sourced            | boolean |
 send-default-reply | boolean | __Create only__, set to true if you want to send the "Default reply" email to the candidate. Default: false
 send-user-notifications | boolean | __Create only__, set to true if you want to send notifications to users. Default: false
