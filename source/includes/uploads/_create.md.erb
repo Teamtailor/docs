@@ -25,9 +25,10 @@ X-Api-Version: <%= config[:api_version] %>
 ```
 
 ```shell
-curl -X "GET" "https://api.teamtailor.com/v1/uploads" \
+curl -X "POST" "https://api.teamtailor.com/v1/uploads" \
      -H "Authorization: Token token=abc123abc123" \
      -H "X-Api-Version: <%= config[:api_version] %>" \
+     -H "Content-Type: application/vnd.api+json" \
      -d "{\"data\":{\"type\":\"uploads\",\"attributes\":{\"url\":\"https://my.fileurl.com/testfile.pdf\",\"file-name\":\"testfile.pdf\"},\"relationships\":{\"candidate\":{\"data\":{\"id\":\"12345\",\"type\":\"candidates\"}}}}}"
 ```
 
