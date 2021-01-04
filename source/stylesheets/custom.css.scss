@@ -1,0 +1,24 @@
+@import 'variables';
+
+.alert {
+    color: $lang-select-text;;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 40px;
+    position: absolute;
+    position: fixed;
+    right: 10px;
+    text-align: right;
+    top: 10px;
+    z-index: 99;
+    opacity: 0.9;
+
+    &-api {
+      background-color: $search-notice-bg;
+    }
+
+    a {
+      color: $lang-select-text;;
+      font-weight: 600;
+    }
+}
